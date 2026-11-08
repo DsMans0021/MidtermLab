@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numerical Analysis · التحليل العددي — Algebra</title>
+<meta name="description" content="التحليل العددي: طريقة التنصيف، النقطة الثابتة، ونيوتن-رافسون، مع خطوات الحل والأمثلة والأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/algebra/numerical-analysis.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Numerical Analysis · التحليل العددي — Algebra">
+<meta property="og:description" content="التحليل العددي: طريقة التنصيف، النقطة الثابتة، ونيوتن-رافسون، مع خطوات الحل والأمثلة والأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/algebra/numerical-analysis.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Numerical Analysis · التحليل العددي — Algebra">
+<meta name="twitter:description" content="التحليل العددي: طريقة التنصيف، النقطة الثابتة، ونيوتن-رافسون، مع خطوات الحل والأمثلة والأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="algebra" data-page="numerical-analysis.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Algebra</a> / Numerical Analysis</div>
+    <div class="eyebrow">Algebra · Topic 03 · Numerical Analysis</div>
+    <h1>Numerical Analysis <span style="color:var(--muted);font-weight:700">· التحليل العددي</span></h1>
+    <p class="lead en">Some equations cannot be solved exactly. Numerical methods find the root approximately. This page covers bisection, simple fixed-point iteration, and Newton–Raphson — with convergence, error, and exam-style examples.</p>
+    <p class="lead ar">بعض المعادلات مش بتتحل بالضبط. الطرق العددية بتجد الجذر تقريبيًا. الصفحة دي بتغطي التنصيف، النقطة الثابتة، ونيوتن–رافسون — مع التقارب والخطأ وأمثلة على شكل الامتحان.</p>
+    <div class="topic-tags">
+      <span class="badge">Core midterm topic</span>
+      <span class="badge gold">Iteration</span>
+      <span class="badge pink">Solved examples</span>
+      <span class="badge">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="idea">
+        <div class="kicker">1 · The idea</div>
+        <h2>Bracketing and iteration</h2>
+        <p class="en">A root of f(x) = 0 is a value x where the graph crosses the x-axis. Numerical methods start with a guess (or an interval) and improve it repeatedly until the answer is accurate enough.</p>
+        <p class="ar">جذر f(x) = 0 هو قيمة x عندها الرسم يقطع محور x. الطرق العددية بتبدأ بتخمين (أو فترة) و بتحسّنه بتكرار لحد ما الدقة تكفي.</p>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Intermediate value theorem · نظرية القيمة المتوسطة</h4>
+            <p class="en">If f is continuous on [a, b] and f(a)·f(b) &lt; 0, then there is at least one root in (a, b). This is the starting condition for bisection.</p>
+            <p class="ar">لو f متصلة على [a, b] وf(a)·f(b) &lt; 0، يبقى فيه جذر واحد على الأقل في (a, b). ده شرط البداية للتنصيف.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="bisection">
+        <div class="kicker">2 · Bisection</div>
+        <h2>Halve the interval every time</h2>
+        <div class="formula">
+          <div class="flabel">Bisection formula</div>
+          <div class="fbody">x<sub>r</sub> = (x<sub>l</sub> + x<sub>u</sub>) / 2</div>
+          <div class="fnote">Replace the half where the sign does not change.</div>
+        </div>
+        <p class="en">Choose x<sub>l</sub> and x<sub>u</sub> with opposite signs. Compute the midpoint x<sub>r</sub>. If f(x<sub>l</sub>)·f(x<sub>r</sub>) &lt; 0, the root is in the lower half; set x<sub>u</sub> = x<sub>r</sub>. Otherwise set x<sub>l</sub> = x<sub>r</sub>. Repeat.</p>
+        <p class="ar">اختار x<sub>l</sub> وx<sub>u</sub> بإشارتين مختلفتين. احسب نقطة المنتصف x<sub>r</sub>. لو f(x<sub>l</sub>)·f(x<sub>r</sub>) &lt; 0، الجذر في النصف السفلي؛ خلي x<sub>u</sub> = x<sub>r</sub>. غير كده خلي x<sub>l</sub> = x<sub>r</sub>. وكرر.</p>
+        <div class="example">
+          <div class="tag">Example 1 · bisection</div>
+          <h4>Use bisection to solve 2x³ − x² + 2x − 1 = 0 on [0, 1].</h4>
+          <div class="work">
+            <span class="step">f(0) = −1 &lt; 0, f(1) = 2 &gt; 0 → root in [0,1]</span>
+            <span class="step">x1 = (0+1)/2 = 0.5</span>
+            <span class="step">f(0.5) = 2(0.125) − 0.25 + 1 − 1 = 0</span>
+            <span class="step">The root is exactly x = 0.5</span>
+          </div>
+        </div>
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Convergence · التقارب</h4>
+            <p class="en">Bisection always converges if the sign change exists, but it is slow (linear). The error is halved each iteration. It never uses the size of f(x), only its sign.</p>
+            <p class="ar">التنصيف بيتقارب دايمًا لو فيه تغير إشارة، لكنه بطيء (تقارب خطي). الخطأ بيقل للنصف كل تكرار. مبيستخدمش قيمة f(x)، بس إشارتها.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fixed-point">
+        <div class="kicker">3 · Fixed-point iteration</div>
+        <h2>Rewrite f(x) = 0 as x = g(x)</h2>
+        <div class="formula">
+          <div class="flabel">Fixed-point iteration</div>
+          <div class="fbody">x<sub>n+1</sub> = g(x<sub>n</sub>)</div>
+          <div class="fnote">Converges if |g′(x)| &lt; 1 near the root.</div>
+        </div>
+        <p class="en">Rearrange the equation so x appears alone. Start with x₀, then iterate. The method converges when the derivative of g near the root is less than 1 in magnitude. If |g′| &gt; 1, it diverges — choose a different rearrangement.</p>
+        <p class="ar">رتّب المعادلة بحيث x تبقى لوحدها. ابدأ بـx₀ وكرر. الطريقة بتتقارب لما |مشتقة g| قرب الجذر أقل من 1. لو |g′| &gt; 1، بتتباعد — اختار ترتيب تاني.</p>
+        <div class="example">
+          <div class="tag">Example 2 · fixed point</div>
+          <h4>Solve x − e<sup>−x</sup> = 0 using x = e<sup>−x</sup>, starting at x₀ = 0.</h4>
+          <div class="work">
+            <span class="step">x1 = e⁰ = 1</span>
+            <span class="step">x2 = e<sup>−1</sup> ≈ 0.3679</span>
+            <span class="step">x3 = e<sup>−0.3679</sup> ≈ 0.6922</span>
+            <span class="step">x4 = e<sup>−0.6922</sup> ≈ 0.5005</span>
+            <span class="step">x5 = e<sup>−0.5005</sup> ≈ 0.6062</span>
+            <span class="step">Continues toward x ≈ 0.5671</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="newton">
+        <div class="kicker">4 · Newton–Raphson</div>
+        <h2>Use the tangent line</h2>
+        <div class="formula">
+          <div class="flabel">Newton–Raphson formula</div>
+          <div class="fbody">x<sub>n+1</sub> = x<sub>n</sub> − f(x<sub>n</sub>) / f′(x<sub>n</sub>)</div>
+          <div class="fnote">Requires f′(x) ≠ 0 and a good initial guess.</div>
+        </div>
+        <p class="en">Newton–Raphson is usually the fastest method (quadratic convergence near the root). It needs the derivative and a starting point close to the root. A bad guess or a zero derivative can make it fail.</p>
+        <p class="ar">نيوتن–رافسون عادةً أسرع طريقة (تقارب تربيعي قرب الجذر). محتاج المشتقة ونقطة بداية قريبة من الجذر. تخمين وحش أو مشتقة صفر ممكن يخليها تفشل.</p>
+        <div class="example">
+          <div class="tag">Example 3 · Newton–Raphson</div>
+          <h4>Solve f(x) = x² − 2 = 0 starting at x₀ = 1.</h4>
+          <div class="work">
+            <span class="step">f′(x) = 2x</span>
+            <span class="step">x1 = 1 − (1−2)/(2) = 1.5</span>
+            <span class="step">x2 = 1.5 − (2.25−2)/(3) = 1.4167</span>
+            <span class="step">x3 = 1.4167 − (2.0069−2)/(2.8333) ≈ 1.41422</span>
+            <span class="step">Converges to √2 ≈ 1.41421</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="kicker">5 · Comparison</div>
+        <h2>Which method should you use?</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>Needs</th><th>Convergence</th><th>Best for</th></tr></thead>
+            <tbody>
+              <tr><td>Bisection</td><td>Sign change on [a,b]</td><td>Slow but guaranteed</td><td>Rough first root</td></tr>
+              <tr><td>Fixed point</td><td>x = g(x), |g′| &lt; 1</td><td>Linear</td><td>Simple rearrangements</td></tr>
+              <tr><td>Newton–Raphson</td><td>f′(x), good guess</td><td>Quadratic (fast)</td><td>Accurate root quickly</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Exam strategy · استراتيجية الامتحان</h4>
+            <p class="en">If the question says “use bisection”, show the interval, midpoint, and sign check each iteration. If it says “use Newton”, write f′ first. If it says “fixed point”, show the rearrangement and check |g′|.</p>
+            <p class="ar">لو السؤال قال “استخدم التنصيف”، اكتب الفترة ونقطة المنتصف وفحص الإشارة كل تكرار. لو قال “نيوتن”، اكتب f′ الأول. ولو قال “نقطة ثابتة”، اكتب الترتيب واتأكد من |g′|.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">6 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Bisection requires: · التنصيف يحتاج:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="na1" data-correct="true"> a) f(a)·f(b) &lt; 0</label>
+              <label><input type="radio" name="na1" data-correct="false"> b) f′(x) = 0</label>
+              <label><input type="radio" name="na1" data-correct="false"> c) |g′| &gt; 1</label>
+              <label><input type="radio" name="na1" data-correct="false"> d) a = b</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> A sign change guarantees a root in the interval by the intermediate value theorem.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The bisection midpoint is: · نقطة منتصف التنصيف:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="na2" data-correct="true"> a) (x<sub>l</sub>+x<sub>u</sub>)/2</label>
+              <label><input type="radio" name="na2" data-correct="false"> b) x<sub>l</sub>·x<sub>u</sub></label>
+              <label><input type="radio" name="na2" data-correct="false"> c) f(x<sub>l</sub>)/f(x<sub>u</sub>)</label>
+              <label><input type="radio" name="na2" data-correct="false"> d) x<sub>l</sub>−x<sub>u</sub></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The midpoint is the average of the lower and upper bounds.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">Fixed-point iteration uses: · النقطة الثابتة تستخدم:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="na3" data-correct="false"> a) x<sub>n+1</sub> = f′(x<sub>n</sub>)</label>
+              <label><input type="radio" name="na3" data-correct="true"> b) x<sub>n+1</sub> = g(x<sub>n</sub>)</label>
+              <label><input type="radio" name="na3" data-correct="false"> c) x<sub>n+1</sub> = (x<sub>l</sub>+x<sub>u</sub>)/2</label>
+              <label><input type="radio" name="na3" data-correct="false"> d) x<sub>n+1</sub> = x<sub>n</sub> + f(x<sub>n</sub>)</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> Rewrite f(x)=0 as x=g(x), then iterate.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">Fixed-point iteration converges near the root if: · بتتقارب لو:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="na4" data-correct="true"> a) |g′(x)| &lt; 1</label>
+              <label><input type="radio" name="na4" data-correct="false"> b) |g′(x)| &gt; 1</label>
+              <label><input type="radio" name="na4" data-correct="false"> c) g′(x) = 0 always</label>
+              <label><input type="radio" name="na4" data-correct="false"> d) f′(x) = 0</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The contraction condition |g′| &lt; 1 ensures convergence.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">Newton–Raphson formula is: · صيغة نيوتن–رافسون:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="na5" data-correct="true"> a) x<sub>n+1</sub> = x<sub>n</sub> − f/f′</label>
+              <label><input type="radio" name="na5" data-correct="false"> b) x<sub>n+1</sub> = x<sub>n</sub> + f/f′</label>
+              <label><input type="radio" name="na5" data-correct="false"> c) x<sub>n+1</sub> = f′/f</label>
+              <label><input type="radio" name="na5" data-correct="false"> d) x<sub>n+1</sub> = (x<sub>l</sub>+x<sub>u</sub>)/2</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The tangent line gives x<sub>n+1</sub> = x<sub>n</sub> − f(x<sub>n</sub>)/f′(x<sub>n</sub>).</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">Which method is usually fastest near the root? · أسرع طريقة قرب الجذر:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="na6" data-correct="false"> a) Bisection</label>
+              <label><input type="radio" name="na6" data-correct="false"> b) Fixed point</label>
+              <label><input type="radio" name="na6" data-correct="true"> c) Newton–Raphson</label>
+              <label><input type="radio" name="na6" data-correct="false"> d) Guessing</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>c)</b> Newton–Raphson has quadratic convergence near a simple root.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="theory-of-equations.html"><span>← Previous</span><b>Theory of Equations</b></a>
+        <a href="gauss-method.html" class="next"><span>Next →</span><b>Gauss's Method</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#idea"><span class="dot blue"></span>The idea</a>
+          <a href="#bisection"><span class="dot"></span>Bisection</a>
+          <a href="#fixed-point"><span class="dot gold"></span>Fixed point</a>
+          <a href="#newton"><span class="dot pink"></span>Newton–Raphson</a>
+          <a href="#compare"><span class="dot"></span>Comparison</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <div class="formula" style="margin:0"><div class="fbody" style="font-size:16px">x<sub>r</sub> = (x<sub>l</sub>+x<sub>u</sub>)/2</div><div class="fnote">bisection</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">x<sub>n+1</sub> = g(x<sub>n</sub>)</div><div class="fnote">fixed point</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">x<sub>n+1</sub> = x<sub>n</sub> − f/f′</div><div class="fnote">Newton–Raphson</div></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature &amp; Thermometry — Physics Midterm Lab</title>
+<meta name="description" content="شرح الحرارة والترمومترات: القانون الصفري، الاتزان الحراري، سلالم سيلزيوس وكلفن وفهرنهايت، الصفر المطلق، والتحويلات.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/temperature.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Temperature &amp; Thermometry — Physics Midterm Lab">
+<meta property="og:description" content="شرح الحرارة والترمومترات: القانون الصفري، الاتزان الحراري، سلالم سيلزيوس وكلفن وفهرنهايت، الصفر المطلق، والتحويلات.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/temperature.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Temperature &amp; Thermometry — Physics Midterm Lab">
+<meta name="twitter:description" content="شرح الحرارة والترمومترات: القانون الصفري، الاتزان الحراري، سلالم سيلزيوس وكلفن وفهرنهايت، الصفر المطلق، والتحويلات.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="temperature">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects · كل المواد</a> / <a href="index.html">Physics · الفيزياء</a> / Temperature &amp; Thermometry</div>
+    <div class="eyebrow">Topic 04 · Heat basics</div>
+    <h1>Temperature &amp; Thermometry <span style="color:var(--muted);font-weight:700">· الحرارة والترمومترات</span></h1>
+    <p class="lead en">Hot and cold are feelings — physics needs a number. This page explains thermal equilibrium, the zeroth law, how thermometers are calibrated, and how to convert between Celsius, Kelvin, and Fahrenheit without mistakes.</p>
+    <p class="lead ar">السخن والبارد إحساس، لكن الفيزياء محتاجة رقم. الصفحة دي بتشرح الاتزان الحراري، القانون الصفري، معايرة الترمومتر، والتحويل بين سيلزيوس وكلفن وفهرنهايت من غير غلط.</p>
+    <div class="topic-tags">
+      <span class="badge green">Zeroth law</span>
+      <span class="badge">Thermal equilibrium</span>
+      <span class="badge gold">Celsius · Kelvin · Fahrenheit</span>
+      <span class="badge pink">Absolute zero</span>
+    </div>
+  </div>
+</header>
+
+<div class="container layout" id="main">
+  <article>
+    <section id="idea" class="section">
+      <div class="callout tip">
+        <div class="icon">1</div>
+        <div>
+          <h4>الفكرة ببساطة · The big idea</h4>
+          <p class="en">Temperature tells us the direction of energy transfer. If two objects are in thermal contact and no energy flows between them, they are at the same temperature and in <b>thermal equilibrium</b>. Our senses are unreliable, so we use a reproducible physical property that changes with temperature — a thermometer.</p>
+          <p class="ar">درجة الحرارة بتحدد اتجاه انتقال الطاقة. لو جسمين في تلامس حراري ومفيش طاقة بتنتقل بينهم، يبقوا عند نفس الدرجة وفي <b>اتزان حراري</b>. إحساسنا مش موثوق، فبنستخدم خاصية فيزيائية قابلة للتكرار بتتغير مع الحرارة — الترمومتر.</p>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="card"><h3>Thermal contact · تلامس حراري</h3><p class="en">Two objects are in thermal contact if energy can be exchanged between them, usually as heat or electromagnetic radiation, due to a temperature difference.</p><p class="ar">جسمان في تلامس حراري لو الطاقة تقدر تنتقل بينهم، غالبًا حرارة أو إشعاع كهرومغناطيسي، بسبب فرق درجة الحرارة.</p></div>
+        <div class="card"><h3>Thermal equilibrium · اتزان حراري</h3><p class="en">A situation where two objects in thermal contact would not exchange energy if left alone. They have the same temperature.</p><p class="ar">حالة جسمين في تلامس حراري مابيتبادلوش طاقة لو سبتهم. عندهم نفس درجة الحرارة.</p></div>
+      </div>
+
+      <div class="formula">
+        <div class="flabel">Zeroth law of thermodynamics · القانون الصفري</div>
+        <div class="fbody">If A ⇌ C and B ⇌ C, then A ⇌ B</div>
+        <div class="fnote">If two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other.</div>
+      </div>
+      <p class="en">Why does this matter? It justifies using a thermometer (C) to compare A and B: if the thermometer reads the same in both, then A and B have the same temperature. The zeroth law is the logical basis of temperature measurement. It comes “zeroth” because it was stated after the first and second laws, but it is logically prior to them.</p>
+      <p class="ar">ليه القانون ده مهم؟ لأنه بيبرر استخدام الترمومتر (C) لمقارنة A وB: لو الترمومتر قرأ نفس القراءة في الاتنين، يبقى A وB عندهم نفس الدرجة. القانون الصفري هو الأساس المنطقي لقياس الحرارة، وسُمي "صفري" لأنه اتقال بعد القانون الأول والتاني لكنه منطقيًا قبلهم.</p>
+    </section>
+
+    <section id="definition" class="section">
+      <div class="section-head"><div><div class="kicker">1 · Definition</div><h2>تعريف درجة الحرارة · Temperature defined</h2></div></div>
+      <p class="en">Temperature is the property that determines whether an object is in thermal equilibrium with other objects. Two objects in thermal equilibrium are at the same temperature. If their temperatures differ, they are not in thermal equilibrium, and energy will transfer when they are placed in contact.</p>
+      <p class="ar">درجة الحرارة هي الخاصية اللي بتحدد هل الجسم في اتزان حراري مع غيره ولا لأ. الجسمان في اتزان حراري عندهم نفس الدرجة. لو الدرجات مختلفة، مش في اتزان، والطاقة هتنتقل لما يتلامسوا.</p>
+      <div class="callout warn">
+        <div class="icon">!</div>
+        <div><h4>Question trap · فخ سؤال</h4><p class="en">Energy travels from the object at higher temperature to the object at lower temperature — <b>not</b> from the larger object, and <b>not</b> from the object with more mass.</p><p class="ar">الطاقة بتنتقل من الجسم الأعلى في درجة الحرارة للجسم الأقل — <b>مش</b> من الأكبر حجمًا، و<b>مش</b> من الأكثر كتلة.</p></div>
+      </div>
+    </section>
+
+    <section id="thermometers" class="section">
+      <div class="section-head"><div><div class="kicker">2 · Thermometers</div><h2>الترمومترات · Thermometers</h2></div></div>
+      <p class="en">A thermometer measures temperature using a physical property that changes with temperature. Common properties: volume of a liquid, dimensions of a solid, pressure of a gas at constant volume, volume of a gas at constant pressure, electrical resistance, and color.</p>
+      <p class="ar">الترمومتر بيقيس الحرارة بخاصية فيزيائية بتتغير مع الحرارة. أمثلة: حجم سائل، أبعاد صلب، ضغط غاز عند حجم ثابت، حجم غاز عند ضغط ثابت، المقاومة الكهربية، واللون.</p>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Liquid-in-glass · زئبق/كحول في زجاج</h3>
+          <p class="en">The liquid expands in a capillary tube when heated. Mercury freezes at −39 °C; alcohol boils below 85 °C, so each has a limited range.</p>
+          <p class="ar">السائل يتمدد في أنبوبة شعرية عند التسخين. الزئبق يتجمد عند −39 °C، والكحول يغلي قبل 85 °C، فكل واحد ليه مدى محدود.</p>
+        </div>
+        <div class="card">
+          <h3>Constant-volume gas thermometer</h3>
+          <p class="en">Uses the pressure change of a fixed-volume gas. Calibrated at the ice point and steam point. Readings are almost independent of the gas used — this is why it is a primary thermometer.</p>
+          <p class="ar">بيستخدم تغير ضغط غاز بحجم ثابت. بيتعاير عند نقطة الثلج ونقطة البخار. قراءاته شبه مستقلة عن نوع الغاز — عشان كده ترمومتر أساسي.</p>
+        </div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 300" role="img" aria-label="Thermometer with Celsius and Fahrenheit scales">
+          <rect x="180" y="30" width="34" height="210" rx="17" fill="#102b46" stroke="#8fb0d1" stroke-width="2"/>
+          <circle cx="197" cy="248" r="26" fill="#ff7ab6" stroke="#8fb0d1" stroke-width="2"/>
+          <rect x="188" y="90" width="18" height="160" fill="#ff7ab6" opacity=".85"/>
+          <line x1="214" y1="70" x2="245" y2="70" stroke="#45e0c0" stroke-width="2"/><text x="255" y="74" class="svg-small">100 °C = 212 °F = 373.15 K</text>
+          <line x1="214" y1="215" x2="245" y2="215" stroke="#45e0c0" stroke-width="2"/><text x="255" y="219" class="svg-small">0 °C = 32 °F = 273.15 K</text>
+          <line x1="214" y1="142" x2="235" y2="142" stroke="#a9bed6"/><text x="245" y="146" class="svg-small">50 °C</text>
+          <line x1="214" y1="178" x2="235" y2="178" stroke="#a9bed6"/><text x="245" y="182" class="svg-small">25 °C</text>
+          <line x1="160" y1="20" x2="160" y2="270" stroke="#ffcb6b" stroke-dasharray="4 5"/>
+          <text x="90" y="282" class="svg-small">absolute zero: −273.15 °C = 0 K</text>
+        </svg>
+        <figcaption>نقطتا المعايرة: نقطة الثلج (0 °C) ونقطة البخار (100 °C). المسافة بينهما تتقسم 100 قسم في سيلزيوس و180 قسم في فهرنهايت.</figcaption>
+      </figure>
+
+      <div class="callout tip">
+        <div class="icon">°</div>
+        <div>
+          <h4>Calibration · المعايرة</h4>
+          <p class="en">A thermometer is calibrated using natural constant-temperature systems: an ice–water mixture at atmospheric pressure (<b>ice point</b>, 0 °C) and water–steam in equilibrium (<b>steam point</b>, 100 °C). The length between them is divided into equal increments.</p>
+          <p class="ar">بيتعاير باستخدام أنظمة طبيعية ثابتة الحرارة: خليط ثلج وماء عند الضغط الجوي (<b>نقطة الثلج</b> 0 °C) وماء وبخار في اتزان (<b>نقطة البخار</b> 100 °C). المسافة بينهم تتقسم أقسام متساوية.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="scales" class="section">
+      <div class="section-head"><div><div class="kicker">3 · Temperature scales</div><h2>سلالم درجة الحرارة · The three scales</h2></div></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Scale</th><th>Ice point</th><th>Steam point</th><th>Divisions</th><th>Absolute zero</th></tr></thead>
+          <tbody>
+            <tr><td><b>Celsius °C</b></td><td>0 °C</td><td>100 °C</td><td>100</td><td>−273.15 °C</td></tr>
+            <tr><td><b>Kelvin K</b></td><td>273.15 K</td><td>373.15 K</td><td>100</td><td>0 K</td></tr>
+            <tr><td><b>Fahrenheit °F</b></td><td>32 °F</td><td>212 °F</td><td>180</td><td>−459.67 °F</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="formula-grid mt-2">
+        <div class="formula"><div class="flabel">Celsius ↔ Kelvin</div><div class="fbody">T<sub>K</sub> = T<sub>C</sub> + 273.15</div><div class="fnote">Same size degree, different zero</div></div>
+        <div class="formula"><div class="flabel">Celsius ↔ Fahrenheit</div><div class="fbody">T<sub>F</sub> = (9/5) T<sub>C</sub> + 32</div><div class="fnote">Different size degree and different zero</div></div>
+        <div class="formula"><div class="flabel">Fahrenheit → Celsius</div><div class="fbody">T<sub>C</sub> = (5/9)(T<sub>F</sub> − 32)</div></div>
+        <div class="formula"><div class="flabel">Temperature changes · التغيرات</div><div class="fbody">ΔT<sub>C</sub> = ΔT<sub>K</sub> = (5/9) ΔT<sub>F</sub></div><div class="fnote">1 °C change = 1 K change = 1.8 °F change</div></div>
+      </div>
+
+      <div class="callout">
+        <div class="icon">0</div>
+        <div>
+          <h4>Absolute zero and the Kelvin scale</h4>
+          <p class="en">If the pressure–temperature lines of different gases are extended, they all reach zero pressure at −273.15 °C. This is <b>absolute zero</b>, the basis of the absolute (Kelvin) scale. The Kelvin is defined using the triple point of water: 273.16 K at 0.01 °C and 4.58 mmHg. The triple point is where ice, liquid water, and steam coexist. No degree symbol is used with kelvins.</p>
+          <p class="ar">لو مدّيت خطوط الضغط–الحرارة لغازات مختلفة، كلها بتوصل لضغط صفر عند −273.15 °C. ده <b>الصفر المطلق</b>، أساس السلم المطلق (كلفن). الكلفن معرّف بنقطة الماء الثلاثية: 273.16 K عند 0.01 °C و4.58 mmHg، وهي النقطة اللي يتواجد فيها الثلج والماء والبخار معًا. كلفن مالوش رمز درجة (°).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="section-head"><div><div class="kicker">4 · Solved examples</div><h2>أمثلة محلولة</h2></div></div>
+
+      <div class="example">
+        <div class="tag">Example 1 · skin temperature</div>
+        <h4>During dilation, skin warms from 72 °F to 84 °F. Convert to Celsius and Kelvin, and find the difference.</h4>
+        <div class="work">
+          <span class="step">T_C = (5/9)(T_F − 32)</span>
+          <span class="step">72 °F → (5/9)(40) = 22.22 °C</span>
+          <span class="step">84 °F → (5/9)(52) = 28.89 °C</span>
+          <span class="step">ΔT_C = 28.89 − 22.22 = 6.67 °C</span>
+          <span class="step">T_K = T_C + 273.15 → 295.37 K and 302.04 K</span>
+          <span class="step">ΔT_K = 302.04 − 295.37 = 6.67 K</span>
+        </div>
+        <p class="en mt-1">Celsius and Kelvin have the same size degree, so the numerical temperature difference is the same: 6.67.</p>
+        <p class="ar mt-1">سيلزيوس وكلفن نفس حجم الدرجة، ففرق الحرارة بنفس الرقم: 6.67.</p>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 2 · 50 °F</div>
+        <h4>On a day when the temperature reaches 50 °F, what is it in °C and K?</h4>
+        <div class="work">
+          <span class="step">T_C = (5/9)(50 − 32) = (5/9)(18) = 10 °C</span>
+          <span class="step">T_K = 10 + 273.15 = 283.15 K</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 3 · which degree is larger?</div>
+        <h4>Which represents a larger temperature change: a Celsius degree or a Fahrenheit degree?</h4>
+        <div class="work">
+          <span class="step">1 °C change = 1.8 °F change</span>
+          <span class="step">Therefore a Celsius degree is larger.</span>
+        </div>
+        <p class="ar mt-1">الدرجة السلزيوس أكبر: تغير 1 °C = تغير 1.8 °F، فالفهرنهايت درجة أصغر.</p>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section">
+      <div class="section-head"><div><div class="kicker">5 · Exam traps</div><h2>أخطاء شائعة</h2></div></div>
+      <div class="grid two">
+        <div class="card"><h3>استخدم كلفن في قوانين الغاز</h3><p class="en">Gas laws require absolute temperature (K). Using °C gives wrong answers, especially in ratios.</p><p class="ar">قوانين الغاز لازم كلفن. استخدام °C بيدي إجابات غلط، خصوصًا في النسب.</p></div>
+        <div class="card"><h3>الفرق ≠ القيمة</h3><p class="en">ΔT in °C equals ΔT in K, but a temperature value in °C is not equal to its Kelvin value. Add 273.15 for values, not for differences.</p><p class="ar">فرق الحرارة بالسلزيوس = فرقها بالكلفن، لكن القيمة نفسها مش متساوية. بتضيف 273.15 للقيمة مش للفرق.</p></div>
+        <div class="card"><h3>فهرنهايت: اطرح 32 الأول</h3><p class="en">When converting °F → °C, subtract 32 <i>before</i> multiplying by 5/9.</p><p class="ar">لما تحوّل من فهرنهايت لسلزيوس، اطرح 32 <i>قبل</i> الضرب في 5/9.</p></div>
+        <div class="card"><h3>كلفن مالوش درجة</h3><p class="en">Write 300 K, not 300 °K. The degree symbol is only for Celsius and Fahrenheit.</p><p class="ar">اكتب 300 K مش 300 °K. رمز الدرجة للسلزيوس والفهرنهايت فقط.</p></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-head"><div><div class="kicker">6 · Practice</div><h2>أسئلة على الحرارة والترمومترات</h2></div></div>
+      <div class="quiz">
+
+        <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Two objects with different sizes, masses, and temperatures are placed in thermal contact. Energy travels: · الطاقة تنتقل:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t1"> a) from larger to smaller</label>
+            <label><input type="radio" name="t1"> b) from more mass to less mass</label>
+            <label><input type="radio" name="t1" data-correct="true"> c) from higher temperature to lower temperature</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Temperature difference — not size or mass — drives heat transfer.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The zeroth law says: if A is in equilibrium with C and B is in equilibrium with C, then: · القانون الصفري يعني:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t2" data-correct="true"> a) A and B are in equilibrium with each other</label>
+            <label><input type="radio" name="t2"> b) A and B must have different temperatures</label>
+            <label><input type="radio" name="t2"> c) C is hotter than both</label>
+            <label><input type="radio" name="t2"> d) energy flows from A to B forever</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> Thermal equilibrium is transitive, which is why a thermometer works.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">The ice point of water is: · نقطة الثلج:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t3" data-correct="true"> a) 0 °C = 273.15 K = 32 °F</label>
+            <label><input type="radio" name="t3"> b) 100 °C = 373.15 K = 212 °F</label>
+            <label><input type="radio" name="t3"> c) 0 K</label>
+            <label><input type="radio" name="t3"> d) 4 °C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> Ice point = freezing point of water at 1 atm.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">Convert 100 °C to Kelvin. · حوّل 100 °C لكلفن:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t4"> a) 100 K</label>
+            <label><input type="radio" name="t4" data-correct="true"> b) 373.15 K</label>
+            <label><input type="radio" name="t4"> c) 273.15 K</label>
+            <label><input type="radio" name="t4"> d) 212 K</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> T_K = 100 + 273.15 = 373.15 K.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">Convert 32 °F to °C. · حوّل 32 °F لسلزيوس:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t5" data-correct="true"> a) 0 °C</label>
+            <label><input type="radio" name="t5"> b) 32 °C</label>
+            <label><input type="radio" name="t5"> c) 100 °C</label>
+            <label><input type="radio" name="t5"> d) −32 °C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> T_C = (5/9)(32 − 32) = 0 °C.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">Which temperature scale has no degree symbol? · أي سلم بدون رمز درجة؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t6"> a) Celsius</label>
+            <label><input type="radio" name="t6"> b) Fahrenheit</label>
+            <label><input type="radio" name="t6" data-correct="true"> c) Kelvin</label>
+            <label><input type="radio" name="t6"> d) all</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> We write 300 K, not 300 °K.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">7</div><div class="qtext">Absolute zero is: · الصفر المطلق:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t7"> a) 0 °C</label>
+            <label><input type="radio" name="t7"> b) 273.15 °C</label>
+            <label><input type="radio" name="t7" data-correct="true"> c) −273.15 °C = 0 K</label>
+            <label><input type="radio" name="t7"> d) −459.67 K</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> It is the zero of the Kelvin scale and cannot be reached.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">8</div><div class="qtext">A temperature change of 10 °C equals a change of: · تغير 10 °C يساوي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t8" data-correct="true"> a) 10 K</label>
+            <label><input type="radio" name="t8"> b) 18 K</label>
+            <label><input type="radio" name="t8"> c) 10 °F</label>
+            <label><input type="radio" name="t8"> d) 18 °C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> ΔT_C = ΔT_K, so a 10 °C change is a 10 K change. In Fahrenheit it would be 18 °F.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">9</div><div class="qtext">The triple point of water is: · نقطة الماء الثلاثية:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t9"> a) 0 °C and 1 atm</label>
+            <label><input type="radio" name="t9" data-correct="true"> b) 0.01 °C and 4.58 mmHg, defined as 273.16 K</label>
+            <label><input type="radio" name="t9"> c) 100 °C and 1 atm</label>
+            <label><input type="radio" name="t9"> d) −273.15 °C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> At the triple point, ice, liquid water, and steam coexist.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">10</div><div class="qtext">Which is the best reason a liquid-in-glass thermometer has a limited range? · سبب محدودية مدى الترمومتر الزجاجي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t10"> a) glass is transparent</label>
+            <label><input type="radio" name="t10" data-correct="true"> b) the liquid freezes or boils outside a certain range</label>
+            <label><input type="radio" name="t10"> c) it cannot be calibrated</label>
+            <label><input type="radio" name="t10"> d) it has no capillary</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Mercury freezes at −39 °C and alcohol boils below 85 °C.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">11</div><div class="qtext">What is 303 K in °C? · 303 K كم سلزيوس؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t11"> a) 0 °C</label>
+            <label><input type="radio" name="t11" data-correct="true"> b) 30 °C</label>
+            <label><input type="radio" name="t11"> c) 303 °C</label>
+            <label><input type="radio" name="t11"> d) 576 °C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> T_C = 303 − 273 = 30 °C.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">12</div><div class="qtext">A thermometer reads the same in ice water and in steam. It can be used to: · ترمومتر بيتعاير عند نقطتي الثلج والبخار عشان:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="t12" data-correct="true"> a) establish a temperature scale between these fixed points</label>
+            <label><input type="radio" name="t12"> b) measure only absolute zero</label>
+            <label><input type="radio" name="t12"> c) replace the zeroth law</label>
+            <label><input type="radio" name="t12"> d) measure mass</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> Fixed points define the scale; the distance between them is divided into equal degrees.</div>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidecard">
+      <h4>On this page</h4>
+      <div class="mini-nav">
+        <a href="#idea"><span class="dot"></span>الفكرة ببساطة</a>
+        <a href="#definition"><span class="dot gold"></span>التعريف</a>
+        <a href="#thermometers"><span class="dot blue"></span>الترمومترات</a>
+        <a href="#scales"><span class="dot pink"></span>السلالم</a>
+        <a href="#examples"><span class="dot"></span>أمثلة محلولة</a>
+        <a href="#quiz"><span class="dot gold"></span>الأسئلة</a>
+      </div>
+    </div>
+    <div class="sidecard">
+      <h4>Conversion cheat sheet</h4>
+      <p class="muted" style="font-size:13px;margin:0;line-height:2">
+        K = °C + 273.15<br>
+        °C = K − 273.15<br>
+        °F = 1.8 °C + 32<br>
+        °C = (°F − 32)/1.8<br>
+        Δ°C = ΔK<br>
+        Δ°F = 1.8 Δ°C
+      </p>
+    </div>
+  </aside>
+</div>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

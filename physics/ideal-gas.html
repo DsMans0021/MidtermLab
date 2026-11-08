@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theory of Ideal Gas — Physics Midterm Lab</title>
+<meta name="description" content="شرح نظرية الغاز المثالي: قوانين بويل وشارل وجاي لوساك، PV=nRT، النظرية الحركية، سرعة rms، الطاقة الداخلية، مع أمثلة وأسئلة محلولة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/ideal-gas.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Theory of Ideal Gas — Physics Midterm Lab">
+<meta property="og:description" content="شرح نظرية الغاز المثالي: قوانين بويل وشارل وجاي لوساك، PV=nRT، النظرية الحركية، سرعة rms، الطاقة الداخلية، مع أمثلة وأسئلة محلولة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/ideal-gas.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Theory of Ideal Gas — Physics Midterm Lab">
+<meta name="twitter:description" content="شرح نظرية الغاز المثالي: قوانين بويل وشارل وجاي لوساك، PV=nRT، النظرية الحركية، سرعة rms، الطاقة الداخلية، مع أمثلة وأسئلة محلولة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="ideal-gas">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects · كل المواد</a> / <a href="index.html">Physics · الفيزياء</a> / Ideal Gas</div>
+    <div class="eyebrow">Topic 07 · Thermal physics</div>
+    <h1>Theory of Ideal Gas <span style="color:var(--muted);font-weight:700">· نظرية الغاز المثالي</span></h1>
+    <p class="lead en">One equation, PV = nRT, connects pressure, volume, temperature and amount of gas. Then kinetic theory explains <em>why</em> — pressure is just molecules bouncing off walls, and temperature is just average molecular kinetic energy.</p>
+    <p class="lead ar">معادلة واحدة PV = nRT بتربط الضغط والحجم ودرجة الحرارة وعدد المولات. وبعدها النظرية الحركية تشرح <em>ليه</em> — الضغط مجرد جزيئات بتصطدم بالحوائط، ودرجة الحرارة مجرد متوسط طاقة حركة الجزيئات.</p>
+    <div class="topic-tags">
+      <span class="badge green">PV = nRT</span>
+      <span class="badge">Boyle · Charles · Gay-Lussac</span>
+      <span class="badge gold">v<sub>rms</sub> = √(3RT/M)</span>
+      <span class="badge pink">U = 3/2 nRT</span>
+    </div>
+  </div>
+</header>
+
+<div class="container layout" id="main">
+  <article>
+    <section id="model" class="section">
+      <div class="section-head"><div><div class="kicker">1 · The model</div><h2>إيه هو الغاز المثالي؟ · What is an ideal gas?</h2></div></div>
+      <p class="en">An ideal gas is a collection of atoms or molecules that move randomly and exert no long-range forces on each other. Each particle is pointlike: its volume is negligible compared with the container volume. Real gases behave approximately like ideal gases at <b>low density</b> (low pressure and/or high temperature), when molecules are far apart and forces between them are weak.</p>
+      <p class="ar">الغاز المثالي مجموعة ذرات أو جزيئات بتتحرك عشوائيًا ومابتأثرش على بعض بقوى بعيدة المدى. كل جسيم نقطي: حجمه مهمل مقارنة بحجم الوعاء. الغازات الحقيقية تقرب من المثالي عند <b>الكثافة المنخفضة</b> (ضغط منخفض و/أو حرارة عالية)، لما الجزيئات تكون بعيدة والقوى بينها ضعيفة.</p>
+      <div class="grid two">
+        <div class="card"><h3>Macroscopic view · نظرة عيانية</h3><p class="en">Describe the gas by state variables: pressure P, volume V, temperature T, and amount n or N. These are measurable and linked by an equation of state.</p><p class="ar">تصف الغاز بمتغيرات الحالة: الضغط P والحجم V ودرجة الحرارة T والكمية n أو N. قابلة للقياس ومربوطة بمعادلة حالة.</p></div>
+        <div class="card"><h3>Microscopic view · نظرة دقيقة</h3><p class="en">Describe the same gas by molecules of mass m moving with velocities v, colliding elastically with each other and with the walls. Pressure and temperature emerge from averages over huge numbers of molecules.</p><p class="ar">تصف نفس الغاز بجزيئات كتلتها m تتحرك بسرعات v وتتصادم تصادمًا مرنًا مع بعضها ومع الحوائط. الضغط ودرجة الحرارة ينتجوا من متوسطات أعداد هائلة من الجزيئات.</p></div>
+      </div>
+    </section>
+
+    <section id="moles" class="section">
+      <div class="section-head"><div><div class="kicker">2 · Amount of substance</div><h2>المول وعدد أفوجادرو · Moles &amp; Avogadro</h2></div></div>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Number of moles · عدد المولات</div><div class="fbody">n = m / M</div><div class="fnote">m = mass of sample (g), M = molar mass (g/mol)</div></div>
+        <div class="formula"><div class="flabel">Avogadro's number · عدد أفوجادرو</div><div class="fbody">N<sub>A</sub> = 6.02 × 10²³ particles/mol</div><div class="fnote">One mole of any substance contains this many particles.</div></div>
+        <div class="formula"><div class="flabel">Number of molecules</div><div class="fbody">N = n N<sub>A</sub></div></div>
+        <div class="formula"><div class="flabel">Mass of one molecule</div><div class="fbody">m<sub>0</sub> = M / N<sub>A</sub></div><div class="fnote">Use M in kg/mol to get kg per molecule</div></div>
+      </div>
+      <div class="callout tip">
+        <div class="icon">mol</div>
+        <div><p class="en">One mole of carbon-12 has a mass of exactly 12 g and contains exactly 6.02 × 10²³ atoms. The same number of particles in one mole of any substance is Avogadro's number. Example: a helium atom has mass 4.00 g/mol ÷ 6.02×10²³ = 6.64×10⁻²⁴ g = 6.64×10⁻²⁷ kg.</p><p class="ar">مول واحد من كربون-12 كتلته 12 جم بالضبط وفيه 6.02×10²³ ذرة. نفس العدد في مول أي مادة هو عدد أفوجادرو. مثال: ذرة هيليوم كتلتها 4.00 ÷ 6.02×10²³ = 6.64×10⁻²⁴ جم = 6.64×10⁻²⁷ كجم.</p></div>
+      </div>
+    </section>
+
+    <section id="laws" class="section">
+      <div class="section-head"><div><div class="kicker">3 · Experimental gas laws</div><h2>قوانين الغازات الثلاثة · The three gas laws</h2><p class="muted">كل قانون بيثبت متغير وبيغيّر الاتنين التانيين.</p></div></div>
+
+      <div class="grid three">
+        <div class="card">
+          <span class="badge green">Boyle's law</span>
+          <h3 class="mt-2">P ∝ 1/V</h3>
+          <p class="en">At constant temperature and amount of gas, pressure is inversely proportional to volume.</p>
+          <p class="ar">عند ثبات درجة الحرارة وعدد المولات، الضغط يتناسب عكسيًا مع الحجم.</p>
+          <div class="formula" style="margin:12px 0 0"><div class="fbody">P₁V₁ = P₂V₂</div></div>
+        </div>
+        <div class="card">
+          <span class="badge gold">Charles's law</span>
+          <h3 class="mt-2">V ∝ T</h3>
+          <p class="en">At constant pressure and amount, volume is directly proportional to absolute temperature.</p>
+          <p class="ar">عند ثبات الضغط وعدد المولات، الحجم يتناسب طرديًا مع درجة الحرارة المطلقة.</p>
+          <div class="formula" style="margin:12px 0 0"><div class="fbody">V₁/T₁ = V₂/T₂</div></div>
+        </div>
+        <div class="card">
+          <span class="badge pink">Gay-Lussac's law</span>
+          <h3 class="mt-2">P ∝ T</h3>
+          <p class="en">At constant volume and amount, pressure is directly proportional to absolute temperature.</p>
+          <p class="ar">عند ثبات الحجم وعدد المولات، الضغط يتناسب طرديًا مع درجة الحرارة المطلقة.</p>
+          <div class="formula" style="margin:12px 0 0"><div class="fbody">P₁/T₁ = P₂/T₂</div></div>
+        </div>
+      </div>
+
+      <div class="callout warn mt-3">
+        <div class="icon">K</div>
+        <div>
+          <h4>دائمًا كلفن · Always kelvin</h4>
+          <p class="en">All gas-law temperatures must be absolute temperatures: T(K) = T(°C) + 273. Using °C produces wrong answers, and at 0 °C it would divide by zero in Charles's law. Degrees Celsius are not proportional — 20 °C is not “twice as hot” as 10 °C, but 293 K and 283 K are meaningful ratios.</p>
+          <p class="ar">كل درجات الحرارة في قوانين الغاز لازم تكون مطلقة: T(K) = T(°C) + 273. استخدام °C بيدي إجابات غلط، وعند 0 °C هيقسم على صفر في قانون شارل. الدرجة المئوية مش متناسبة — 20 °C مش "ضعف" 10 °C، لكن 293 K و283 K نسبهم ليها معنى.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-3">Combined gas law · القانون المدمج</h3>
+      <div class="formula">
+        <div class="flabel">For a fixed amount of gas</div>
+        <div class="fbody">P₁V₁ / T₁ = P₂V₂ / T₂</div>
+        <div class="fnote">Combine Boyle + Charles + Gay-Lussac when n is constant. If only one variable is constant, the equation reduces to the matching law.</div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 240" role="img" aria-label="Three gas law graphs">
+          <g transform="translate(20,20)">
+            <rect x="0" y="0" width="220" height="190" rx="10" fill="#0d2233" stroke="#294a63"/>
+            <text x="110" y="24" text-anchor="middle" class="svg-label">Boyle: P vs V</text>
+            <line x1="30" y1="160" x2="195" y2="160" stroke="#8fb0d1"/>
+            <line x1="30" y1="160" x2="30" y2="45" stroke="#8fb0d1"/>
+            <path d="M45 60 C70 115, 105 140, 185 152" fill="none" stroke="#45e0c0" stroke-width="4"/>
+            <text x="150" y="180" class="svg-small">V</text><text x="8" y="55" class="svg-small">P</text>
+          </g>
+          <g transform="translate(270,20)">
+            <rect x="0" y="0" width="220" height="190" rx="10" fill="#0d2233" stroke="#294a63"/>
+            <text x="110" y="24" text-anchor="middle" class="svg-label">Charles: V vs T</text>
+            <line x1="30" y1="160" x2="195" y2="160" stroke="#8fb0d1"/>
+            <line x1="30" y1="160" x2="30" y2="45" stroke="#8fb0d1"/>
+            <line x1="38" y1="152" x2="185" y2="60" stroke="#ffcb6b" stroke-width="4"/>
+            <text x="150" y="180" class="svg-small">T (K)</text><text x="8" y="55" class="svg-small">V</text>
+          </g>
+          <g transform="translate(520,20)">
+            <rect x="0" y="0" width="220" height="190" rx="10" fill="#0d2233" stroke="#294a63"/>
+            <text x="110" y="24" text-anchor="middle" class="svg-label">Gay-Lussac: P vs T</text>
+            <line x1="30" y1="160" x2="195" y2="160" stroke="#8fb0d1"/>
+            <line x1="30" y1="160" x2="30" y2="45" stroke="#8fb0d1"/>
+            <line x1="38" y1="152" x2="185" y2="60" stroke="#ff7ab6" stroke-width="4"/>
+            <text x="150" y="180" class="svg-small">T (K)</text><text x="8" y="55" class="svg-small">P</text>
+          </g>
+        </svg>
+        <figcaption>الرسومات الثلاثة: بويل (عكسي)، شارل وجاي لوساك (طردي) — الخطوط المستقيمة في شارل وجاي لوساك بتعدي من الأصل لأن T كلفن.</figcaption>
+      </figure>
+    </section>
+
+    <section id="ideal-law" class="section">
+      <div class="section-head"><div><div class="kicker">4 · Equation of state</div><h2>قانون الغاز المثالي · The ideal gas law</h2></div></div>
+      <div class="formula">
+        <div class="flabel">Ideal gas law · قانون الغاز المثالي</div>
+        <div class="fbody">PV = nRT &nbsp;&nbsp;=&nbsp;&nbsp; N k<sub>B</sub>T</div>
+        <div class="fvars">
+          <div><b>P</b> absolute pressure · الضغط المطلق (Pa)</div>
+          <div><b>V</b> volume · الحجم (m³)</div>
+          <div><b>n</b> number of moles · عدد المولات (mol)</div>
+          <div><b>N</b> number of molecules · عدد الجزيئات</div>
+          <div><b>T</b> absolute temperature · الحرارة المطلقة (K)</div>
+          <div><b>R</b> universal gas constant = 8.31 J/(mol·K)</div>
+          <div><b>k<sub>B</sub></b> Boltzmann's constant = 1.38 × 10⁻²³ J/K = R/N<sub>A</sub></div>
+        </div>
+        <div class="fnote">R = 0.0821 L·atm/(mol·K) when P in atm and V in litres. At STP (0 °C, 1 atm), 1 mol occupies 22.4 L.</div>
+      </div>
+
+      <p class="en mt-2">The two forms are the same law. Multiply n by N<sub>A</sub> to get N, and use R = N<sub>A</sub>k<sub>B</sub>. Use n when you count moles; use N when you count molecules. The equation summarizes Boyle, Charles and Gay-Lussac: if T is constant, PV = constant; if P is constant, V/T = constant; if V is constant, P/T = constant.</p>
+      <p class="ar mt-2">الصيغتين نفس القانون. اضرب n في N_A تحصل على N، واستخدم R = N_A k_B. استخدم n لما تعد بالمولات، وN لما تعد بالجزيئات. القانون بيلخص بويل وشارل وجاي لوساك: لو T ثابت يبقى PV ثابت؛ لو P ثابت يبقى V/T ثابت؛ لو V ثابت يبقى P/T ثابت.</p>
+
+      <div class="callout">
+        <div class="icon">!</div>
+        <div>
+          <h4>Gauge vs absolute pressure · الضغط المقاس والمطلق</h4>
+          <p class="en">Most pressure gauges read gauge pressure: the difference above atmospheric pressure. The gas law needs <b>absolute</b> pressure: P<sub>abs</sub> = P<sub>gauge</sub> + P<sub>atm</sub>. With P<sub>atm</sub> ≈ 1.01 × 10⁵ Pa (1 atm).</p>
+          <p class="ar">معظم أجهزة قياس الضغط بتقرأ الضغط المقاس: الفرق فوق الضغط الجوي. قانون الغاز يحتاج الضغط <b>المطلق</b>: P_abs = P_gauge + P_atm، حيث P_atm ≈ 1.01×10⁵ Pa (1 atm).</p>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 1 · applying PV = nRT</div>
+        <h4>An ideal gas at 20 °C and 1.5 × 10⁵ Pa fills a 1.0 L container. (a) Find n. (b) The gas expands to 2.0 L while pressure falls to 1.01 × 10⁵ Pa. Find the final temperature.</h4>
+        <div class="work">
+          <span class="step">(a) T = 20 + 273 = 293 K, V = 1.0×10⁻³ m³</span>
+          <span class="step">n = PV/RT = (1.50×10⁵)(1.00×10⁻³)/[(8.31)(293)]</span>
+          <span class="step">n = 6.16 × 10⁻² mol</span>
+          <span class="step">(b) P₁V₁/T₁ = P₂V₂/T₂ → T₂ = T₁(P₂V₂)/(P₁V₁)</span>
+          <span class="step">T₂ = 293 × [(1.01×10⁵)(2.00×10⁻³)]/[(1.50×10⁵)(1.00×10⁻³)]</span>
+          <span class="step">T₂ ≈ 395 K (≈ 122 °C)</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 2 · tire pressure on a hot day</div>
+        <h4>A tire has gauge pressure 2.0 × 10⁵ Pa at 27 °C. After driving, the temperature is 57 °C. Find the new gauge pressure (constant volume).</h4>
+        <div class="work">
+          <span class="step">Convert to absolute: P₁ = 2.0×10⁵ + 1.01×10⁵ = 3.01×10⁵ Pa</span>
+          <span class="step">T₁ = 300 K, T₂ = 330 K</span>
+          <span class="step">P₂/T₂ = P₁/T₁ → P₂ = 3.01×10⁵ × 330/300</span>
+          <span class="step">P₂ = 3.31×10⁵ Pa (absolute)</span>
+          <span class="step">P_gauge = 3.31×10⁵ − 1.01×10⁵ = 2.30×10⁵ Pa</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 3 · balloon underwater (Boyle)</div>
+        <h4>A 30 cm³ balloon at 1 atm is taken to a depth of 4 m in fresh water. Temperature is constant. Find its volume. (ρ = 1000 kg/m³, g = 9.8 m/s²)</h4>
+        <div class="work">
+          <span class="step">Pressure at depth: P = P_atm + ρgh</span>
+          <span class="step">= 1.01×10⁵ + (1000)(9.8)(4) = 1.403×10⁵ Pa</span>
+          <span class="step">Boyle: P₁V₁ = P₂V₂</span>
+          <span class="step">V₂ = (1.01×10⁵ × 30)/(1.403×10⁵)</span>
+          <span class="step">V₂ ≈ 21.6 cm³</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="kinetic" class="section">
+      <div class="section-head"><div><div class="kicker">5 · Kinetic theory</div><h2>النظرية الحركية · Why pressure exists</h2></div></div>
+      <p class="en">Kinetic theory starts from molecules and derives the gas law. It rests on five assumptions:</p>
+      <p class="ar">النظرية الحركية بتبدأ من الجزيئات وتستنتج قانون الغاز. قائمة على خمس افتراضات:</p>
+      <ol class="clean">
+        <li><span class="en">The number of molecules is large, and the average separation is large compared with molecular size.</span><span class="ar">عدد الجزيئات كبير، ومتوسط المسافة بينها كبير مقارنة بحجمها.</span></li>
+        <li><span class="en">Molecules obey Newton's laws but move randomly as a whole.</span><span class="ar">الجزيئات تخضع لقوانين نيوتن لكن تتحرك عشوائيًا ككل.</span></li>
+        <li><span class="en">Molecules interact only through short-range forces during elastic collisions; no long-range forces.</span><span class="ar">تتفاعل فقط بقوى قصيرة المدى أثناء التصادمات المرنة؛ لا قوى بعيدة المدى.</span></li>
+        <li><span class="en">Collisions with the container walls are elastic.</span><span class="ar">التصادمات مع جدران الوعاء مرنة.</span></li>
+        <li><span class="en">All molecules of the gas are identical.</span><span class="ar">كل جزيئات الغاز متطابقة.</span></li>
+      </ol>
+
+      <h3 class="mt-3">Pressure from collisions · الضغط من التصادمات</h3>
+      <p class="en">A molecule of mass m moving with velocity −v<sub>x</sub> hits a wall and rebounds elastically with +v<sub>x</sub>. Its momentum change is Δp<sub>x</sub> = 2mv<sub>x</sub>. The round-trip time between hits on that wall is Δt = 2d/v<sub>x</sub>, so the average force from one molecule is F = Δp/Δt = mv<sub>x</sub>²/d. Summing over N molecules and all three directions, with random motion giving equal averages, yields:</p>
+      <p class="ar">جزيء كتلته m يتحرك بسرعة −v_x يصطدم بالحائط ويرتد مرنًا بـ +v_x. تغير كمية الحركة Δp_x = 2mv_x. زمن الذهاب والعودة بين الصدمات Δt = 2d/v_x، فمتوسط قوة جزيء واحد F = mv_x²/d. بجمع N جزيء وفي الاتجاهات الثلاثة، مع تساوي المتوسطات للحركة العشوائية:</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Pressure from molecular motion</div><div class="fbody">P = ⅓ (N/V) m <span style="border-top:1px solid currentColor">v²</span></div><div class="fnote">v² bar is the average of v², not the square of average v</div></div>
+        <div class="formula"><div class="flabel">In terms of kinetic energy</div><div class="fbody">P = ⅔ (N/V) (½ m v²)</div><div class="fnote">Pressure ∝ number density × average translational KE</div></div>
+      </div>
+      <div class="callout tip">
+        <div class="icon">→</div>
+        <div>
+          <h4>Interpretation · التفسير</h4>
+          <p class="en">P ∝ N/V: more molecules per unit volume means more collisions per second. P ∝ average KE: hotter molecules move faster, hit harder and more often. This is why adding air to a tire raises pressure, and why a tire warms on a drive.</p>
+          <p class="ar">P ∝ N/V: جزيئات أكتر في وحدة الحجم = تصادمات أكتر في الثانية. P ∝ متوسط طاقة الحركة: جزيئات أسخن تتحرك أسرع وتضرب أقوى وأكتر. عشان كده زيادة الهواء في الإطار ترفع الضغط، والإطار بيسخن أثناء السواقة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="temperature" class="section">
+      <div class="section-head"><div><div class="kicker">6 · Temperature &amp; speed</div><h2>الحرارة = متوسط طاقة الحركة</h2></div></div>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Average translational KE per molecule</div><div class="fbody">½ m <span style="border-top:1px solid currentColor">v²</span> = (3/2) k<sub>B</sub>T</div></div>
+        <div class="formula"><div class="flabel">Total translational KE</div><div class="fbody">KE = (3/2) N k<sub>B</sub>T = (3/2) nRT</div></div>
+        <div class="formula"><div class="flabel">RMS speed · سرعة الجذر التربيعي للمتوسط</div><div class="fbody">v<sub>rms</sub> = √(3k<sub>B</sub>T/m) = √(3RT/M)</div><div class="fnote">M in kg/mol. Use M = molar mass, not molecular mass in u.</div></div>
+        <div class="formula"><div class="flabel">Internal energy · monatomic ideal gas</div><div class="fbody">U = (3/2) nRT</div><div class="fnote">Depends only on n and T, not on molar mass</div></div>
+      </div>
+      <div class="callout mt-2">
+        <div class="icon">T</div>
+        <div>
+          <h4>Key idea · الفكرة المهمة</h4>
+          <p class="en">Absolute temperature is a direct measure of the average translational kinetic energy of gas molecules. At the same temperature, all gases have the same average KE per molecule — but lighter molecules move faster because ½mv² is the same and m is smaller.</p>
+          <p class="ar">درجة الحرارة المطلقة مقياس مباشر لمتوسط طاقة الحركة الانتقالية للجزيئات. عند نفس درجة الحرارة، كل الغازات لها نفس متوسط طاقة الحركة لكل جزيء — لكن الجزيئات الأخف تتحرك أسرع لأن ½mv² ثابتة وm أصغر.</p>
+        </div>
+      </div>
+      <p class="en mt-2">v<sub>rms</sub> is not average velocity (which is zero for random motion). It is the square root of the mean of v². Lighter gases like helium have larger v<sub>rms</sub> than heavier gases at the same T, so they diffuse faster and escape a planet's atmosphere more readily.</p>
+      <p class="ar mt-2">v_rms مش متوسط السرعة (اللي بصفر في الحركة العشوائية). هي جذر متوسط v². الغازات الأخف زي الهيليوم ليها v_rms أكبر من الأثقل عند نفس T، فبتنتشر أسرع وبتفلت من الغلاف الجوي أسهل.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Gas</th><th>M (g/mol)</th><th>v<sub>rms</sub> at 293 K (m/s)</th></tr></thead>
+          <tbody>
+            <tr><td>He</td><td>4</td><td>1351</td></tr>
+            <tr><td>N₂</td><td>28</td><td>511</td></tr>
+            <tr><td>O₂</td><td>32</td><td>478</td></tr>
+            <tr><td>CO₂</td><td>44</td><td>407</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="section-head"><div><div class="kicker">7 · Worked examples</div><h2>أمثلة محلولة</h2></div></div>
+
+      <div class="example">
+        <div class="tag">Example 4 · internal energy of helium</div>
+        <h4>A cylinder contains 2 mol of helium at 20 °C. Find (a) total internal energy, (b) average KE per molecule, (c) energy to double v<sub>rms</sub>.</h4>
+        <div class="work">
+          <span class="step">T = 293 K</span>
+          <span class="step">(a) U = (3/2)nRT = 1.5 × 2.00 × 8.31 × 293 ≈ 7.30×10³ J</span>
+          <span class="step">(b) ½mv² = (3/2)k_BT = 1.5 × 1.38×10⁻²³ × 293 ≈ 6.07×10⁻²¹ J</span>
+          <span class="step">(c) v_rms ∝ √T, so doubling v_rms needs T₂ = 4T₁</span>
+          <span class="step">ΔU = (3/2)nR(T₂ − T₁) = 1.5 × 2.00 × 8.31 × (4×293 − 293)</span>
+          <span class="step">ΔU ≈ 2.19×10⁴ J</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 5 · rms speed</div>
+        <h4>Calculate the rms speed of helium at 300 K (M = 4.0 × 10⁻³ kg/mol).</h4>
+        <div class="work">
+          <span class="step">v_rms = √(3RT/M)</span>
+          <span class="step">= √(3 × 8.31 × 300 / 4.0×10⁻³)</span>
+          <span class="step">= √(7.479×10⁶ / 4.0×10⁻³)</span>
+          <span class="step">= √(1.87×10⁶) ≈ 1.37×10³ m/s</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 6 · sealed container heated</div>
+        <h4>A sealed container holds gas at 0 °C. Temperature rises to 273 °C. What happens to v<sub>rms</sub>?</h4>
+        <div class="work">
+          <span class="step">T₁ = 273 K, T₂ = 546 K</span>
+          <span class="step">v₂/v₁ = √(T₂/T₁) = √2 ≈ 1.41</span>
+          <span class="step">It increases but less than doubles.</span>
+        </div>
+        <div class="answer show"><b>Correct choice: “increases but less than doubles.”</b> Doubling the Celsius value is not doubling the kelvin value.</div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 7 · internal energy change of argon</div>
+        <h4>5.00 mol of argon is cooled from 300 K to 240 K. Find (a) ΔU, (b) change in average KE per atom.</h4>
+        <div class="work">
+          <span class="step">(a) ΔU = (3/2)nRΔT = 1.5 × 5.00 × 8.31 × (240 − 300)</span>
+          <span class="step">= −3.74×10³ J</span>
+          <span class="step">(b) ΔKE = (3/2)k_BΔT = 1.5 × 1.38×10⁻²³ × (−60)</span>
+          <span class="step">≈ −1.24×10⁻²¹ J per atom</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 8 · gas expands at constant pressure</div>
+        <h4>A monatomic ideal gas expands to twice its volume at constant pressure. Its initial internal energy is U₀. Find the final internal energy.</h4>
+        <div class="work">
+          <span class="step">P constant, V doubles → T doubles (V/T constant)</span>
+          <span class="step">U ∝ T for fixed n → U doubles</span>
+          <span class="step">U_final = 2U₀</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 9 · pressure tripled, volume halved</div>
+        <h4>For 20 g of a monatomic ideal gas, pressure is tripled while volume is halved. What happens to U?</h4>
+        <div class="work">
+          <span class="step">U = (3/2)nRT = (3/2)PV</span>
+          <span class="step">U₂/U₁ = (P₂V₂)/(P₁V₁) = (3)(1/2) = 1.5</span>
+          <span class="step">U increases by 50%</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section">
+      <div class="section-head"><div><div class="kicker">8 · Exam traps</div><h2>أخطاء شائعة</h2></div></div>
+      <div class="grid two">
+        <div class="card"><h3>°C في قانون الغاز</h3><p class="en">Always convert to kelvin before substituting into PV = nRT or any gas law.</p><p class="ar">حوّل لكلفن قبل التعويض في PV = nRT أو أي قانون غاز.</p></div>
+        <div class="card"><h3>Gauge pressure</h3><p class="en">Add atmospheric pressure to a gauge reading before using the gas law.</p><p class="ar">اجمع الضغط الجوي على قراءة المقياس قبل استخدام قانون الغاز.</p></div>
+        <div class="card"><h3>M بوحدات خاطئة</h3><p class="en">In v<sub>rms</sub> = √(3RT/M), M must be in kg/mol, not g/mol and not atomic mass units.</p><p class="ar">في v_rms لازم M بالكجم/مول، مش جرام/مول ولا وحدة كتل ذرية.</p></div>
+        <div class="card"><h3>متوسط v مش v<sub>rms</sub></h3><p class="en">Random motion has average velocity zero, but v<sub>rms</sub> is positive. Use v² averages, then take the square root.</p><p class="ar">الحركة العشوائية متوسط السرعة فيها صفر، لكن v_rms موجبة. استخدم متوسط v² ثم خذ الجذر.</p></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-head"><div><div class="kicker">9 · Assignment MCQs</div><h2>أسئلة الاختيار من متعدد</h2><p class="muted">من شيت Assignment 1 — اختبر نفسك قبل ما تبص على الإجابة.</p></div></div>
+      <div class="quiz">
+
+        <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">An ideal gas is defined as a gas whose molecules:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g1"> a) have strong intermolecular forces</label>
+            <label><input type="radio" name="g1"> b) occupy large volumes</label>
+            <label><input type="radio" name="g1" data-correct="true"> c) move randomly and exert no long-range forces on each other</label>
+            <label><input type="radio" name="g1"> d) remain stationary</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Ideal gas molecules are pointlike, non-interacting except during collisions.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">Boyle's law states that at constant temperature:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g2"> a) P ∝ V</label>
+            <label><input type="radio" name="g2"> b) P ∝ T</label>
+            <label><input type="radio" name="g2" data-correct="true"> c) P ∝ 1/V</label>
+            <label><input type="radio" name="g2"> d) V ∝ T</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Pressure and volume are inversely proportional when T and n are fixed.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">Temperature in the ideal gas law must be expressed in:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g3"> a) °C</label>
+            <label><input type="radio" name="g3"> b) °F</label>
+            <label><input type="radio" name="g3" data-correct="true"> c) K</label>
+            <label><input type="radio" name="g3"> d) any unit</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Gas-law ratios require an absolute scale.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">Pressure arises because:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g4"> a) molecules have mass</label>
+            <label><input type="radio" name="g4" data-correct="true"> b) molecules collide with container walls</label>
+            <label><input type="radio" name="g4"> c) molecules have color</label>
+            <label><input type="radio" name="g4"> d) molecules absorb light</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Pressure is the average force per unit area from molecular collisions.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">The average translational kinetic energy per molecule is:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g5"> a) k<sub>B</sub>T</label>
+            <label><input type="radio" name="g5"> b) ½k<sub>B</sub>T</label>
+            <label><input type="radio" name="g5" data-correct="true"> c) (3/2)k<sub>B</sub>T</label>
+            <label><input type="radio" name="g5"> d) 2k<sub>B</sub>T</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Three translational degrees of freedom, ½k<sub>B</sub>T each.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">If the volume of an ideal gas doubles while temperature remains constant, the pressure becomes:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g6"> a) double</label>
+            <label><input type="radio" name="g6" data-correct="true"> b) half</label>
+            <label><input type="radio" name="g6"> c) four times</label>
+            <label><input type="radio" name="g6"> d) unchanged</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Boyle's law: PV = constant.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">7</div><div class="qtext">If temperature doubles at constant volume, pressure:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g7" data-correct="true"> a) doubles</label>
+            <label><input type="radio" name="g7"> b) halves</label>
+            <label><input type="radio" name="g7"> c) remains constant</label>
+            <label><input type="radio" name="g7"> d) quadruples</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> Gay-Lussac's law: P/T = constant (T in kelvin).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">8</div><div class="qtext">Increasing the number of gas molecules in a fixed volume causes:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g8"> a) pressure to decrease</label>
+            <label><input type="radio" name="g8" data-correct="true"> b) pressure to increase</label>
+            <label><input type="radio" name="g8"> c) temperature to become zero</label>
+            <label><input type="radio" name="g8"> d) volume to disappear</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> More molecules → more collisions per unit time and area.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">9</div><div class="qtext">Which law explains the increase of tire pressure on a hot day?</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g9"> a) Boyle's law</label>
+            <label><input type="radio" name="g9"> b) Charles's law</label>
+            <label><input type="radio" name="g9" data-correct="true"> c) Gay-Lussac's law</label>
+            <label><input type="radio" name="g9"> d) Hooke's law</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Tire volume is nearly constant, so P ∝ T.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">10</div><div class="qtext">Molecular collisions with container walls are:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g10"> a) inelastic</label>
+            <label><input type="radio" name="g10" data-correct="true"> b) elastic</label>
+            <label><input type="radio" name="g10"> c) impossible</label>
+            <label><input type="radio" name="g10"> d) partly elastic only</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Kinetic theory assumes elastic collisions, so kinetic energy is conserved.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">11</div><div class="qtext">Which quantity directly measures the average kinetic energy of gas molecules?</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g11"> a) pressure</label>
+            <label><input type="radio" name="g11"> b) volume</label>
+            <label><input type="radio" name="g11" data-correct="true"> c) temperature</label>
+            <label><input type="radio" name="g11"> d) density</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> ½mv² = (3/2)k<sub>B</sub>T.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">12</div><div class="qtext">At equal temperatures, helium molecules move faster than argon molecules because helium has:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g12"> a) higher pressure</label>
+            <label><input type="radio" name="g12" data-correct="true"> b) lower molar mass</label>
+            <label><input type="radio" name="g12"> c) larger volume</label>
+            <label><input type="radio" name="g12"> d) more molecules</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> v<sub>rms</sub> = √(3RT/M): smaller M gives larger speed at the same T.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">13</div><div class="qtext">The kinetic theory assumes gas molecules obey:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g13"> a) Maxwell's laws only</label>
+            <label><input type="radio" name="g13"> b) Einstein's equations only</label>
+            <label><input type="radio" name="g13" data-correct="true"> c) Newton's laws of motion</label>
+            <label><input type="radio" name="g13"> d) Ohm's law</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Molecules obey Newton's laws but move randomly as a whole.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">14</div><div class="qtext">For an ideal gas, PV = Nk<sub>B</sub>T, where N is the:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g14"> a) number of moles</label>
+            <label><input type="radio" name="g14" data-correct="true"> b) number of molecules</label>
+            <label><input type="radio" name="g14"> c) atomic mass</label>
+            <label><input type="radio" name="g14"> d) volume</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> The n-form uses R; the N-form uses k<sub>B</sub>.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">15</div><div class="qtext">If the rms speed doubles, the temperature must:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g15"> a) double</label>
+            <label><input type="radio" name="g15"> b) triple</label>
+            <label><input type="radio" name="g15" data-correct="true"> c) quadruple</label>
+            <label><input type="radio" name="g15"> d) remain constant</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> v<sub>rms</sub> ∝ √T, so doubling v requires 4T.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">16</div><div class="qtext">The rms speed is proportional to:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g16" data-correct="true"> a) √T</label>
+            <label><input type="radio" name="g16"> b) T²</label>
+            <label><input type="radio" name="g16"> c) 1/T</label>
+            <label><input type="radio" name="g16"> d) M</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> v<sub>rms</sub> = √(3RT/M).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">17</div><div class="qtext">A monatomic ideal gas has internal energy:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g17"> a) nRT</label>
+            <label><input type="radio" name="g17" data-correct="true"> b) (3/2)nRT</label>
+            <label><input type="radio" name="g17"> c) (5/2)nRT</label>
+            <label><input type="radio" name="g17"> d) PV²</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Monatomic gas has only translational kinetic energy: U = 3/2 nRT.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">18</div><div class="qtext">What is the rms speed of Cl₂ at 320 K? (R = 8.31, M = 71 g/mol)</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g18"> a) 1.7×10² m/s</label>
+            <label><input type="radio" name="g18" data-correct="true"> b) 3.4×10² m/s</label>
+            <label><input type="radio" name="g18"> c) 0.8×10⁴ m/s</label>
+            <label><input type="radio" name="g18"> d) 1.1×10⁵ m/s</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> v = √(3×8.31×320/0.071) = √(1.123×10⁵) ≈ 335 m/s.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">19</div><div class="qtext">If the temperature of an ideal gas in a box is increased:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g19"> a) average velocity increases</label>
+            <label><input type="radio" name="g19"> b) average speed increases</label>
+            <label><input type="radio" name="g19"> c) distance between molecules increases</label>
+            <label><input type="radio" name="g19" data-correct="true"> d) all of the above</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> Higher T raises speeds and, at constant pressure, the gas expands so spacing increases.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">20</div><div class="qtext">For a fixed mass, if pressure is constant and volume increases:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g20"> a) average KE decreases</label>
+            <label><input type="radio" name="g20"> b) average KE stays the same</label>
+            <label><input type="radio" name="g20" data-correct="true"> c) average KE increases</label>
+            <label><input type="radio" name="g20"> d) cannot be determined</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> At constant P, V ∝ T, so T rises and KE ∝ T rises.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">21</div><div class="qtext">What is the internal energy of 50 mol of neon at 27 °C? (R = 8.31)</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g21" data-correct="true"> a) 1.9×10⁵ J</label>
+            <label><input type="radio" name="g21"> b) 1.6×10⁵ J</label>
+            <label><input type="radio" name="g21"> c) 3.8×10³ J</label>
+            <label><input type="radio" name="g21"> d) depends on container size</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> U = 1.5 × 50 × 8.31 × 300 ≈ 1.87×10⁵ J. Neon is monatomic; container size is irrelevant.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">22</div><div class="qtext">A monatomic gas expands to twice its volume at constant pressure. Its initial internal energy is U₀. Final internal energy is:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g22"> a) U₀</label>
+            <label><input type="radio" name="g22" data-correct="true"> b) 2U₀</label>
+            <label><input type="radio" name="g22"> c) 4U₀</label>
+            <label><input type="radio" name="g22"> d) cannot tell without ΔT</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Constant P and double V means double T; U ∝ T.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">23</div><div class="qtext">The internal energy of a monatomic ideal gas equals:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g23" data-correct="true"> a) (3/2)PV</label>
+            <label><input type="radio" name="g23"> b) (3/2)nT/V</label>
+            <label><input type="radio" name="g23"> c) 3T/P</label>
+            <label><input type="radio" name="g23"> d) none of the above</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> U = (3/2)nRT and PV = nRT, so U = (3/2)PV.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">24</div><div class="qtext">The pressure of 20 g of a monatomic gas is tripled while its volume is halved. Internal energy:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g24"> a) stays the same</label>
+            <label><input type="radio" name="g24" data-correct="true"> b) increases</label>
+            <label><input type="radio" name="g24"> c) decreases</label>
+            <label><input type="radio" name="g24"> d) indeterminate</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> U = (3/2)PV → U₂/U₁ = 3 × ½ = 1.5, so U increases by 50%.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">25</div><div class="qtext">Gas at 0 °C is heated to 273 °C. The rms speed:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g25"> a) does not change</label>
+            <label><input type="radio" name="g25" data-correct="true"> b) increases but less than doubles</label>
+            <label><input type="radio" name="g25"> c) doubles</label>
+            <label><input type="radio" name="g25"> d) quadruples</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> T goes 273 K → 546 K, so v rises by √2 ≈ 1.41, less than 2.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">26</div><div class="qtext">One mole each of He, Ne, Ar, Kr, Xe, Rn at 300 K. Which has greatest internal energy and which has highest rms speed?</div></div>
+          <div class="opts">
+            <label><input type="radio" name="g26"> a) He energy, Rn speed</label>
+            <label><input type="radio" name="g26"> b) Rn energy, He speed</label>
+            <label><input type="radio" name="g26"> c) same energy, Rn speed</label>
+            <label><input type="radio" name="g26" data-correct="true"> d) same energy, He speed</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> All are monatomic with 1 mol at same T: U = 3/2 nRT is equal. He has the smallest M, so largest v<sub>rms</sub>.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="problems" class="section">
+      <div class="section-head"><div><div class="kicker">10 · Assignment problems</div><h2>مسائل محلولة</h2></div></div>
+      <div class="grid two">
+
+        <div class="card"><h4>Problem 1</h4><p class="en">A monatomic gas at 300 K has rms speed v. If v<sub>rms</sub> becomes 3v: (a) new temperature? (b) factor change in internal energy?</p><p class="ar">غاز أحادي عند 300 K سرعته v. لو بقت 3v: (أ) الحرارة الجديدة؟ (ب) معامل تغير الطاقة الداخلية؟</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer"><b>(a)</b> v ∝ √T → T₂ = 9T₁ = 2700 K. <b>(b)</b> U ∝ T → U₂/U₁ = 9.</div>
+        </div>
+
+        <div class="card"><h4>Problem 2</h4><p class="en">1.0 L gas at 293 K and 1.5×10⁵ Pa expands to 2.0 L at 1.013×10⁵ Pa. Find final T.</p><p class="ar">1 لتر غاز عند 293 K و1.5×10⁵ Pa يتمدد لـ2 لتر عند 1.013×10⁵ Pa. احسب T النهائية.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">T₂ = 293 × (1.013×10⁵ × 2)/(1.5×10⁵ × 1) ≈ <b>396 K</b>.</div>
+        </div>
+
+        <div class="card"><h4>Problem 3</h4><p class="en">Tire at 2.0×10⁵ Pa and 300 K. Temperature rises to 360 K at constant volume. Find final pressure.</p><p class="ar">إطار عند 2.0×10⁵ Pa و300 K. الحرارة تزيد لـ360 K بحجم ثابت. احسب الضغط النهائي.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">P₂ = P₁T₂/T₁ = 2.0×10⁵ × 360/300 = <b>2.4×10⁵ Pa</b> (absolute). Gauge value = 1.39×10⁵ Pa.</div>
+        </div>
+
+        <div class="card"><h4>Problem 4</h4><p class="en">Calculate rms speed of helium at 300 K (M = 4×10⁻³ kg/mol).</p><p class="ar">احسب سرعة rms للهيليوم عند 300 K.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">v = √(3×8.31×300/4×10⁻³) ≈ <b>1.37×10³ m/s</b>.</div>
+        </div>
+
+        <div class="card"><h4>Problem 5</h4><p class="en">3 mol of helium at 400 K. Find internal energy.</p><p class="ar">3 مول هيليوم عند 400 K. احسب الطاقة الداخلية.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">U = 1.5 × 3 × 8.31 × 400 ≈ <b>1.50×10⁴ J</b>.</div>
+        </div>
+
+        <div class="card"><h4>Problem 6</h4><p class="en">4.50 L gas drops from 375 K to 275 K at constant volume; initial pressure 1 atm. (a) final pressure (b) moles.</p><p class="ar">4.5 لتر غاز تنخفض حرارته من 375 لـ275 K بحجم ثابت وضغط ابتدائي 1 atm. (أ) الضغط النهائي (ب) عدد المولات.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">(a) P₂ = 1.013×10⁵ × 275/375 ≈ <b>7.43×10⁴ Pa</b>. (b) n = PV/RT = (1.013×10⁵)(4.50×10⁻³)/(8.31×375) ≈ <b>0.146 mol</b>.</div>
+        </div>
+
+        <div class="card"><h4>Problem 7</h4><p class="en">A 30 cm³ balloon at 1 atm is taken to 4 m depth in fresh water (constant T). Find V.</p><p class="ar">بالون 30 سم³ عند 1 atm ينزل لعمق 4 م في ماء عذب (T ثابتة). احسب الحجم.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">P₂ = 1.01×10⁵ + 1000×9.8×4 = 1.403×10⁵ Pa. V₂ = P₁V₁/P₂ ≈ <b>21.6 cm³</b>.</div>
+        </div>
+
+        <div class="card"><h4>Problem 8</h4><p class="en">5.00 mol argon cooled from 300 K to 240 K. Find (a) ΔU (b) ΔKE per atom.</p><p class="ar">5 مول أرجون تبرد من 300 لـ240 K. احسب (أ) ΔU (ب) تغير طاقة الحركة لكل ذرة.</p>
+          <button class="reveal">Show solution · الحل</button>
+          <div class="answer">(a) ΔU = 1.5×5×8.31×(−60) ≈ <b>−3.74×10³ J</b>. (b) ΔKE = 1.5×1.38×10⁻²³×(−60) ≈ <b>−1.24×10⁻²¹ J</b>.</div>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidecard">
+      <h4>On this page</h4>
+      <div class="mini-nav">
+        <a href="#model"><span class="dot"></span>الغاز المثالي</a>
+        <a href="#moles"><span class="dot gold"></span>المول وأفوجادرو</a>
+        <a href="#laws"><span class="dot blue"></span>قوانين الغازات</a>
+        <a href="#ideal-law"><span class="dot pink"></span>PV = nRT</a>
+        <a href="#kinetic"><span class="dot"></span>النظرية الحركية</a>
+        <a href="#temperature"><span class="dot gold"></span>الحرارة والسرعة</a>
+        <a href="#examples"><span class="dot blue"></span>أمثلة محلولة</a>
+        <a href="#quiz"><span class="dot pink"></span>الأسئلة</a>
+      </div>
+    </div>
+    <div class="sidecard">
+      <h4>Formula sheet</h4>
+      <p class="muted" style="font-size:13px;margin:0;line-height:2">
+        PV = nRT = Nk<sub>B</sub>T<br>
+        P₁V₁/T₁ = P₂V₂/T₂<br>
+        P = ⅓(N/V)m v²<br>
+        ½mv² = (3/2)k<sub>B</sub>T<br>
+        v<sub>rms</sub> = √(3RT/M)<br>
+        U = (3/2)nRT = (3/2)PV<br>
+        R = 8.31 J/mol·K<br>
+        k<sub>B</sub> = 1.38×10⁻²³ J/K<br>
+        N<sub>A</sub> = 6.02×10²³ /mol
+      </p>
+    </div>
+  </aside>
+</div>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friction · الاحتكاك — Mechanics</title>
+<meta name="description" content="الاحتكاك الجاف: القوانين، زاوية الاحتكاك، الأسافين، البراغي، السيور، ومقاومة الدحرجة، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/mechanics/friction.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Friction · الاحتكاك — Mechanics">
+<meta property="og:description" content="الاحتكاك الجاف: القوانين، زاوية الاحتكاك، الأسافين، البراغي، السيور، ومقاومة الدحرجة، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/mechanics/friction.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Friction · الاحتكاك — Mechanics">
+<meta name="twitter:description" content="الاحتكاك الجاف: القوانين، زاوية الاحتكاك، الأسافين، البراغي، السيور، ومقاومة الدحرجة، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="mechanics" data-page="friction.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Mechanics</a> / Friction</div>
+    <div class="eyebrow">Mechanics · Topic 06 · Friction</div>
+    <h1>Friction <span style="color:var(--muted);font-weight:700">· الاحتكاك</span></h1>
+    <p class="lead en">Friction is the tangential force between contacting surfaces that opposes sliding or the tendency to slide. This page covers dry friction laws, the angle of friction, wedges, screws, belts, and rolling resistance.</p>
+    <p class="lead ar">الاحتكاك قوة مماسية بين الأسطح المتلامسة بتقاوم الانزلاق أو ميلان الانزلاق. الصفحة دي بتغطي قوانين الاحتكاك الجاف، زاوية الاحتكاك، الأسافين، البراغي، السيور، ومقاومة الدحرجة.</p>
+    <div class="topic-tags">
+      <span class="badge gold">Core topic</span>
+      <span class="badge">Dry friction</span>
+      <span class="badge green">Wedges &amp; screws</span>
+      <span class="badge pink">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="laws">
+        <div class="kicker">1 · Dry friction</div>
+        <h2>Static and kinetic</h2>
+        <p class="en">Dry friction occurs between unlubricated surfaces in contact. Static friction prevents motion up to a maximum; kinetic friction acts while sliding and is usually smaller. The friction force is tangent to the surface and opposes impending or actual motion.</p>
+        <p class="ar">الاحتكاك الجاف بين أسطح جافة متلامسة. الاحتكاك الساكن بيمنع الحركة لحد أقصى؛ والحركي بيأثر أثناء الانزلاق وعادة أقل. قوة الاحتكاك مماسية للسطح وبتعارض الحركة أو ميلانها.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Static friction</div><div class="fbody">F<sub>s</sub> ≤ μ<sub>s</sub> N</div><div class="fnote">Equality at impending motion</div></div>
+          <div class="formula"><div class="flabel">Kinetic friction</div><div class="fbody">F<sub>k</sub> = μ<sub>k</sub> N</div><div class="fnote">While sliding</div></div>
+          <div class="formula"><div class="flabel">Coefficient</div><div class="fbody">μ = F/N</div><div class="fnote">Dimensionless</div></div>
+          <div class="formula"><div class="flabel">Usually</div><div class="fbody">μ<sub>k</sub> &lt; μ<sub>s</sub></div></div>
+        </div>
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>N is not always mg · N مش دايمًا mg</h4>
+            <p class="en">The normal force comes from the equilibrium equation perpendicular to the surface. If an applied force has a component pressing into or lifting the body, N changes. Resolve first, then use F = μN.</p>
+            <p class="ar">القوة العمودية بتيجي من معادلة الاتزان العمودية على السطح. لو فيه قوة مؤثرة بضغط أو بترفع الجسم، N بتتغير. حلّل الأول، وبعدين استخدم F = μN.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="angle">
+        <div class="kicker">2 · Angle of friction</div>
+        <h2>φ and the reaction</h2>
+        <p class="en">At impending motion, the total reaction R of the surface is inclined at the angle of friction φ to the normal. The coefficient of friction is the tangent of that angle.</p>
+        <p class="ar">عند ميلان الحركة، رد الفعل الكلي R للسطح بيكون مايل بزاوية الاحتكاك φ عن العمودي. معامل الاحتكاك = ظل الزاوية دي.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Angle of friction</div><div class="fbody">tan φ = μ</div></div>
+          <div class="formula"><div class="flabel">Reaction</div><div class="fbody">R = √(N²+F²)</div></div>
+          <div class="formula"><div class="flabel">At impending slip</div><div class="fbody">F = μ<sub>s</sub>N</div></div>
+          <div class="formula"><div class="flabel">Angle of repose</div><div class="fbody">tan θ = μ<sub>s</sub></div><div class="fnote">On an incline</div></div>
+        </div>
+        <div class="example">
+          <div class="tag">Example · block on a horizontal plane</div>
+          <h4>A 200 N block is pulled by P at 30° above the horizontal. μ<sub>s</sub> = 0.3. Find the minimum P to start motion.</h4>
+          <div class="work">
+            <span class="step">Vertical: N + P sin 30° − 200 = 0 → N = 200 − 0.5P</span>
+            <span class="step">Horizontal at impending slip: P cos 30° = 0.3N</span>
+            <span class="step">0.866P = 0.3(200 − 0.5P) = 60 − 0.15P</span>
+            <span class="step">1.016P = 60 → P ≈ 59.1 N</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="machines">
+        <div class="kicker">3 · Applications</div>
+        <h2>Wedges, screws, and belts</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Device</th><th>Key idea</th><th>Formula / note</th></tr></thead>
+            <tbody>
+              <tr><td>Wedge</td><td>Converts a small force into a large normal force</td><td>Equilibrium of the wedge with friction on both faces</td></tr>
+              <tr><td>Square-thread screw</td><td>Inclined plane wrapped around a cylinder</td><td>P = W tan(α ± φ)</td></tr>
+              <tr><td>Belt friction</td><td>Tension ratio depends on wrap angle</td><td>T₂/T₁ = e<sup>μβ</sup></td></tr>
+              <tr><td>Rolling resistance</td><td>Deformation at the contact</td><td>M = W a, a = rolling resistance arm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="en">For a screw, α is the helix angle, φ the friction angle; use α+φ for raising the load and α−φ for lowering (with self-locking when φ ≥ α). For a belt, β is the angle of contact in radians and T₂ is the larger tension.</p>
+        <p class="ar">في البرغي، α زاوية الحلزون وφ زاوية الاحتكاك؛ استخدم α+φ لرفع الحمل وα−φ لإنزاله (مع القفل الذاتي لما φ ≥ α). في السير، β زاوية التلامس بالراديان وT₂ الشد الأكبر.</p>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Units · الوحدات</h4>
+            <p class="en">Belt formula needs β in radians, not degrees. Convert: radians = degrees × π/180. The coefficient μ is dimensionless, so T₂/T₁ is dimensionless.</p>
+            <p class="ar">قانون السير يحتاج β بالراديان مش بالدرجات. حوّل: راديان = درجات × π/180. المعامل μ بدون وحدة، فـT₂/T₁ بدون وحدة.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">4 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">At impending motion, static friction equals: · عند ميلان الحركة:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mfr1" data-correct="true"> a) μ<sub>s</sub>N</label>
+              <label><input type="radio" name="mfr1" data-correct="false"> b) zero</label>
+              <label><input type="radio" name="mfr1" data-correct="false"> c) μ<sub>k</sub>N always</label>
+              <label><input type="radio" name="mfr1" data-correct="false"> d) N/μ<sub>s</sub></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Static friction reaches its maximum at impending slip.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The angle of friction satisfies: · زاوية الاحتكاك:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mfr2" data-correct="true"> a) tan φ = μ</label>
+              <label><input type="radio" name="mfr2" data-correct="false"> b) sin φ = μ</label>
+              <label><input type="radio" name="mfr2" data-correct="false"> c) cos φ = μ</label>
+              <label><input type="radio" name="mfr2" data-correct="false"> d) φ = μ</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> μ = tan φ from the friction triangle.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">Kinetic friction is usually: · الاحتكاك الحركي عادة:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mfr3" data-correct="true"> a) less than static friction</label>
+              <label><input type="radio" name="mfr3" data-correct="false"> b) greater than static friction</label>
+              <label><input type="radio" name="mfr3" data-correct="false"> c) zero</label>
+              <label><input type="radio" name="mfr3" data-correct="false"> d) independent of N</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> μ<sub>k</sub> is generally smaller than μ<sub>s</sub>.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">Belt friction uses: · احتكاك السيور:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mfr4" data-correct="true"> a) T₂/T₁ = e<sup>μβ</sup></label>
+              <label><input type="radio" name="mfr4" data-correct="false"> b) T₂/T₁ = μβ</label>
+              <label><input type="radio" name="mfr4" data-correct="false"> c) T₂/T₁ = e<sup>β/μ</sup></label>
+              <label><input type="radio" name="mfr4" data-correct="false"> d) T₂ = T₁</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> β must be in radians.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">For a screw, raising the load uses: · رفع الحمل في البرغي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mfr5" data-correct="true"> a) P = W tan(α+φ)</label>
+              <label><input type="radio" name="mfr5" data-correct="false"> b) P = W tan(α−φ)</label>
+              <label><input type="radio" name="mfr5" data-correct="false"> c) P = W sin α</label>
+              <label><input type="radio" name="mfr5" data-correct="false"> d) P = W/μ</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Friction adds to the effort when raising.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">The normal force N in F = μN is found from: · N بتتحدد من:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mfr6" data-correct="true"> a) equilibrium perpendicular to the surface</label>
+              <label><input type="radio" name="mfr6" data-correct="false"> b) the weight always</label>
+              <label><input type="radio" name="mfr6" data-correct="false"> c) the friction force</label>
+              <label><input type="radio" name="mfr6" data-correct="false"> d) the moment equation always</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Resolve perpendicular to the surface; N may not equal mg.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="wrench.html"><span>← Previous</span><b>The Wrench</b></a>
+        <a href="formulas.html" class="next"><span>Next →</span><b>Formula Vault</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#laws"><span class="dot blue"></span>Dry friction</a>
+          <a href="#angle"><span class="dot gold"></span>Angle of friction</a>
+          <a href="#machines"><span class="dot pink"></span>Applications</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <ul>
+          <li>F<sub>s</sub> ≤ μ<sub>s</sub>N</li>
+          <li>F<sub>k</sub> = μ<sub>k</sub>N</li>
+          <li>tan φ = μ</li>
+          <li>P = W tan(α±φ)</li>
+          <li>T₂/T₁ = e<sup>μβ</sup></li>
+          <li>M = W a</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

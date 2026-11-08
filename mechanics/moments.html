@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moments &amp; Couples · العزوم والأزواج</title>
+<meta name="description" content="العزوم والأزواج في الاستاتيكا: عزم القوة حول نقطة ومحور، نظرية فارينيون، الأزواج، والأنظمة المكافئة، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/mechanics/moments.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Moments &amp; Couples · العزوم والأزواج">
+<meta property="og:description" content="العزوم والأزواج في الاستاتيكا: عزم القوة حول نقطة ومحور، نظرية فارينيون، الأزواج، والأنظمة المكافئة، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/mechanics/moments.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moments &amp; Couples · العزوم والأزواج">
+<meta name="twitter:description" content="العزوم والأزواج في الاستاتيكا: عزم القوة حول نقطة ومحور، نظرية فارينيون، الأزواج، والأنظمة المكافئة، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="mechanics" data-page="moments.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Mechanics</a> / Moments &amp; Couples</div>
+    <div class="eyebrow">Mechanics · Topic 03 · Moments</div>
+    <h1>Moments &amp; Couples <span style="color:var(--muted);font-weight:700">· العزوم والأزواج</span></h1>
+    <p class="lead en">A moment measures the turning effect of a force. This page covers the scalar and vector definitions, Varignon's theorem, couples, equivalent systems, and the transfer of a force to a new point.</p>
+    <p class="lead ar">العزم بيقيس تأثير الدوران للقوة. الصفحة دي بتغطي التعريف العددي والمتجهي، نظرية فارينيون، الأزواج، الأنظمة المكافئة، ونقل القوة لنقطة جديدة.</p>
+    <div class="topic-tags">
+      <span class="badge gold">Core topic</span>
+      <span class="badge">Varignon</span>
+      <span class="badge green">Couples</span>
+      <span class="badge pink">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="moment">
+        <div class="kicker">1 · Moment of a force</div>
+        <h2>Turning effect</h2>
+        <p class="en">The moment of a force about a point O is the force times the perpendicular distance from O to its line of action. The unit is N·m. The sign depends on the direction of rotation.</p>
+        <p class="ar">عزم القوة حول نقطة O = القوة × المسافة العمودية من O لخط عملها. الوحدة N·m. الإشارة بتعتمد على اتجاه الدوران.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Scalar moment</div><div class="fbody">M<sub>O</sub> = F d</div><div class="fnote">d = perpendicular distance</div></div>
+          <div class="formula"><div class="flabel">Vector moment</div><div class="fbody">M<sub>O</sub> = r × F</div><div class="fnote">r from O to point of application</div></div>
+          <div class="formula"><div class="flabel">Moment about an axis</div><div class="fbody">M<sub>axis</sub> = λ · (r × F)</div><div class="fnote">λ = unit vector along the axis</div></div>
+          <div class="formula"><div class="flabel">Sign convention</div><div class="fbody">CCW positive, CW negative</div><div class="fnote">2D problems</div></div>
+        </div>
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Distance is perpendicular · المسافة عمودية</h4>
+            <p class="en">If the force is not perpendicular to the arm, use d = r sin θ, not the full length r. A force whose line of action passes through O has zero moment about O.</p>
+            <p class="ar">لو القوة مش عمودية على الذراع، استخدم d = r sin θ مش الطول r كله. القوة اللي خط عملها بيعدي من O عزمها حول O = صفر.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="varignon">
+        <div class="kicker">2 · Varignon's theorem</div>
+        <h2>Resolve, then add moments</h2>
+        <p class="en">The moment of a force about a point equals the sum of the moments of its components about the same point. This is the fastest way to handle inclined forces.</p>
+        <p class="ar">عزم القوة حول نقطة = مجموع عزوم مركباتها حول نفس النقطة. دي أسرع طريقة للتعامل مع القوى المائلة.</p>
+        <div class="formula">
+          <div class="flabel">Varignon</div>
+          <div class="fbody">M<sub>O</sub>(F) = M<sub>O</sub>(F<sub>x</sub>) + M<sub>O</sub>(F<sub>y</sub>)</div>
+          <div class="fnote">Take each component's perpendicular distance with its sign</div>
+        </div>
+        <div class="example">
+          <div class="tag">Example · inclined force</div>
+          <h4>F = 50 N at 30° acts at a point 4 m horizontally and 2 m vertically from O. Find M<sub>O</sub>.</h4>
+          <div class="work">
+            <span class="step">F<sub>x</sub> = 50 cos 30° = 43.30 N, F<sub>y</sub> = 25 N</span>
+            <span class="step">Moment of F<sub>x</sub> about O = −43.30 × 2 = −86.60 N·m (CW)</span>
+            <span class="step">Moment of F<sub>y</sub> about O = +25 × 4 = +100 N·m (CCW)</span>
+            <span class="step">M<sub>O</sub> = +13.40 N·m (CCW)</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="couples">
+        <div class="kicker">3 · Couples</div>
+        <h2>Two equal, opposite, non-collinear forces</h2>
+        <p class="en">A couple consists of two forces equal in magnitude, opposite in direction, and not on the same line. Its resultant force is zero, but its moment is not. The moment of a couple is the same about every point.</p>
+        <p class="ar">الزوج عبارة عن قوتين متساويتين في المقدار، متعاكستين في الاتجاه، ومش على نفس الخط. محصلة قواه = صفر، لكن عزمه مش صفر. عزم الزوج ثابت حول أي نقطة.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Couple moment</div><div class="fbody">C = F d</div><div class="fnote">d = perpendicular distance between the forces</div></div>
+          <div class="formula"><div class="flabel">Vector couple</div><div class="fbody">C = r × F</div><div class="fnote">r from any point on one line to any point on the other</div></div>
+          <div class="formula"><div class="flabel">Resultant force</div><div class="fbody">ΣF = 0</div></div>
+          <div class="formula"><div class="flabel">Free vector</div><div class="fbody">Couple can be moved anywhere</div><div class="fnote">Same external effect on a rigid body</div></div>
+        </div>
+        <p class="en">Equivalent couples have the same moment. You may rotate a couple in its plane, move it parallel to itself, or move it to a parallel plane without changing its effect.</p>
+        <p class="ar">الأزواج المكافئة لها نفس العزم. تقدر تدور الزوج في مستواه، تنقله موازي لنفسه، أو تنقله لمستوى موازي من غير ما يتغير تأثيره.</p>
+      </section>
+
+      <section class="section" id="equivalent">
+        <div class="kicker">4 · Equivalent systems</div>
+        <h2>Force–couple transfer</h2>
+        <p class="en">A force acting at A can be moved to B by adding a couple equal to the moment of the original force about B. The new system is a force at B plus a couple.</p>
+        <p class="ar">القوة المؤثرة عند A تنقل لـB بإضافة زوج يساوي عزم القوة الأصلية حول B. النظام الجديد قوة عند B وزوج.</p>
+        <div class="formula">
+          <div class="flabel">Transfer couple</div>
+          <div class="fbody">C<sub>T</sub> = r<sub>BA</sub> × F</div>
+          <div class="fnote">Add C<sub>T</sub> to any existing couple at B</div>
+        </div>
+        <div class="example">
+          <div class="tag">Example · reduce to a force–couple system</div>
+          <h4>F = 100 N at A(0,0,0), move to B(3,0,0).</h4>
+          <div class="work">
+            <span class="step">r<sub>BA</sub> = A − B = (−3, 0, 0) m</span>
+            <span class="step">C<sub>T</sub> = r<sub>BA</sub> × F</span>
+            <span class="step">If F = 100j N, C<sub>T</sub> = (−3i) × (100j) = −300k N·m</span>
+            <span class="step">Equivalent system: 100j N at B plus −300k N·m couple</span>
+          </div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Check the direction · راجع الاتجاه</h4>
+            <p class="en">Use r from the new point to the old point of application. If you reverse r, the transfer couple reverses sign. Check with the right-hand rule.</p>
+            <p class="ar">استخدم r من النقطة الجديدة لنقطة التأثير القديمة. لو عكست r، الزوج المنقول هيعكس إشارته. تحقق بقاعدة اليد اليمنى.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">5 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Moment = · العزم =</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mm1" data-correct="true"> a) F d</label>
+              <label><input type="radio" name="mm1" data-correct="false"> b) F/d</label>
+              <label><input type="radio" name="mm1" data-correct="false"> c) F + d</label>
+              <label><input type="radio" name="mm1" data-correct="false"> d) F²d</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> d is the perpendicular distance to the line of action.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The vector moment is: · العزم المتجهي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mm2" data-correct="true"> a) r × F</label>
+              <label><input type="radio" name="mm2" data-correct="false"> b) r · F</label>
+              <label><input type="radio" name="mm2" data-correct="false"> c) F × r</label>
+              <label><input type="radio" name="mm2" data-correct="false"> d) r + F</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> r is from the moment point to the point of application.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">A couple has: · الزوج عنده:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mm3" data-correct="true"> a) zero resultant force and nonzero moment</label>
+              <label><input type="radio" name="mm3" data-correct="false"> b) nonzero resultant force</label>
+              <label><input type="radio" name="mm3" data-correct="false"> c) zero moment</label>
+              <label><input type="radio" name="mm3" data-correct="false"> d) three forces</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Equal and opposite forces cancel, but their moment remains.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">The moment of a couple about any point is: · عزم الزوج حول أي نقطة:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mm4" data-correct="true"> a) the same</label>
+              <label><input type="radio" name="mm4" data-correct="false"> b) zero</label>
+              <label><input type="radio" name="mm4" data-correct="false"> c) different at every point</label>
+              <label><input type="radio" name="mm4" data-correct="false"> d) always clockwise</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> A couple is a free vector; its moment is independent of the point.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">Varignon's theorem says: · نظرية فارينيون:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mm5" data-correct="true"> a) the moment of a force equals the sum of its components' moments</label>
+              <label><input type="radio" name="mm5" data-correct="false"> b) moment equals force times distance always</label>
+              <label><input type="radio" name="mm5" data-correct="false"> c) couples are always zero</label>
+              <label><input type="radio" name="mm5" data-correct="false"> d) forces are scalars</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Resolve the force and add the moments of the components.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">Moving a force to a new point requires adding: · نقل القوة يحتاج إضافة:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mm6" data-correct="true"> a) a transfer couple</label>
+              <label><input type="radio" name="mm6" data-correct="false"> b) a second force</label>
+              <label><input type="radio" name="mm6" data-correct="false"> c) nothing</label>
+              <label><input type="radio" name="mm6" data-correct="false"> d) a unit vector</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The transfer couple equals the moment of the original force about the new point.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="forces.html"><span>← Previous</span><b>Forces &amp; Resultants</b></a>
+        <a href="equilibrium.html" class="next"><span>Next →</span><b>Equilibrium</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#moment"><span class="dot blue"></span>Moment of a force</a>
+          <a href="#varignon"><span class="dot"></span>Varignon</a>
+          <a href="#couples"><span class="dot gold"></span>Couples</a>
+          <a href="#equivalent"><span class="dot pink"></span>Equivalent systems</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <ul>
+          <li>M<sub>O</sub> = F d</li>
+          <li>M<sub>O</sub> = r × F</li>
+          <li>M<sub>axis</sub> = λ·(r×F)</li>
+          <li>C = F d</li>
+          <li>C<sub>T</sub> = r<sub>BA</sub> × F</li>
+          <li>CCW +, CW −</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

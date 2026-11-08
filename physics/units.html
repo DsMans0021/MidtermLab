@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Units &amp; Dimensions — Physics Midterm Lab</title>
+<meta name="description" content="شرح الوحدات والأبعاد: الكميات الأساسية والمشتقة، SI، البادئات، تحليل الأبعاد، مع أسئلة وأمثلة محلولة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/units.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Units &amp; Dimensions — Physics Midterm Lab">
+<meta property="og:description" content="شرح الوحدات والأبعاد: الكميات الأساسية والمشتقة، SI، البادئات، تحليل الأبعاد، مع أسئلة وأمثلة محلولة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/units.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Units &amp; Dimensions — Physics Midterm Lab">
+<meta name="twitter:description" content="شرح الوحدات والأبعاد: الكميات الأساسية والمشتقة، SI، البادئات، تحليل الأبعاد، مع أسئلة وأمثلة محلولة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="units">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects · كل المواد</a> / <a href="index.html">Physics · الفيزياء</a> / Units &amp; Dimensions</div>
+    <div class="eyebrow">Topic 01 · Foundation</div>
+    <h1>Units &amp; Dimensions <span style="color:var(--muted);font-weight:700">· الوحدات والأبعاد</span></h1>
+    <p class="lead en">Before solving any physics problem, you must speak the language: what is measured, with which unit, and what is the dimension of each quantity. This page builds that language from zero.</p>
+    <p class="lead ar">قبل أي مسألة فيزياء، لازم تعرف إيه اللي بتقيسه، بإيه، وإيه أبعاد الكمية. الصفحة دي بتبني اللغة من الصفر: الكمية، الوحدة، البعد، وتحليل الأبعاد.</p>
+    <div class="topic-tags">
+      <span class="badge green">Fundamental &amp; derived</span>
+      <span class="badge">SI · CGS · FPS</span>
+      <span class="badge gold">Dimensional analysis</span>
+      <span class="badge pink">Exam traps</span>
+    </div>
+  </div>
+</header>
+
+<div class="container layout" id="main">
+  <article>
+    <section id="idea" class="section">
+      <div class="callout tip">
+        <div class="icon">1</div>
+        <div>
+          <h4>الفكرة ببساطة · The big idea in one minute</h4>
+          <p class="en">Physics is measurement. A physical quantity is anything we can measure and describe with a number plus a unit. A <b>unit</b> is the agreed standard we compare against. A <b>dimension</b> tells you the physical nature of the quantity, independent of whether you measure length in metres or feet.</p>
+          <p class="ar">الفيزياء كلها قياس. أي كمية فيزيائية = رقم + وحدة. الوحدة هي الاتفاق العالمي اللي بنقيس بيه. أما <b>البُعد (Dimension)</b> فهو نوع الكمية نفسها، يعني الطول يفضل طول سواء قسته بالمتر أو بالقدم. عشان كده بنكتب الطول [L]، الكتلة [M]، الزمن [T].</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h3>Physical quantity · الكمية الفيزيائية</h3>
+          <p class="en">A property that can be measured and expressed as a number with a unit: length, mass, time, temperature, speed, force.</p>
+          <p class="ar">أي خاصية نقدر نقيسها ونعبر عنها برقم ووحدة. أمثلة: الطول، الكتلة، الزمن، درجة الحرارة، السرعة، القوة.</p>
+        </div>
+        <div class="card">
+          <h3>Unit · الوحدة</h3>
+          <p class="en">The standard used for measurement: metre for length, kilogram for mass, second for time, kelvin for temperature.</p>
+          <p class="ar">المعيار اللي بنقيس بيه: المتر للطول، الكيلوجرام للكتلة، الثانية للزمن، الكلفن لدرجة الحرارة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="types" class="section">
+      <div class="section-head"><div><div class="kicker">1 · Classification</div><h2>أنواع الكميات · Types of quantities</h2></div></div>
+      <div class="grid two">
+        <div class="card">
+          <span class="badge green">Fundamental · أساسية</span>
+          <h3 class="mt-2">الكميات الأساسية</h3>
+          <p class="en">Quantities that do not depend on any other quantity for their measurement. The seven SI base quantities are: length, mass, time, electric current, temperature, amount of substance, and luminous intensity.</p>
+          <p class="ar">كميات مبنية على غيرها: الطول، الكتلة، الزمن، شدة التيار، درجة الحرارة، كمية المادة، وشدة الإضاءة. كل واحدة ليها وحدة أساسية في SI.</p>
+        </div>
+        <div class="card">
+          <span class="badge gold">Derived · مشتقة</span>
+          <h3 class="mt-2">الكميات المشتقة</h3>
+          <p class="en">Built from fundamental quantities: area, volume, speed, acceleration, force, pressure, density, work, energy.</p>
+          <p class="ar">بتتكوّن من الأساسية: المساحة، الحجم، السرعة، العجلة، القوة، الضغط، الكثافة، الشغل، والطاقة.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap mt-2">
+        <table>
+          <thead><tr><th>SI base quantity · الكمية الأساسية</th><th>Symbol</th><th>SI unit · الوحدة</th><th>Unit symbol</th><th>Dimension</th></tr></thead>
+          <tbody>
+            <tr><td>Length · الطول</td><td><b>L</b></td><td>metre · متر</td><td>m</td><td>[L]</td></tr>
+            <tr><td>Mass · الكتلة</td><td><b>M</b></td><td>kilogram · كيلوجرام</td><td>kg</td><td>[M]</td></tr>
+            <tr><td>Time · الزمن</td><td><b>T</b></td><td>second · ثانية</td><td>s</td><td>[T]</td></tr>
+            <tr><td>Electric current · التيار</td><td><b>I</b></td><td>ampere · أمبير</td><td>A</td><td>[I]</td></tr>
+            <tr><td>Temperature · الحرارة</td><td><b>Θ</b></td><td>kelvin · كلفن</td><td>K</td><td>[Θ]</td></tr>
+            <tr><td>Amount of substance · كمية المادة</td><td><b>N</b></td><td>mole · مول</td><td>mol</td><td>[N]</td></tr>
+            <tr><td>Luminous intensity · شدة الإضاءة</td><td><b>J</b></td><td>candela · كانديلا</td><td>cd</td><td>[J]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="systems" class="section">
+      <div class="section-head"><div><div class="kicker">2 · Unit systems</div><h2>أنظمة الوحدات · Systems of units</h2></div></div>
+      <div class="grid three">
+        <div class="card"><span class="badge green">SI / MKS</span><h3 class="mt-2">International</h3><p class="en">metre (m), kilogram (kg), second (s). The standard system used in the exam.</p><p class="ar">متر، كيلوجرام، ثانية. النظام المعتمد في الامتحان.</p></div>
+        <div class="card"><span class="badge gold">CGS</span><h3 class="mt-2">French / Gaussian</h3><p class="en">centimetre (cm), gram (g), second (s). Common in older physics texts and in Young's modulus data in dyne/cm².</p><p class="ar">سنتيمتر، جرام، ثانية. بيظهر في كتب قديمة وفي وحدات معامل يونج dyne/cm².</p></div>
+        <div class="card"><span class="badge pink">FPS</span><h3 class="mt-2">British</h3><p class="en">foot (ft), pound (lb), second (s). Still used in some engineering data.</p><p class="ar">قدم، باوند، ثانية. لسه بيستخدم في بعض البيانات الهندسية.</p></div>
+      </div>
+
+      <div class="callout mt-2">
+        <div class="icon">↔</div>
+        <div>
+          <h4>Useful conversions · تحويلات مهمة</h4>
+          <p class="en">1 m = 100 cm = 1000 mm · 1 kg = 1000 g · 1 N = 10<sup>5</sup> dyne · 1 Pa = 1 N/m² · 1 atm = 1.013 × 10<sup>5</sup> Pa · 1 L = 10<sup>−3</sup> m³ · 1 cal = 4.186 J.</p>
+          <p class="ar">احفظهم كويس: 1 متر = 100 سم، 1 كجم = 1000 جم، 1 نيوتن = 10<sup>5</sup> داين، 1 باسكال = نيوتن/م²، 1 ضغط جوي = 1.013×10<sup>5</sup> باسكال، 1 لتر = 10<sup>−3</sup> م³، 1 كالوري = 4.186 جول.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prefixes" class="section">
+      <div class="section-head"><div><div class="kicker">3 · Prefixes</div><h2>البادئات · Power prefixes</h2></div></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Prefix</th><th>Abbreviation</th><th>Power</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>nano · نانو</td><td><b>n</b></td><td>10<sup>−9</sup></td><td>nm = 10<sup>−9</sup> m</td></tr>
+            <tr><td>micro · ميكرو</td><td><b>µ</b></td><td>10<sup>−6</sup></td><td>µm = 10<sup>−6</sup> m</td></tr>
+            <tr><td>milli · مللي</td><td><b>m</b></td><td>10<sup>−3</sup></td><td>mm = 10<sup>−3</sup> m</td></tr>
+            <tr><td>centi · سنتي</td><td><b>c</b></td><td>10<sup>−2</sup></td><td>cm = 10<sup>−2</sup> m</td></tr>
+            <tr><td>deci · ديسي</td><td><b>d</b></td><td>10<sup>−1</sup></td><td>dm = 10<sup>−1</sup> m</td></tr>
+            <tr><td>kilo · كيلو</td><td><b>k</b></td><td>10<sup>3</sup></td><td>km = 10<sup>3</sup> m</td></tr>
+            <tr><td>mega · ميجا</td><td><b>M</b></td><td>10<sup>6</sup></td><td>MPa = 10<sup>6</sup> Pa</td></tr>
+            <tr><td>giga · جيجا</td><td><b>G</b></td><td>10<sup>9</sup></td><td>GPa = 10<sup>9</sup> Pa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout tip">
+        <div class="icon">Q</div>
+        <div>
+          <h4>Rules for writing SI units · قواعد كتابة الوحدات</h4>
+          <p class="en">Unit names start with a small letter (newton, not Newton). Symbols named after scientists start with a capital letter (N). Other symbols are lowercase (kg). Leave a space between number and unit: 10 kg, not 10kg. Units have no plural: 6 metre, not metres. No full stop after the unit.</p>
+          <p class="ar">اسم الوحدة يبدأ بحرف صغير، لكن رمز الوحدة المسماة على عالم يبدأ بكابيتال (N). سيب مسافة بين الرقم والوحدة: 10 kg مش 10kg. الوحدة مالهاش جمع. ومفيش نقطة بعد الوحدة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dimensions" class="section">
+      <div class="section-head"><div><div class="kicker">4 · Dimensional analysis</div><h2>تحليل الأبعاد · Dimensional analysis</h2></div></div>
+      <p class="en">Dimensions can be treated like algebra: add, subtract, multiply, and divide. Both sides of any correct equation must have the same dimensions. This lets you check an equation or derive the form of a relation. Its limitation: it cannot determine numerical constants such as ½ or 2π.</p>
+      <p class="ar">الأبعاد بتتعامل زي الجبر: جمع وطرح وضرب وقسمة. أي معادلة صحيحة لازم يكون الطرفين ليهم نفس الأبعاد. ده بيخليك تتأكد من صحة قانون أو تستنتج شكله. عيبه إنه مايقدرش يحدد الثوابت الرقمية زي ½ أو 2π.</p>
+
+      <div class="formula-grid">
+        <div class="formula">
+          <div class="flabel">Speed · السرعة</div>
+          <div class="fbody">[v] = L / T = LT<sup>−1</sup></div>
+        </div>
+        <div class="formula">
+          <div class="flabel">Acceleration · العجلة</div>
+          <div class="fbody">[a] = LT<sup>−1</sup> / T = LT<sup>−2</sup></div>
+        </div>
+        <div class="formula">
+          <div class="flabel">Force · القوة</div>
+          <div class="fbody">[F] = [m][a] = MLT<sup>−2</sup></div>
+        </div>
+        <div class="formula">
+          <div class="flabel">Work / Energy · الشغل والطاقة</div>
+          <div class="fbody">[W] = [F][d] = ML<sup>2</sup>T<sup>−2</sup></div>
+        </div>
+        <div class="formula">
+          <div class="flabel">Pressure · الضغط</div>
+          <div class="fbody">[P] = [F]/[A] = ML<sup>−1</sup>T<sup>−2</sup></div>
+        </div>
+        <div class="formula">
+          <div class="flabel">Density · الكثافة</div>
+          <div class="fbody">[ρ] = M / L<sup>3</sup> = ML<sup>−3</sup></div>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Worked example · مثال محلول</div>
+        <h4>Is T = 2π√(L/g) dimensionally correct?</h4>
+        <div class="work">
+          <span class="step">[L] = L, [g] = LT⁻²</span>
+          <span class="step">[L/g] = L / (LT⁻²) = T²</span>
+          <span class="step">[√(L/g)] = T</span>
+          <span class="step">Therefore T = 2π√(L/g) has dimension [T] ✓</span>
+        </div>
+        <p class="en mt-1">A related expression written as <code>T = 2πgL</code> is <b>dimensionally wrong</b>, because its dimension would be LT<sup>−2</sup>, not T.</p>
+        <p class="ar mt-1">أما لو الكلام على <code>T = 2πgL</code> من غير جذر، فهي <b>غلط</b> لأن أبعادها هتطلع LT<sup>−2</sup> مش T.</p>
+      </div>
+
+      <div class="example">
+        <div class="tag">Worked example · مثال محلول</div>
+        <h4>Check u = v − at</h4>
+        <div class="work">
+          <span class="step">[u] = [v] = LT⁻¹</span>
+          <span class="step">[a][t] = (LT⁻²)(T) = LT⁻¹</span>
+          <span class="step">Both terms have the same dimension → equation is dimensionally correct ✓</span>
+        </div>
+        <p class="ar mt-1">لما تجمع أو تطرح، كل الحدود لازم تكون من نفس النوع. هنا v و at الاتنين سرعة، يبقى القانون سليم بعديًا.</p>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section">
+      <div class="section-head"><div><div class="kicker">5 · Exam traps</div><h2>أخطاء بتتكرر في الامتحان</h2></div></div>
+      <div class="grid two">
+        <div class="card"><h3>لا تجمع كميات مختلفة الأبعاد</h3><p class="en">You cannot add length to time. Addition and subtraction require identical dimensions.</p><p class="ar">مينفعش تجمع طول + زمن. الجمع والطرح لازم نفس الأبعاد.</p></div>
+        <div class="card"><h3>القسمة لا تشترط نفس الأبعاد</h3><p class="en">Dividing two different quantities is allowed; it produces a new derived dimension. Only addition/subtraction require matching dimensions.</p><p class="ar">القسمة مسموحة بين كميتين مختلفتين، والناتج بُعد جديد. الشرط بس في الجمع والطرح.</p></div>
+        <div class="card"><h3>البُعد مش الوحدة</h3><p class="en">The dimension of length is [L] whether you use metres or feet. Unit changes, dimension does not.</p><p class="ar">بُعد الطول [L] سواء بالمتر أو القدم. الوحدة تتغير، البُعد ثابت.</p></div>
+        <div class="card"><h3>تحليل الأبعاد لا يعطي الأرقام</h3><p class="en">It can confirm the form of an equation, but cannot give the numerical factor (like 2π or ½).</p><p class="ar">بيتأكد من الشكل، لكن مايعطيش المعامل الرقمي زي 2π أو ½.</p></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-head"><div><div class="kicker">6 · Practice</div><h2>أسئلة على الوحدات والأبعاد</h2><p class="muted">اختار إجابتك ثم اضغط "تحقق". النتيجة بتتحدث تلقائيًا.</p></div></div>
+      <div class="quiz">
+
+        <div class="q">
+          <div class="qhead"><div class="num">1</div><div class="qtext">Which of the following is a fundamental quantity? · أي الكميات التالية أساسية؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u1"> a) Force</label>
+            <label><input type="radio" name="u1" data-correct="true"> b) Temperature</label>
+            <label><input type="radio" name="u1"> c) Pressure</label>
+            <label><input type="radio" name="u1"> d) Energy</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b) Temperature.</b> Temperature is one of the seven SI base quantities. Force, pressure, and energy are derived.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">2</div><div class="qtext">The SI unit of work function of a metal used in the photoelectric effect is: · وحدة دالة الشغل في SI هي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u2" data-correct="true"> a) joule (J)</label>
+            <label><input type="radio" name="u2"> b) newton (N)</label>
+            <label><input type="radio" name="u2"> c) pascal (Pa)</label>
+            <label><input type="radio" name="u2"> d) hertz (Hz)</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a) joule (J).</b> Work function is an energy, so its unit is the joule.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">3</div><div class="qtext">Dimensions of kinetic energy are the same as that of: · أبعاد طاقة الحركة مثل أبعاد:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u3"> a) Acceleration</label>
+            <label><input type="radio" name="u3"> b) Velocity</label>
+            <label><input type="radio" name="u3" data-correct="true"> c) Work</label>
+            <label><input type="radio" name="u3"> d) Force</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c) Work.</b> Both are energies: [ML²T⁻²].</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">4</div><div class="qtext">The surface tension of a liquid is 70 dyne/cm. In MKS its value is: · في نظام MKS تساوي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u4"> a) 70 N/m</label>
+            <label><input type="radio" name="u4" data-correct="true"> b) 7 × 10⁻² N/m</label>
+            <label><input type="radio" name="u4"> c) 7 × 10² N/m</label>
+            <label><input type="radio" name="u4"> d) 7 × 10³ N/m</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b) 7 × 10⁻² N/m.</b><br>70 dyne/cm = 70 × (10⁻⁵ N)/(10⁻² m) = 70 × 10⁻³ = 7 × 10⁻² N/m.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">5</div><div class="qtext">The expression T = 2πgL is dimensionally incorrect. · التعبير T = 2πgL أبعاده غير صحيحة.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u5" data-correct="true"> a) True</label>
+            <label><input type="radio" name="u5"> b) False</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: True.</b> [gL] = (LT⁻²)(L) = L²T⁻², not T. The correct pendulum formula is T = 2π√(L/g).</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">6</div><div class="qtext">The equation u = v − at is dimensionally correct (u, v velocities; a acceleration; t time). · هل القانون صحيح بعديًا؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u6" data-correct="true"> a) True</label>
+            <label><input type="radio" name="u6"> b) False</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: True.</b> [u] = [v] = LT⁻¹ and [at] = (LT⁻²)(T) = LT⁻¹. All terms match.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">7</div><div class="qtext">Two different quantities that are to be divided must have the same dimensions. · القسمة تشترط نفس الأبعاد.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u7"> a) True</label>
+            <label><input type="radio" name="u7" data-correct="true"> b) False</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: False.</b> Division does not require equal dimensions; it creates a new derived dimension. Only addition and subtraction require matching dimensions.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">8</div><div class="qtext">Which of the following is a dimensionless quantity? · أي كمية بلا أبعاد؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u8"> a) Force</label>
+            <label><input type="radio" name="u8"> b) Mass</label>
+            <label><input type="radio" name="u8"> c) Pressure</label>
+            <label><input type="radio" name="u8" data-correct="true"> d) None of the above</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d) None of the above.</b> Force, mass, and pressure all have dimensions. A true dimensionless example is strain or specific gravity.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">9</div><div class="qtext">The density of a material is 2.7 g/cm³. Convert it to kg/m³.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u9" data-correct="true"> a) 2700 kg/m³</label>
+            <label><input type="radio" name="u9"> b) 270 kg/m³</label>
+            <label><input type="radio" name="u9"> c) 2.7 × 10⁴ kg/m³</label>
+            <label><input type="radio" name="u9"> d) 0.0027 kg/m³</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a) 2700 kg/m³.</b> 1 g/cm³ = 1000 kg/m³, so 2.7 × 1000 = 2700 kg/m³.</div>
+        </div>
+
+        <div class="q">
+          <div class="qhead"><div class="num">10</div><div class="qtext">In dimensional analysis, the dimension of pressure is: · أبعاد الضغط:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="u10"> a) MLT⁻²</label>
+            <label><input type="radio" name="u10" data-correct="true"> b) ML⁻¹T⁻²</label>
+            <label><input type="radio" name="u10"> c) ML²T⁻²</label>
+            <label><input type="radio" name="u10"> d) ML⁻³</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b) ML⁻¹T⁻².</b> Pressure = force/area = (MLT⁻²)/(L²) = ML⁻¹T⁻².</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="summary" class="section">
+      <div class="callout tip mb-0">
+        <div class="icon">✓</div>
+        <div>
+          <h4>Before you leave this page · قبل ما تسيب الصفحة</h4>
+          <p class="en">You should be able to: list the 7 base quantities, convert between SI/CGS, use prefixes, write dimensions of common quantities, and check an equation dimensionally.</p>
+          <p class="ar">لازم تكون قادر: تعدّد الكميات الأساسية السبعة، تحوّل بين الأنظمة، تستخدم البادئات، تكتب أبعاد الكميات الشائعة، وتتأكد من معادلة بعديًا.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidecard">
+      <h4>On this page</h4>
+      <div class="mini-nav">
+        <a href="#idea"><span class="dot"></span>الفكرة ببساطة</a>
+        <a href="#types"><span class="dot gold"></span>أنواع الكميات</a>
+        <a href="#systems"><span class="dot blue"></span>أنظمة الوحدات</a>
+        <a href="#prefixes"><span class="dot pink"></span>البادئات</a>
+        <a href="#dimensions"><span class="dot"></span>تحليل الأبعاد</a>
+        <a href="#quiz"><span class="dot gold"></span>الأسئلة</a>
+      </div>
+    </div>
+    <div class="sidecard">
+      <h4>Quick reminders</h4>
+      <p class="muted" style="font-size:13px;margin:0">[Length] = L<br>[Mass] = M<br>[Time] = T<br><br>Force = MLT⁻²<br>Energy = ML²T⁻²<br>Pressure = ML⁻¹T⁻²</p>
+    </div>
+  </aside>
+</div>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

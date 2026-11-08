@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equilibrium · الاتزان — Mechanics</title>
+<meta name="description" content="اتزان الجسيم والجسم الصلب: FBD، المساند وردود الأفعال، الأعضاء ذات القوتين والثلاث قوى، والجمالونات، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/mechanics/equilibrium.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Equilibrium · الاتزان — Mechanics">
+<meta property="og:description" content="اتزان الجسيم والجسم الصلب: FBD، المساند وردود الأفعال، الأعضاء ذات القوتين والثلاث قوى، والجمالونات، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/mechanics/equilibrium.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Equilibrium · الاتزان — Mechanics">
+<meta name="twitter:description" content="اتزان الجسيم والجسم الصلب: FBD، المساند وردود الأفعال، الأعضاء ذات القوتين والثلاث قوى، والجمالونات، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="mechanics" data-page="equilibrium.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Mechanics</a> / Equilibrium</div>
+    <div class="eyebrow">Mechanics · Topic 04 · Equilibrium</div>
+    <h1>Equilibrium <span style="color:var(--muted);font-weight:700">· الاتزان</span></h1>
+    <p class="lead en">Equilibrium means the net force and net moment are zero. This page covers free-body diagrams, particle and rigid-body equilibrium, supports and reactions, two-force and three-force members, and trusses.</p>
+    <p class="lead ar">الاتزان معناه محصلة القوى ومحصلة العزوم = صفر. الصفحة دي بتغطي مخطط الجسم الحر، اتزان الجسيم والجسم الصلب، المساند وردود الأفعال، الأعضاء ذات القوتين والثلاث قوى، والجمالونات.</p>
+    <div class="topic-tags">
+      <span class="badge pink">Core topic</span>
+      <span class="badge gold">FBD</span>
+      <span class="badge">Reactions</span>
+      <span class="badge green">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="conditions">
+        <div class="kicker">1 · Conditions</div>
+        <h2>Zero force, zero moment</h2>
+        <p class="en">A particle is in equilibrium when the vector sum of all forces is zero. A rigid body needs both zero resultant force and zero resultant moment about any point.</p>
+        <p class="ar">الجسيم في اتزان لما مجموع القوى المتجه = صفر. الجسم الصلب يحتاج محصلة قوى = صفر ومحصلة عزوم = صفر حول أي نقطة.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Particle 2D</div><div class="fbody">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0</div></div>
+          <div class="formula"><div class="flabel">Particle 3D</div><div class="fbody">ΣF<sub>x</sub> = ΣF<sub>y</sub> = ΣF<sub>z</sub> = 0</div></div>
+          <div class="formula"><div class="flabel">Rigid body 2D</div><div class="fbody">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0, ΣM<sub>O</sub> = 0</div></div>
+          <div class="formula"><div class="flabel">Rigid body 3D</div><div class="fbody">ΣF = 0, ΣM = 0</div><div class="fnote">Six scalar equations</div></div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Choice of point · اختيار النقطة</h4>
+            <p class="en">Take moments about a point where unknown forces intersect. That removes those unknowns from the moment equation and gives a direct solution.</p>
+            <p class="ar">خد العزم حول نقطة تتقاطع فيها قوى مجهولة. كده تشيل المجاهيل دي من معادلة العزم وتحل مباشرة.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fbd">
+        <div class="kicker">2 · Free-body diagram</div>
+        <h2>The FBD is half the solution</h2>
+        <p class="en">Isolate the body, draw every external force acting on it, and replace supports with the reactions they provide. Do not include forces the body exerts on other bodies.</p>
+        <p class="ar">اعزل الجسم، ارسم كل القوى الخارجية المؤثرة عليه، واستبدل المساند بردود الأفعال اللي بتوفرها. متضمنش القوى اللي الجسم بيأثرها على غيره.</p>
+        <ol class="muted" style="padding-left:20px;font-size:14px">
+          <li>Draw the body outline separately.</li>
+          <li>Add weight at the centre of gravity.</li>
+          <li>Add applied loads with correct direction.</li>
+          <li>Replace each support with its reaction components.</li>
+          <li>Label unknown magnitudes.</li>
+          <li>Choose axes and write the equations.</li>
+        </ol>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Support</th><th>Reaction</th></tr></thead>
+            <tbody>
+              <tr><td>Roller</td><td>One force perpendicular to the surface</td></tr>
+              <tr><td>Pin / hinge</td><td>Two components (x and y)</td></tr>
+              <tr><td>Fixed support</td><td>Two force components + a moment</td></tr>
+              <tr><td>Short link / cable</td><td>Force along the link (tension only for cable)</td></tr>
+              <tr><td>Smooth contact surface</td><td>Normal force only</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="members">
+        <div class="kicker">3 · Special members</div>
+        <h2>Two-force and three-force members</h2>
+        <p class="en">A two-force member has forces applied at only two points and no applied moment. For equilibrium, the two forces must be equal, opposite, and collinear. A three-force member in equilibrium has concurrent forces (or parallel, in a special case).</p>
+        <p class="ar">العضو ذو القوتين عليه قوى عند نقطتين بس وبدون عزم مؤثر. للاتزان، القوتين لازم يكونوا متساويين ومتعاكسين وعلى نفس الخط. العضو ذو الثلاث قوى في الاتزان قواه متلاقية (أو متوازية في حالة خاصة).</p>
+        <div class="example">
+          <div class="tag">Example · simply supported beam</div>
+          <h4>A 6 m beam carries a 12 kN load at 2 m from A. Find the reactions at A (pin) and B (roller).</h4>
+          <div class="work">
+            <span class="step">ΣM<sub>A</sub> = 0: R<sub>B</sub>(6) − 12(2) = 0 → R<sub>B</sub> = 4 kN</span>
+            <span class="step">ΣF<sub>y</sub> = 0: R<sub>A</sub> + 4 − 12 = 0 → R<sub>A</sub> = 8 kN</span>
+            <span class="step">ΣF<sub>x</sub> = 0: A<sub>x</sub> = 0</span>
+            <span class="step">Check: R<sub>A</sub> + R<sub>B</sub> = 12 kN</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="truss">
+        <div class="kicker">4 · Trusses</div>
+        <h2>Method of joints</h2>
+        <p class="en">A simple truss is made of triangles. Assume members are two-force members: forces act along the member, either tension or compression. Solve joint by joint, starting at a joint with at most two unknowns.</p>
+        <p class="ar">الجمالون البسيط مكوّن من مثلثات. افترض أن الأعضاء ذات قوتين: القوى على اتجاه العضو، شد أو ضغط. حل مفصل مفصل، وابدأ بمفصل فيه مجهولين على الأكثر.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">At each joint</div><div class="fbody">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0</div></div>
+          <div class="formula"><div class="flabel">Tension</div><div class="fbody">Force pulls away from the joint</div></div>
+          <div class="formula"><div class="flabel">Compression</div><div class="fbody">Force pushes toward the joint</div></div>
+          <div class="formula"><div class="flabel">Zero-force member</div><div class="fbody">Two non-collinear members at an unloaded joint</div></div>
+        </div>
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Sign discipline · ضبط الإشارات</h4>
+            <p class="en">Assume tension and draw arrows away from the joint. A negative result means compression. Do not flip arrows mid-calculation without recording the sign.</p>
+            <p class="ar">افترض شد وارسم الأسهم بعيد عن المفصل. النتيجة السالبة معناها ضغط. متعكسش الأسهم في نص الحل من غير ما تسجل الإشارة.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">5 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">A particle in equilibrium has: · الجسيم في اتزان:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="me1" data-correct="true"> a) ΣF = 0</label>
+              <label><input type="radio" name="me1" data-correct="false"> b) ΣM = 0 only</label>
+              <label><input type="radio" name="me1" data-correct="false"> c) ΣF = constant</label>
+              <label><input type="radio" name="me1" data-correct="false"> d) zero mass</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Particle equilibrium requires zero resultant force.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">A roller support provides: · المسند الدحروج:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="me2" data-correct="true"> a) one normal reaction</label>
+              <label><input type="radio" name="me2" data-correct="false"> b) two force components and a moment</label>
+              <label><input type="radio" name="me2" data-correct="false"> c) no reaction</label>
+              <label><input type="radio" name="me2" data-correct="false"> d) only a moment</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> A roller resists only in the direction normal to the surface.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">A pin support provides: · المسند المفصلي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="me3" data-correct="true"> a) two force components</label>
+              <label><input type="radio" name="me3" data-correct="false"> b) one force</label>
+              <label><input type="radio" name="me3" data-correct="false"> c) no moment and no force</label>
+              <label><input type="radio" name="me3" data-correct="false"> d) three moments</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> A pin can react in two directions but not resist rotation.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">A two-force member has forces that are: · العضو ذو القوتين:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="me4" data-correct="true"> a) equal, opposite, collinear</label>
+              <label><input type="radio" name="me4" data-correct="false"> b) perpendicular</label>
+              <label><input type="radio" name="me4" data-correct="false"> c) always zero</label>
+              <label><input type="radio" name="me4" data-correct="false"> d) parallel but not collinear</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Otherwise the member would not be in equilibrium.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">In a truss, members carry: · أعضاء الجمالون:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="me5" data-correct="true"> a) axial tension or compression</label>
+              <label><input type="radio" name="me5" data-correct="false"> b) bending only</label>
+              <label><input type="radio" name="me5" data-correct="false"> c) torsion only</label>
+              <label><input type="radio" name="me5" data-correct="false"> d) no force</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Truss members are treated as two-force members.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">A negative member force (assumed tension) means: · القوة السالبة معناها:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="me6" data-correct="true"> a) compression</label>
+              <label><input type="radio" name="me6" data-correct="false"> b) tension</label>
+              <label><input type="radio" name="me6" data-correct="false"> c) zero force</label>
+              <label><input type="radio" name="me6" data-correct="false"> d) a moment</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The negative sign reverses the assumed tension direction.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="moments.html"><span>← Previous</span><b>Moments &amp; Couples</b></a>
+        <a href="wrench.html" class="next"><span>Next →</span><b>The Wrench</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#conditions"><span class="dot blue"></span>Conditions</a>
+          <a href="#fbd"><span class="dot"></span>FBD</a>
+          <a href="#members"><span class="dot gold"></span>Two/three-force</a>
+          <a href="#truss"><span class="dot pink"></span>Trusses</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick checklist</h4>
+        <ul>
+          <li>Draw the FBD first.</li>
+          <li>Include weight.</li>
+          <li>Replace supports with reactions.</li>
+          <li>ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0.</li>
+          <li>ΣM = 0 about a smart point.</li>
+          <li>Check signs and units.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

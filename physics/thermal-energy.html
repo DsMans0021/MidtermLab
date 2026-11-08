@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Energy &amp; Heat Transfer — Physics Midterm Lab</title>
+<meta name="description" content="شرح الطاقة الحرارية: الحرارة النوعية، الكالوريمتري، الحرارة الكامنة، منحنى الثلج للبخار، التوصيل والحمل والإشعاع، مع أسئلة وأمثلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/thermal-energy.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Thermal Energy &amp; Heat Transfer — Physics Midterm Lab">
+<meta property="og:description" content="شرح الطاقة الحرارية: الحرارة النوعية، الكالوريمتري، الحرارة الكامنة، منحنى الثلج للبخار، التوصيل والحمل والإشعاع، مع أسئلة وأمثلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/thermal-energy.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Thermal Energy &amp; Heat Transfer — Physics Midterm Lab">
+<meta name="twitter:description" content="شرح الطاقة الحرارية: الحرارة النوعية، الكالوريمتري، الحرارة الكامنة، منحنى الثلج للبخار، التوصيل والحمل والإشعاع، مع أسئلة وأمثلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="thermal-energy">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects · كل المواد</a> / <a href="index.html">Physics · الفيزياء</a> / Thermal Energy</div>
+    <div class="eyebrow">Topic 06 · Heat &amp; energy</div>
+    <h1>Thermal Energy &amp; Heat Transfer <span style="color:var(--muted);font-weight:700">· الطاقة الحرارية</span></h1>
+    <p class="lead en">Why does water take so long to boil? Why does ice stay at 0 °C while melting? Why does a metal spoon feel colder than a plastic one? This page answers all of it — specific heat, latent heat, and the three ways heat moves.</p>
+    <p class="lead ar">ليه الماء بياخد وقت طويل يغلي؟ ليه الثلج يفضل عند 0 °C وهو بينصهر؟ ليه المعلقة المعدن بتحسها أبرد من البلاستيك؟ الصفحة دي تجاوب: الحرارة النوعية، الحرارة الكامنة، والطرق الثلاثة لانتقال الحرارة.</p>
+    <div class="topic-tags">
+      <span class="badge green">Q = mcΔT</span>
+      <span class="badge">Calorimetry</span>
+      <span class="badge gold">Latent heat</span>
+      <span class="badge pink">Conduction · Convection · Radiation</span>
+    </div>
+  </div>
+</header>
+
+<div class="container layout" id="main">
+  <article>
+    <section id="idea" class="section">
+      <div class="callout tip">
+        <div class="icon">1</div>
+        <div>
+          <h4>الفكرة ببساطة · The big idea</h4>
+          <p class="en"><b>Heat</b> is energy in transit because of a temperature difference. <b>Internal energy</b> is the energy stored inside a system in the random motion and bonding of its particles. Heat is not “stuff inside” an object — you cannot say a cup of water “has heat”; you say energy was transferred to it by heat.</p>
+          <p class="ar"><b>الحرارة (Heat)</b> هي طاقة بتنتقل بسبب فرق درجة الحرارة. <b>الطاقة الداخلية (Internal energy)</b> هي الطاقة المخزنة جوه النظام في حركة الجزيئات العشوائية وروابطها. الحرارة مش "مادة جوه" الجسم — مينفعش تقول كوب الماء "فيه حرارة"؛ تقول انتقلت له طاقة بالحرارة.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <div class="card"><h3>Heat · الحرارة</h3><p class="en">Transfer of internal energy between a system and its environment due to a temperature difference. Symbol Q, unit joule (J).</p><p class="ar">انتقال طاقة داخلية بين النظام والوسط بسبب فرق درجة الحرارة. رمزها Q ووحدتها الجول.</p></div>
+        <div class="card"><h3>Internal energy U · الطاقة الداخلية</h3><p class="en">The energy associated with the atoms and molecules: translational, rotational, vibrational kinetic energy plus potential energy from bonding.</p><p class="ar">طاقة الذرات والجزيئات: حركة انتقالية ودورانية واهتزازية + طاقة وضع من الروابط.</p></div>
+      </div>
+
+      <div class="callout">
+        <div class="icon">cal</div>
+        <div>
+          <h4>Calorie · الكالوري</h4>
+          <p class="en">One calorie is the energy needed to raise 1 g of water by 1 °C (from 14.5 °C to 15.5 °C). The SI unit of heat is the joule: <b>1 cal = 4.186 J</b>. Raising 1 kg of water by 1 °C needs 4186 J, but 1 kg of copper needs only 387 J — different substances have different specific heats.</p>
+          <p class="ar">الكالوري = الطاقة اللازمة لرفع جرام ماء درجة واحدة (من 14.5 إلى 15.5). وحدة الحرارة في SI هي الجول: <b>1 cal = 4.186 J</b>. رفع 1 كجم ماء درجة يحتاج 4186 J، بينما 1 كجم نحاس يحتاج 387 J فقط — كل مادة ليها حرارة نوعية مختلفة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="specific-heat" class="section">
+      <div class="section-head"><div><div class="kicker">1 · Specific heat</div><h2>الحرارة النوعية · Specific heat capacity</h2></div></div>
+      <p class="en">Every substance needs a unique amount of energy per unit mass to change its temperature by 1 °C. This property is called the specific heat c. Water has a very high specific heat (≈ 4190 J/kg·°C), which is why it is slow to heat and slow to cool.</p>
+      <p class="ar">كل مادة محتاجة كمية طاقة مختلفة لكل كجم عشان ترفع درجة حرارتها 1 °C. الخاصية دي اسمها الحرارة النوعية c. الماء حرارته النوعية عالية جدًا (≈4190 J/kg·°C)، عشان كده بيسخن ويبرد ببطء.</p>
+      <div class="formula">
+        <div class="flabel">Specific heat · الحرارة النوعية</div>
+        <div class="fbody">c = Q / (m ΔT) &nbsp;&nbsp;→&nbsp;&nbsp; Q = m c ΔT</div>
+        <div class="fvars">
+          <div><b>Q</b> energy transferred · الطاقة المنتقلة (J)</div>
+          <div><b>m</b> mass · الكتلة (kg)</div>
+          <div><b>c</b> specific heat · الحرارة النوعية (J/kg·°C)</div>
+          <div><b>ΔT</b> T<sub>final</sub> − T<sub>initial</sub> · تغير الحرارة (°C or K)</div>
+        </div>
+        <div class="fnote">Q is positive when energy flows in (temperature rises), negative when energy flows out (temperature falls).</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Substance</th><th>c (J/kg·°C)</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Water</td><td>4190</td><td>Very high — stores a lot of energy</td></tr>
+            <tr><td>Ice</td><td>2090</td><td>Lower than liquid water</td></tr>
+            <tr><td>Steam</td><td>2010</td><td>Lower than liquid water</td></tr>
+            <tr><td>Aluminum</td><td>900</td><td>Heats quickly</td></tr>
+            <tr><td>Glass</td><td>837</td><td>Moderate</td></tr>
+            <tr><td>Copper</td><td>387</td><td>Low — heats and cools fast</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="calorimetry" class="section">
+      <div class="section-head"><div><div class="kicker">2 · Calorimetry</div><h2>الكالوريمتري · Measuring heat exchange</h2></div></div>
+      <p class="en">A calorimeter is an isolated vessel used to measure heat exchange. If hot and cold objects are mixed and no energy leaves the system, the energy lost by the hot object equals the energy gained by the cold objects. Using ΣQ = 0 with Q = mc(T<sub>f</sub> − T<sub>i</sub>) gives every term its correct sign automatically.</p>
+      <p class="ar">الكالوريمتر وعاء معزول لقياس تبادل الحرارة. لو خلطت ساخن وبارد ومفيش طاقة تخرج من النظام، الطاقة اللي فقدها الساخن = اللي كسبها البارد. باستخدام ΣQ = 0 مع Q = mc(T<sub>f</sub> − T<sub>i</sub>) كل حد بياخد إشارته الصح تلقائيًا.</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Conservation of energy · حفظ الطاقة</div><div class="fbody">Q<sub>cold</sub> = − Q<sub>hot</sub></div></div>
+        <div class="formula"><div class="flabel">General calorimetry</div><div class="fbody">ΣQ = 0 → Σ m<sub>i</sub>c<sub>i</sub>(T<sub>f</sub> − T<sub>i</sub>) = 0</div></div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 1 · unknown specific heat</div>
+        <h4>A 125 g block at 90 °C is placed in 0.326 kg of water at 20 °C. The final temperature is 22.4 °C. Find c of the block (ignore the cup).</h4>
+        <div class="work">
+          <span class="step">Q_cold = −Q_hot</span>
+          <span class="step">m_w c_w (T_f − T_iw) = − m_b c_b (T_f − T_ib)</span>
+          <span class="step">c_b = m_w c_w (T_f − T_iw) / [m_b (T_ib − T_f)]</span>
+          <span class="step">= (0.326)(4190)(22.4 − 20.0) / [(0.125)(90.0 − 22.4)]</span>
+          <span class="step">≈ 388 J/kg·°C ≈ 390 J/kg·°C</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 2 · three materials</div>
+        <h4>0.4 kg water at 40 °C is poured into a 0.3 kg glass beaker at 25 °C. A 0.5 kg aluminum block at 37 °C is placed in the water. Find the final temperature.</h4>
+        <div class="work">
+          <span class="step">ΣQ = 0: m_wc_w(T−40) + m_Alc_Al(T−37) + m_gc_g(T−25) = 0</span>
+          <span class="step">Water: 0.4 × 4190 = 1676 J/°C</span>
+          <span class="step">Aluminum: 0.5 × 900 = 450 J/°C</span>
+          <span class="step">Glass: 0.3 × 837 = 251.1 J/°C</span>
+          <span class="step">Σmc = 2377.1 J/°C</span>
+          <span class="step">ΣmcT_initial = 1676×40 + 450×37 + 251.1×25 = 89 967.5 J</span>
+          <span class="step">T = 89 967.5 / 2377.1 ≈ 37.9 °C</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="latent" class="section">
+      <div class="section-head"><div><div class="kicker">3 · Phase change</div><h2>الحرارة الكامنة وتغير الحالة · Latent heat</h2></div></div>
+      <p class="en">During a phase change, energy is transferred but the temperature does not change. The energy goes into breaking or forming bonds, not into increasing molecular kinetic energy. The energy per unit mass needed to change phase is the latent heat L.</p>
+      <p class="ar">أثناء تغير الحالة، الطاقة بتنتقل لكن درجة الحرارة ماتتغيرش. الطاقة بتذهب لكسر أو تكوين الروابط، مش لزيادة طاقة الحركة. الطاقة اللازمة لكل كجم لتغير الحالة هي الحرارة الكامنة L.</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Latent heat · الحرارة الكامنة</div><div class="fbody">Q = ± m L</div><div class="fnote">+ when energy is absorbed (melting/boiling); − when released (freezing/condensing)</div></div>
+        <div class="formula"><div class="flabel">Fusion · الانصهار</div><div class="fbody">L<sub>f</sub>(water) = 3.33 × 10⁵ J/kg</div><div class="fnote">Solid ↔ liquid</div></div>
+        <div class="formula"><div class="flabel">Vaporization · التبخر</div><div class="fbody">L<sub>v</sub>(water) = 2.26 × 10⁶ J/kg</div><div class="fnote">Liquid ↔ gas</div></div>
+        <div class="formula"><div class="flabel">Sublimation · التسامي</div><div class="fbody">solid → gas directly, without liquid</div><div class="fnote">Example: dry ice (frozen CO₂)</div></div>
+      </div>
+      <div class="callout warn">
+        <div class="icon">!</div>
+        <div><h4>Why does the temperature stay constant?</h4><p class="en">The added energy changes the potential energy of the molecules (separating them), not their average kinetic energy. Since temperature measures average kinetic energy, it stays constant during the phase change.</p><p class="ar">الطاقة المضافة بتغير طاقة الوضع للجزيئات (تفصلهم)، مش متوسط طاقة الحركة. وبما إن درجة الحرارة بتقيس متوسط طاقة الحركة، تفضل ثابتة أثناء تغير الحالة.</p></div>
+      </div>
+    </section>
+
+    <section id="graph" class="section">
+      <div class="section-head"><div><div class="kicker">4 · The ice-to-steam graph</div><h2>منحنى 1 جرام ثلج إلى بخار</h2><p class="muted">أشهر رسمة في الشابتر: خمس مراحل، وكل مرحلة ليها قانونها.</p></div></div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 320" role="img" aria-label="Heating curve for one gram of ice from -30 C to steam at 120 C">
+          <line x1="80" y1="265" x2="710" y2="265" stroke="#8fb0d1" stroke-width="2"/>
+          <line x1="80" y1="265" x2="80" y2="30" stroke="#8fb0d1" stroke-width="2"/>
+          <text x="620" y="292" class="svg-label">Energy added (J)</text>
+          <text x="25" y="38" class="svg-label">T (°C)</text>
+          <path d="M110 230 L210 150 L300 150 L430 80 L520 80 L610 55" fill="none" stroke="#45e0c0" stroke-width="5"/>
+          <circle cx="110" cy="230" r="5" fill="#ff7ab6"/><text x="95" y="250" class="svg-small">−30 °C</text>
+          <circle cx="210" cy="150" r="5" fill="#ffcb6b"/><text x="195" y="138" class="svg-small">0 °C</text>
+          <circle cx="300" cy="150" r="5" fill="#ffcb6b"/><text x="290" y="138" class="svg-small">0 °C</text>
+          <circle cx="430" cy="80" r="5" fill="#ffcb6b"/><text x="415" y="68" class="svg-small">100 °C</text>
+          <circle cx="520" cy="80" r="5" fill="#ffcb6b"/><text x="505" y="68" class="svg-small">100 °C</text>
+          <circle cx="610" cy="55" r="5" fill="#ff7ab6"/><text x="600" y="42" class="svg-small">120 °C</text>
+          <text x="120" y="205" class="svg-small">A ice warms</text>
+          <text x="220" y="172" class="svg-small">B melting (flat)</text>
+          <text x="315" y="115" class="svg-small">C water warms</text>
+          <text x="435" y="103" class="svg-small">D boiling (flat)</text>
+          <text x="535" y="52" class="svg-small">E steam warms</text>
+          <line x1="210" y1="150" x2="210" y2="265" stroke="#a9bed6" stroke-dasharray="4 5"/>
+          <line x1="300" y1="150" x2="300" y2="265" stroke="#a9bed6" stroke-dasharray="4 5"/>
+          <line x1="430" y1="80" x2="430" y2="265" stroke="#a9bed6" stroke-dasharray="4 5"/>
+          <line x1="520" y1="80" x2="520" y2="265" stroke="#a9bed6" stroke-dasharray="4 5"/>
+          <text x="195" y="285" class="svg-small">62.7</text>
+          <text x="285" y="285" class="svg-small">396</text>
+          <text x="415" y="285" class="svg-small">815</text>
+          <text x="505" y="285" class="svg-small">3070</text>
+          <text x="610" y="285" class="svg-small">3110</text>
+        </svg>
+        <figcaption>منحنى تسخين 1 g ثلج من −30 °C إلى بخار عند 120 °C. المراحل المسطحة = تغير حالة، الحرارة ثابتة.</figcaption>
+      </figure>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Part</th><th>Process</th><th>Equation</th><th>Energy</th></tr></thead>
+          <tbody>
+            <tr><td><b>A</b></td><td>Ice warms −30 → 0 °C</td><td>Q = m<sub>i</sub>c<sub>i</sub>ΔT</td><td>62.7 J</td></tr>
+            <tr><td><b>B</b></td><td>Ice melts at 0 °C</td><td>Q = m<sub>i</sub>L<sub>f</sub></td><td>333 J (total 396 J)</td></tr>
+            <tr><td><b>C</b></td><td>Water warms 0 → 100 °C</td><td>Q = m<sub>w</sub>c<sub>w</sub>ΔT</td><td>419 J (total 815 J)</td></tr>
+            <tr><td><b>D</b></td><td>Water boils at 100 °C</td><td>Q = m<sub>w</sub>L<sub>v</sub></td><td>2260 J (total 3070 J)</td></tr>
+            <tr><td><b>E</b></td><td>Steam warms 100 → 120 °C</td><td>Q = m<sub>s</sub>c<sub>s</sub>ΔT</td><td>40.2 J (total 3110 J)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout tip">
+        <div class="icon">Σ</div>
+        <div><p class="en">Total energy to turn 1 g of ice at −30 °C into steam at 120 °C = 3.11 × 10³ J. Conversely, cooling 1 g of steam at 120 °C to ice at −30 °C removes the same 3.11 × 10³ J.</p><p class="ar">إجمالي الطاقة لتحويل 1 جم ثلج عند −30 إلى بخار عند 120 = 3.11×10³ J. وبالعكس، تبريد 1 جم بخار من 120 إلى ثلج عند −30 يسحب نفس الطاقة.</p></div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 3 · ice + water</div>
+        <h4>6 kg of ice at −5 °C is added to 30 L of water at 20 °C. Find the equilibrium temperature.</h4>
+        <div class="work">
+          <span class="step">m_water = ρV = 1000 × 30 × 10⁻³ = 30 kg</span>
+          <span class="step">Q1: ice warms −5→0: (6)(2090)(5) = 62 700 J</span>
+          <span class="step">Q2: ice melts: (6)(3.33×10⁵) = 1.998×10⁶ J</span>
+          <span class="step">Q3: melted ice warms 0→T: (6)(4190)(T−0)</span>
+          <span class="step">Q4: warm water cools 20→T: (30)(4190)(T−20)</span>
+          <span class="step">ΣQ = 0 → 62 700 + 1.998×10⁶ + 25 140T + 125 700(T−20) = 0</span>
+          <span class="step">T ≈ 3.05 °C</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 4 · not enough energy to melt all ice</div>
+        <h4>5 kg of ice at 0 °C is added to 10 kg of water at 15 °C. Find the final state and temperature.</h4>
+        <div class="work">
+          <span class="step">Energy to melt all ice: Q = mL_f = 5 × 3.33×10⁵ = 1.665×10⁶ J</span>
+          <span class="step">Max energy the water can give cooling to 0 °C:</span>
+          <span class="step">Q = 10 × 4190 × 15 = 6.285×10⁵ J</span>
+          <span class="step">6.285×10⁵ &lt; 1.665×10⁶ → not all ice melts</span>
+          <span class="step">Final state: ice + water at 0 °C</span>
+          <span class="step">Mass melted = 6.285×10⁵ / 3.33×10⁵ ≈ 1.89 kg</span>
+          <span class="step">Ice remaining = 5 − 1.89 ≈ 3.11 kg</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="conduction" class="section">
+      <div class="section-head"><div><div class="kicker">5 · Heat transfer</div><h2>انتقال الحرارة · Conduction, convection, radiation</h2></div></div>
+      <div class="grid three">
+        <div class="card"><span class="badge green">Conduction</span><h3 class="mt-2">التوصيل</h3><p class="en">Energy transfer through a material by collisions and lattice vibrations, without bulk movement. Metals are good conductors because free electrons carry energy. Gases are poor conductors.</p><p class="ar">انتقال الطاقة داخل المادة بالتصادم واهتزاز الشبكة، من غير حركة كتلية. المعادن موصلات جيدة لأن الإلكترونات الحرة تنقل الطاقة. الغازات موصلات رديئة.</p></div>
+        <div class="card"><span class="badge gold">Convection</span><h3 class="mt-2">الحمل</h3><p class="en">Energy transfer by the movement of the fluid itself. Warm fluid expands, becomes less dense, rises; cool fluid sinks. Natural (density difference) or forced (fan/pump).</p><p class="ar">انتقال الطاقة بحركة المائع نفسه. المائع الساخن يتمدد، كثافته تقل، يرتفع؛ والبارد يغرق. طبيعي (فرق كثافة) أو قسري (مروحة/مضخة).</p></div>
+        <div class="card"><span class="badge pink">Radiation</span><h3 class="mt-2">الإشعاع</h3><p class="en">Energy transfer by electromagnetic waves. Needs no medium — the Sun's energy reaches Earth through space. All objects radiate continuously.</p><p class="ar">انتقال الطاقة بموجات كهرومغناطيسية. لا يحتاج وسط — طاقة الشمس توصل الأرض عبر الفضاء. كل الأجسام تشع باستمرار.</p></div>
+      </div>
+
+      <h3 class="mt-3">Conduction equation · قانون التوصيل</h3>
+      <div class="formula">
+        <div class="flabel">Rate of heat conduction</div>
+        <div class="fbody">P = Q/Δt = k A (T<sub>h</sub> − T<sub>c</sub>) / L</div>
+        <div class="fvars">
+          <div><b>P</b> power / rate of energy transfer · القدرة (W)</div>
+          <div><b>k</b> thermal conductivity · التوصيلية الحرارية (W/m·K)</div>
+          <div><b>A</b> cross-sectional area · المساحة (m²)</div>
+          <div><b>T<sub>h</sub> − T<sub>c</sub></b> temperature difference · فرق الحرارة</div>
+          <div><b>L</b> thickness / length · السمك (m)</div>
+        </div>
+        <div class="fnote">(T<sub>h</sub> − T<sub>c</sub>)/L is the temperature gradient (K/m). Good conductors: large k. Good insulators: small k.</div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 5 · conduction through a window</div>
+        <h4>A glass window has area 2 m², thickness 5 mm, k = 0.8 W/m·K. Inside is 22 °C and outside is 2 °C. Find the rate of heat loss.</h4>
+        <div class="work">
+          <span class="step">P = kA(T_h − T_c)/L</span>
+          <span class="step">= (0.8)(2)(20)/(5 × 10⁻³)</span>
+          <span class="step">= 32/0.005 = 6400 W</span>
+        </div>
+        <p class="ar mt-1">6.4 kW معدل فقد حرارة كبير — عشان كده الزجاج المزدوج بيقلل الفقد.</p>
+      </div>
+
+      <div class="callout mt-2">
+        <div class="icon">T</div>
+        <div>
+          <h4>Body temperature · حرارة جسم الإنسان</h4>
+          <p class="en">Mammals maintain about 35–38 °C. Fat under the skin insulates against both conduction and convection because it has low thermal conductivity and few blood vessels to carry heat to the surface. This is why body fat helps in cold environments.</p>
+          <p class="ar">الثدييات بتحافظ على 35–38 °C. الدهون تحت الجلد بتعزل ضد التوصيل والحمل لأن توصيليتها الحرارية قليلة وفيها أوعية دموية قليلة. عشان كده الدهون بتساعد في البرد.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="radiation" class="section">
+      <div class="section-head"><div><div class="kicker">6 · Radiation</div><h2>الإشعاع · Stefan–Boltzmann law</h2></div></div>
+      <p class="en">All objects radiate energy continuously as electromagnetic waves due to thermal vibrations. The rate is proportional to the fourth power of absolute temperature. An object also absorbs radiation; if it didn't, it would eventually radiate all its energy and reach 0 K.</p>
+      <p class="ar">كل الأجسام تشع طاقة باستمرار كموجات كهرومغناطيسية بسبب الاهتزازات الحرارية. المعدل يتناسب مع القوة الرابعة لدرجة الحرارة المطلقة. الجسم كذلك بيمتص إشعاع؛ لو ما امتصش، كان فقد كل طاقته ووصل 0 K.</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Stefan–Boltzmann · إشعاع الجسم</div><div class="fbody">P = σ e A T⁴</div><div class="fnote">T must be in kelvin</div></div>
+        <div class="formula"><div class="flabel">Net radiation exchange</div><div class="fbody">P<sub>net</sub> = σ e A (T⁴ − T<sub>s</sub>⁴)</div><div class="fnote">T<sub>s</sub> = surroundings temperature</div></div>
+        <div class="formula"><div class="flabel">Stefan–Boltzmann constant</div><div class="fbody">σ = 5.67 × 10⁻⁸ W/m²·K⁴</div></div>
+        <div class="formula"><div class="flabel">Emissivity · الانبعاثية</div><div class="fbody">0 ≤ e ≤ 1</div><div class="fnote">Black body: e = 1 (perfect absorber and radiator)</div></div>
+      </div>
+
+      <div class="grid two mt-2">
+        <div class="card"><h3>Black body · جسم أسود</h3><p class="en">An ideal absorber: absorbs all incident radiation, reflects nothing. A perfect black body has e = 1 and is also an ideal radiator. The Sun is nearly a perfect black body — it is bright because it emits, not because it reflects.</p><p class="ar">ممتص مثالي: يمتص كل الإشعاع الساقط ولا يعكس شيئًا. الجسم الأسود المثالي e = 1 وهو كذلك مشع مثالي. الشمس تقريبًا جسم أسود مثالي — مضيئة لأنها تشع مش لأنها تعكس.</p></div>
+        <div class="card"><h3>e = 0 · عاكس مثالي</h3><p class="en">An object with e = 0 absorbs none of the incident energy and reflects it all — an ideal reflector.</p><p class="ar">جسم e = 0 مايمتصش أي طاقة ويعكسها كلها — عاكس مثالي.</p></div>
+      </div>
+
+      <div class="callout tip mt-2">
+        <div class="icon">e</div>
+        <div>
+          <h4>Applications · تطبيقات</h4>
+          <p class="en"><b>Clothing:</b> black fabric absorbs sunlight well and emits well; about half the emitted energy goes toward the body, warming it. White clothing reflects much of the incoming energy. <b>Thermography:</b> temperature-sensitive cameras produce thermograms; warm areas are brightest, useful in medicine. <b>Greenhouse effect:</b> visible sunlight enters, is absorbed, and reradiated as infrared; convection is inhibited, so the interior warms. CO₂ increases this effect.</p>
+          <p class="ar"><b>الملابس:</b> الأسود يمتص الشمس ويشع جيدًا، ونصف الإشعاع يرجع للجسم فيدفّيه. الأبيض يعكس معظم الطاقة. <b>التصوير الحراري:</b> كاميرات حساسة للحرارة تنتج صورًا، المناطق الدافئة ألمع، مفيدة طبيًا. <b>الصوبة الزجاجية:</b> ضوء مرئي يدخل ويُمتص ويعاد إشعاعه تحت أحمر، والحمل ممنوع فيسخن الداخل. زيادة CO₂ تزيد التأثير.</p>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 6 · net radiation of a person</div>
+        <h4>A person has skin area 1.8 m², emissivity 0.97, skin temperature 33 °C, room temperature 20 °C. Find the net radiation loss.</h4>
+        <div class="work">
+          <span class="step">T_skin = 33 + 273 = 306 K, T_room = 293 K</span>
+          <span class="step">P_net = σeA(T⁴ − T_s⁴)</span>
+          <span class="step">= (5.67×10⁻⁸)(0.97)(1.8)(306⁴ − 293⁴)</span>
+          <span class="step">≈ 9.9×10⁻⁸ × (8.77×10⁹ − 7.37×10⁹)</span>
+          <span class="step">≈ 138 W</span>
+        </div>
+        <p class="ar mt-1">ده فقد إشعاعي صافي؛ الجسم يعوضه بالتمثيل الغذائي.</p>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section">
+      <div class="section-head"><div><div class="kicker">7 · Exam traps</div><h2>أخطاء شائعة</h2></div></div>
+      <div class="grid two">
+        <div class="card"><h3>الحرارة ≠ درجة الحرارة</h3><p class="en">Heat is energy transfer; temperature is a measure of average kinetic energy. They are not the same quantity.</p><p class="ar">الحرارة انتقال طاقة؛ درجة الحرارة مقياس لمتوسط طاقة الحركة. مش نفس الكمية.</p></div>
+        <div class="card"><h3>مرحلة تغير الحالة: مفيش ΔT</h3><p class="en">During melting or boiling, use Q = mL, not Q = mcΔT. Temperature is constant.</p><p class="ar">أثناء الانصهار أو الغليان استخدم Q = mL مش Q = mcΔT. الحرارة ثابتة.</p></div>
+        <div class="card"><h3>الإشارة في ΣQ = 0</h3><p class="en">Use Q = mc(T<sub>f</sub> − T<sub>i</sub>) for every object; the sign sorts itself out.</p><p class="ar">استخدم Q = mc(T_f − T_i) لكل جسم؛ الإشارة تظبط لوحدها.</p></div>
+        <div class="card"><h3>الإشعاع يحتاج كلفن</h3><p class="en">Stefan–Boltzmann uses T⁴, so temperature must be in kelvin. A small °C error becomes huge when raised to the fourth power.</p><p class="ar">قانون ستيفان يحتاج كلفن لأن T⁴. غلطة صغيرة في °C تبقى ضخمة عند الرفع للأس الرابع.</p></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-head"><div><div class="kicker">8 · Practice</div><h2>أسئلة على الطاقة الحرارية</h2></div></div>
+      <div class="quiz">
+
+        <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Heat is: · الحرارة هي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h1"> a) the total internal energy of an object</label>
+            <label><input type="radio" name="h1" data-correct="true"> b) energy transferred due to a temperature difference</label>
+            <label><input type="radio" name="h1"> c) the same as temperature</label>
+            <label><input type="radio" name="h1"> d) measured in kelvin</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Heat is energy in transit; internal energy is stored, temperature is a state variable.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The unit of specific heat is: · وحدة الحرارة النوعية:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h2"> a) J/kg</label>
+            <label><input type="radio" name="h2" data-correct="true"> b) J/(kg·°C)</label>
+            <label><input type="radio" name="h2"> c) J·kg/°C</label>
+            <label><input type="radio" name="h2"> d) W/m·K</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> c = Q/(mΔT), so J/(kg·°C).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">During melting, the temperature of a pure substance: · أثناء الانصهار درجة الحرارة:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h3"> a) rises</label>
+            <label><input type="radio" name="h3"> b) falls</label>
+            <label><input type="radio" name="h3" data-correct="true"> c) stays constant</label>
+            <label><input type="radio" name="h3"> d) doubles</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> The energy goes into breaking bonds, not raising kinetic energy.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">How much energy is needed to melt 2 kg of ice at 0 °C? (L<sub>f</sub> = 3.33 × 10⁵ J/kg)</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h4"> a) 1.67 × 10⁵ J</label>
+            <label><input type="radio" name="h4" data-correct="true"> b) 6.66 × 10⁵ J</label>
+            <label><input type="radio" name="h4"> c) 2.26 × 10⁶ J</label>
+            <label><input type="radio" name="h4"> d) 4.19 × 10⁶ J</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Q = mL_f = 2 × 3.33×10⁵ = 6.66×10⁵ J.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">Which process needs the most energy per kg for water? · أعلى طاقة لكل كجم:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h5"> a) heating ice by 1 °C</label>
+            <label><input type="radio" name="h5" data-correct="true"> b) vaporization</label>
+            <label><input type="radio" name="h5"> c) melting</label>
+            <label><input type="radio" name="h5"> d) heating water by 1 °C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> L_v = 2.26×10⁶ J/kg is much larger than L_f = 3.33×10⁵ J/kg.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">Heat transfer by actual movement of a fluid is: · انتقال الحرارة بحركة المائع:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h6"> a) conduction</label>
+            <label><input type="radio" name="h6" data-correct="true"> b) convection</label>
+            <label><input type="radio" name="h6"> c) radiation</label>
+            <label><input type="radio" name="h6"> d) sublimation</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Convection = energy carried by the moving fluid.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">7</div><div class="qtext">Which method of heat transfer does not need a medium? · أي طريقة لا تحتاج وسط؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h7"> a) conduction</label>
+            <label><input type="radio" name="h7"> b) convection</label>
+            <label><input type="radio" name="h7" data-correct="true"> c) radiation</label>
+            <label><input type="radio" name="h7"> d) all need a medium</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Radiation travels as electromagnetic waves through vacuum.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">8</div><div class="qtext">A black body has emissivity: · الجسم الأسود انبعاثيته:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h8"> a) 0</label>
+            <label><input type="radio" name="h8"> b) 0.5</label>
+            <label><input type="radio" name="h8" data-correct="true"> c) 1</label>
+            <label><input type="radio" name="h8"> d) infinite</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> A perfect black body absorbs all radiation and is a perfect emitter (e = 1).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">9</div><div class="qtext">How much energy raises 0.5 kg of water by 10 °C? (c = 4190 J/kg·°C)</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h9"> a) 2 095 J</label>
+            <label><input type="radio" name="h9" data-correct="true"> b) 20 950 J</label>
+            <label><input type="radio" name="h9"> c) 104 750 J</label>
+            <label><input type="radio" name="h9"> d) 41 900 J</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b) 20 950 J.</b> Q = (0.5)(4190)(10) = 20 950 J.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">10</div><div class="qtext">In conduction, P = kAΔT/L. If the thickness L is doubled, the rate of heat transfer: · لو تضاعف السمك، معدل الانتقال:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h10"> a) doubles</label>
+            <label><input type="radio" name="h10" data-correct="true"> b) halves</label>
+            <label><input type="radio" name="h10"> c) quadruples</label>
+            <label><input type="radio" name="h10"> d) stays the same</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> P is inversely proportional to thickness L.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">11</div><div class="qtext">A metal spoon feels colder than a plastic spoon at the same temperature because: · المعلقة المعدن بتحس أبرد لأن:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h11"> a) it is at a lower temperature</label>
+            <label><input type="radio" name="h11" data-correct="true"> b) it conducts heat away from your hand faster</label>
+            <label><input type="radio" name="h11"> c) it has a higher specific heat</label>
+            <label><input type="radio" name="h11"> d) it radiates more</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Higher thermal conductivity removes heat from your skin quickly, producing the sensation of cold.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">12</div><div class="qtext">The energy needed to change 1 kg of a substance from solid to liquid at constant temperature is called: · طاقة تحويل 1 كجم من صلب لسائل عند ثبات الحرارة:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h12"> a) specific heat</label>
+            <label><input type="radio" name="h12" data-correct="true"> b) latent heat of fusion</label>
+            <label><input type="radio" name="h12"> c) latent heat of vaporization</label>
+            <label><input type="radio" name="h12"> d) thermal conductivity</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> L_f is for melting/freezing; L_v is for boiling/condensing.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">13</div><div class="qtext">Which statement about a calorimeter is correct? · الكالوريمتر:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h13" data-correct="true"> a) it is an isolated vessel used to measure heat exchange</label>
+            <label><input type="radio" name="h13"> b) it measures pressure</label>
+            <label><input type="radio" name="h13"> c) it produces heat</label>
+            <label><input type="radio" name="h13"> d) it measures only latent heat</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> It minimizes energy exchange with the surroundings so ΣQ ≈ 0 inside.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">14</div><div class="qtext">Net radiation from an object is proportional to: · الإشعاع الصافي يتناسب مع:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h14"> a) T</label>
+            <label><input type="radio" name="h14"> b) T²</label>
+            <label><input type="radio" name="h14"> c) T³</label>
+            <label><input type="radio" name="h14" data-correct="true"> d) T⁴</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> Stefan–Boltzmann law: P = σeAT⁴.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">15</div><div class="qtext">Why does a greenhouse warm up? · ليه الصوبة الزجاجية بتسخن؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h15" data-correct="true"> a) visible light is absorbed and reradiated as infrared; convection is inhibited</label>
+            <label><input type="radio" name="h15"> b) glass produces heat</label>
+            <label><input type="radio" name="h15"> c) radiation cannot enter</label>
+            <label><input type="radio" name="h15"> d) the air inside has no molecules</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> The trapped infrared and reduced convection raise the interior temperature.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">16</div><div class="qtext">A 0.2 kg metal block at 100 °C is put in 0.5 kg water at 20 °C. If final T = 25 °C, find c of the metal (c<sub>w</sub> = 4190).</div></div>
+          <div class="opts">
+            <label><input type="radio" name="h16"> a) 250 J/kg·°C</label>
+            <label><input type="radio" name="h16"> b) 349 J/kg·°C</label>
+            <label><input type="radio" name="h16"> c) 419 J/kg·°C</label>
+            <label><input type="radio" name="h16" data-correct="true"> d) 700 J/kg·°C</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d) ≈700 J/kg·°C.</b> c = (0.5×4190×5)/[0.2×(100−25)] = 10 475/15 ≈ 698 J/kg·°C.</div>
+        </div>
+
+      </div>
+
+      <div class="callout tip mt-3">
+        <div class="icon">Q</div>
+        <div>
+          <h4>Long-answer practice · أسئلة مقالية</h4>
+          <p class="en">1) Distinguish heat, internal energy, and temperature. 2) Explain why temperature is constant during a phase change. 3) Describe the ice-to-steam heating curve. 4) Compare conduction, convection, and radiation. 5) Why are metals good conductors? 6) Explain the greenhouse effect.</p>
+          <p class="ar">1) فرّق بين الحرارة والطاقة الداخلية ودرجة الحرارة. 2) ليه الحرارة ثابتة أثناء تغير الحالة؟ 3) اوصف منحنى الثلج للبخار. 4) قارن التوصيل والحمل والإشعاع. 5) ليه المعادن موصلات جيدة؟ 6) اشرح تأثير الصوبة الزجاجية.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidecard">
+      <h4>On this page</h4>
+      <div class="mini-nav">
+        <a href="#idea"><span class="dot"></span>الفكرة ببساطة</a>
+        <a href="#specific-heat"><span class="dot gold"></span>الحرارة النوعية</a>
+        <a href="#calorimetry"><span class="dot blue"></span>الكالوريمتري</a>
+        <a href="#latent"><span class="dot pink"></span>الحرارة الكامنة</a>
+        <a href="#graph"><span class="dot"></span>منحنى الثلج</a>
+        <a href="#conduction"><span class="dot gold"></span>التوصيل والحمل</a>
+        <a href="#radiation"><span class="dot blue"></span>الإشعاع</a>
+        <a href="#quiz"><span class="dot pink"></span>الأسئلة</a>
+      </div>
+    </div>
+    <div class="sidecard">
+      <h4>Key constants</h4>
+      <p class="muted" style="font-size:13px;margin:0;line-height:2">
+        c<sub>water</sub> = 4190 J/kg·°C<br>
+        c<sub>ice</sub> = 2090 J/kg·°C<br>
+        c<sub>steam</sub> = 2010 J/kg·°C<br>
+        L<sub>f</sub> = 3.33×10⁵ J/kg<br>
+        L<sub>v</sub> = 2.26×10⁶ J/kg<br>
+        σ = 5.67×10⁻⁸ W/m²·K⁴<br>
+        1 cal = 4.186 J
+      </p>
+    </div>
+  </aside>
+</div>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

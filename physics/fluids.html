@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid Mechanics — Physics Midterm Lab</title>
+<meta name="description" content="شرح ميكانيكا الموائع: الكثافة، الوزن النوعي، الضغط، المانومتر، مبدأ باسكال، المكبس الهيدروليكي، وقاعدة أرخميدس مع أسئلة محلولة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/fluids.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Fluid Mechanics — Physics Midterm Lab">
+<meta property="og:description" content="شرح ميكانيكا الموائع: الكثافة، الوزن النوعي، الضغط، المانومتر، مبدأ باسكال، المكبس الهيدروليكي، وقاعدة أرخميدس مع أسئلة محلولة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/fluids.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fluid Mechanics — Physics Midterm Lab">
+<meta name="twitter:description" content="شرح ميكانيكا الموائع: الكثافة، الوزن النوعي، الضغط، المانومتر، مبدأ باسكال، المكبس الهيدروليكي، وقاعدة أرخميدس مع أسئلة محلولة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="fluids">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects · كل المواد</a> / <a href="index.html">Physics · الفيزياء</a> / Fluid Mechanics</div>
+    <div class="eyebrow">Topic 03 · Fluids</div>
+    <h1>Fluid Mechanics <span style="color:var(--muted);font-weight:700">· ميكانيكا الموائع</span></h1>
+    <p class="lead en">From the density of a liquid to why a huge ship floats: pressure at depth, hydraulic lifts, manometers, and Archimedes' principle — explained with everyday examples.</p>
+    <p class="lead ar">من كثافة السائل لحد سر الطفو: الضغط مع العمق، المكبس الهيدروليكي، المانومتر، وقاعدة أرخميدس — كلها بأمثلة من الحياة اليومية.</p>
+    <div class="topic-tags">
+      <span class="badge green">Density &amp; pressure</span>
+      <span class="badge">Pascal's principle</span>
+      <span class="badge gold">Archimedes</span>
+      <span class="badge pink">Manometers</span>
+    </div>
+  </div>
+</header>
+
+<div class="container layout" id="main">
+  <article>
+    <section id="idea" class="section">
+      <div class="callout tip">
+        <div class="icon">1</div>
+        <div>
+          <h4>الفكرة ببساطة · The big idea</h4>
+          <p class="en">A fluid is anything that flows: liquids and gases. Unlike a solid, a fluid cannot resist a shear stress; it keeps deforming as long as the stress is applied. In <b>fluid statics</b> the fluid is at rest, so there is no shear stress — only pressure, acting equally in all directions.</p>
+          <p class="ar">المائع أي حاجة بتسيل: سوائل وغازات. عكس الصلب، المائع مايقاومش إجهاد القص؛ بيفضل يتشوه طول ما القوة موجودة. في <b>استاتيكا الموائع</b> المائع ساكن، فمفيش قص، وفيه بس ضغط بيأثر في كل الاتجاهات بالتساوي.</p>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="card"><h3>Solid · صلب</h3><p class="en">Has definite shape and volume. Resists shear stress by a fixed deformation. Molecules are closely packed with strong attraction.</p><p class="ar">شكل وحجم ثابتين. يقاوم القص بتشوه ثابت. الجزيئات متقاربة وقوى التجاذب قوية.</p></div>
+        <div class="card"><h3>Fluid · مائع</h3><p class="en">Liquid: fixed volume, takes the shape of its container, forms a free surface. Gas: no fixed volume or shape; fills the container and is compressible.</p><p class="ar">السائل: حجم ثابت وشكل الإناء، وله سطح حر. الغاز: مفيش حجم أو شكل ثابت، يملأ الإناء وقابل للانضغاط.</p></div>
+      </div>
+
+      <div class="callout mt-2">
+        <div class="icon">σ</div>
+        <div>
+          <h4>Why fluid statics matters · ليه بنبدأ بالساكن؟</h4>
+          <p class="en">In a static fluid there is no relative motion between layers, so no shear stress. The only stress is normal stress due to pressure. Pressure varies with depth because of the fluid's weight — so fluid statics only makes sense in a gravity field.</p>
+          <p class="ar">في المائع الساكن مفيش حركة نسبية بين الطبقات، فمفيش قص. الإجهاد الوحيد عمودي بسبب الضغط. الضغط بيتغير مع العمق بسبب وزن المائع، فاستاتيكا الموائع مرتبطة بالجاذبية.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="properties" class="section">
+      <div class="section-head"><div><div class="kicker">1 · Fluid properties</div><h2>خواص الموائع · Properties of fluids</h2></div></div>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Density · الكثافة</div><div class="fbody">ρ = m / V</div><div class="fnote">kg/m³ · water = 1000 kg/m³ = 1 g/cm³</div></div>
+        <div class="formula"><div class="flabel">Specific weight · الوزن النوعي</div><div class="fbody">w = W / V = ρ g</div><div class="fnote">N/m³</div></div>
+        <div class="formula"><div class="flabel">Specific volume · الحجم النوعي</div><div class="fbody">v = V / m = 1 / ρ</div><div class="fnote">m³/kg</div></div>
+        <div class="formula"><div class="flabel">Specific gravity · الكثافة النسبية</div><div class="fbody">S = ρ<sub>fluid</sub> / ρ<sub>water</sub></div><div class="fnote">Dimensionless · بلا أبعاد</div></div>
+      </div>
+
+      <div class="table-wrap mt-2">
+        <table>
+          <thead><tr><th>Property</th><th>Meaning · المعنى</th><th>Unit</th></tr></thead>
+          <tbody>
+            <tr><td><b>Mass density ρ</b></td><td>Mass per unit volume · الكتلة لكل وحدة حجم</td><td>kg/m³</td></tr>
+            <tr><td><b>Specific weight w</b></td><td>Weight per unit volume · الوزن لكل وحدة حجم</td><td>N/m³</td></tr>
+            <tr><td><b>Specific volume v</b></td><td>Volume per unit mass; reciprocal of density · مقلوب الكثافة</td><td>m³/kg</td></tr>
+            <tr><td><b>Specific gravity S</b></td><td>Ratio of density to water density for liquids (air for gases) · نسبة الكثافة لكثافة الماء</td><td>none</td></tr>
+            <tr><td><b>Viscosity</b></td><td>Resistance of a fluid to flow / to one layer sliding over another · مقاومة السريان</td><td>Pa·s or N·s/m²</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <div class="icon">ρ</div>
+        <div>
+          <h4>Density facts · حقائق عن الكثافة</h4>
+          <p class="en">Liquid density is almost constant; gas density changes strongly with pressure and temperature. Specific gravity of mercury = 13.6, so ρ<sub>Hg</sub> = 13.6 × 1000 = 13 600 kg/m³. Specific gravity of water = 1.</p>
+          <p class="ar">كثافة السوائل شبه ثابتة، أما الغازات فتتغير بشدة مع الضغط والحرارة. الكثافة النسبية للزئبق = 13.6، يبقى كثافته 13 600 kg/m³. الماء = 1.</p>
+        </div>
+      </div>
+
+      <div class="grid three mt-2">
+        <div class="card"><h3>Ideal fluid · مائع مثالي</h3><p class="en">Incompressible and zero viscosity. Imaginary — no real fluid is perfectly ideal.</p><p class="ar">غير قابل للانضغاط ولزوجته صفر. مائع خيالي، مفيش مائع حقيقي مثالي تمامًا.</p></div>
+        <div class="card"><h3>Real fluid · مائع حقيقي</h3><p class="en">Has viscosity. All actual fluids are real.</p><p class="ar">له لزوجة. كل الموائع الحقيقية كده.</p></div>
+        <div class="card"><h3>Newtonian fluid · نيوتوني</h3><p class="en">Shear stress is directly proportional to the rate of shear strain (velocity gradient).</p><p class="ar">إجهاد القص يتناسب طرديًا مع معدل الانفعال (تدرج السرعة).</p></div>
+        <div class="card"><h3>Non-Newtonian · غير نيوتوني</h3><p class="en">Shear stress is not proportional to the rate of shear strain.</p><p class="ar">إجهاد القص مش متناسب مع معدل الانفعال.</p></div>
+        <div class="card"><h3>Ideal plastic · لدن مثالي</h3><p class="en">Needs a minimum yield stress before flow begins; after that, stress ∝ strain rate.</p><p class="ar">محتاج إجهاد حد أدنى (yield) قبل ما يسيل، وبعدها يتناسب مع معدل الانفعال.</p></div>
+        <div class="card"><h3>Viscosity · اللزوجة</h3><p class="en">Think of honey vs water: honey has higher viscosity, so it resists flowing more.</p><p class="ar">العسل مقابل الماء: العسل لزوجته أعلى، فبيقاوم السريان أكتر.</p></div>
+      </div>
+    </section>
+
+    <section id="pressure" class="section">
+      <div class="section-head"><div><div class="kicker">2 · Pressure</div><h2>الضغط · Pressure</h2></div></div>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Definition · التعريف</div><div class="fbody">P = F / A</div><div class="fnote">1 Pa = 1 N/m²</div></div>
+        <div class="formula"><div class="flabel">Hydrostatic pressure · الضغط مع العمق</div><div class="fbody">P<sub>h</sub> = P₀ + ρ g h</div><div class="fnote">P₀ = atmospheric pressure at the surface</div></div>
+        <div class="formula"><div class="flabel">Gauge pressure · الضغط المقاس</div><div class="fbody">P<sub>g</sub> = P<sub>abs</sub> − P<sub>atm</sub> = ρ g h</div><div class="fnote">Can be positive or negative</div></div>
+        <div class="formula"><div class="flabel">Absolute pressure · الضغط المطلق</div><div class="fbody">P<sub>abs</sub> = P<sub>g</sub> + P<sub>atm</sub></div><div class="fnote">Measured from absolute zero</div></div>
+      </div>
+
+      <p class="en">The same force on a smaller area gives a larger pressure: that is why a needle pokes a balloon more easily than a finger. All points at the same depth in a connected static fluid are at the same pressure; otherwise the fluid would not be in equilibrium. The pressure at depth h does not depend on the shape of the container.</p>
+      <p class="ar">نفس القوة على مساحة أصغر = ضغط أكبر، عشان كده الإبرة تخرم البالونة أسهل من الصباع. كل النقط على نفس العمق في مائع ساكن متصل ليها نفس الضغط، وإلا المائع مايكونش في اتزان. والضغط عند العمق h مايعتمدش على شكل الإناء.</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 280" role="img" aria-label="Pressure increases with depth and same depth same pressure">
+          <rect x="120" y="40" width="240" height="190" rx="8" fill="#0a2238" stroke="#436a8d"/>
+          <rect x="120" y="40" width="240" height="190" rx="8" fill="url(#water)" opacity=".6"/>
+          <defs><linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f9cf4"/><stop offset="1" stop-color="#0b3a64"/></linearGradient></defs>
+          <line x1="120" y1="40" x2="360" y2="40" stroke="#45e0c0" stroke-width="4"/>
+          <circle cx="190" cy="100" r="6" fill="#ffcb6b"/><circle cx="290" cy="100" r="6" fill="#ffcb6b"/>
+          <line x1="190" y1="100" x2="290" y2="100" stroke="#ffcb6b" stroke-dasharray="4 5"/>
+          <text x="380" y="103" class="svg-small">same depth → same pressure</text>
+          <circle cx="200" cy="200" r="6" fill="#ff7ab6"/><circle cx="300" cy="200" r="6" fill="#ff7ab6"/>
+          <text x="380" y="203" class="svg-small">deeper → higher pressure</text>
+          <line x1="190" y1="100" x2="190" y2="40" stroke="#ffcb6b" stroke-dasharray="4 4"/>
+          <text x="150" y="70" class="svg-small">h₁</text>
+          <line x1="200" y1="200" x2="200" y2="40" stroke="#ff7ab6" stroke-dasharray="4 4"/>
+          <text x="160" y="130" class="svg-small">h₂</text>
+          <path d="M480 80 h180 M480 140 h180 M480 200 h180" stroke="#a9bed6" stroke-width="2"/>
+          <circle cx="500" cy="80" r="5" fill="#45e0c0"/><circle cx="520" cy="140" r="5" fill="#45e0c0"/><circle cx="540" cy="200" r="5" fill="#45e0c0"/>
+          <text x="480" y="245" class="svg-small">P = P₀ + ρgh</text>
+        </svg>
+        <figcaption>الضغط يزيد مع العمق، وكل النقط على نفس العمق ليها نفس الضغط في نفس السائل المتصل.</figcaption>
+      </figure>
+
+      <div class="grid two mt-2">
+        <div class="card"><h3>Gauge pressure · الضغط المقاس</h3><p class="en">Measured relative to atmospheric pressure. Positive above atmospheric, negative below it (vacuum). A tyre gauge reads zero at atmospheric pressure.</p><p class="ar">بيتقاس بالنسبة للضغط الجوي. موجب فوق الجوي، وسالب تحته (فراغ). مقياس الكاوتش بيقرأ صفر عند الضغط الجوي.</p></div>
+        <div class="card"><h3>Absolute pressure · الضغط المطلق</h3><p class="en">Measured from complete vacuum: P<sub>abs</sub> = P<sub>g</sub> + P<sub>atm</sub>. Standard atmospheric pressure = 1.013 × 10⁵ Pa = 101 kPa = 1 atm.</p><p class="ar">بيتقاس من الفراغ التام: P<sub>abs</sub> = P<sub>g</sub> + P<sub>atm</sub>. الضغط الجوي القياسي = 1.013×10⁵ Pa = 101 kPa = 1 atm.</p></div>
+      </div>
+
+      <div class="formula mt-2">
+        <div class="flabel">Atmospheric pressure · الضغط الجوي</div>
+        <div class="fbody">1 atm = 1.013 × 10⁵ Pa = 760 mmHg = 10.34 m of water</div>
+        <div class="fnote">The 10.34 m water height is why a simple suction pump cannot lift water more than about 10 m.</div>
+      </div>
+    </section>
+
+    <section id="measuring" class="section">
+      <div class="section-head"><div><div class="kicker">3 · Measuring pressure</div><h2>قياس الضغط · Barometers and manometers</h2></div></div>
+      <div class="grid two">
+        <div class="card">
+          <span class="badge green">Barometer</span><h3 class="mt-2">Measures atmospheric pressure</h3>
+          <p class="en">A tube closed at one end, filled with mercury, inverted in a mercury dish. The space above is nearly a vacuum. The mercury height satisfies P<sub>atm</sub> = ρ<sub>Hg</sub>gh. At sea level h = 0.760 m.</p>
+          <p class="ar">أنبوبة مغلقة من طرف ومقلوبة في حوض زئبق. فوقها فراغ تقريبًا. ارتفاع الزئبق بيحقق P<sub>atm</sub> = ρgh. عند سطح البحر h = 0.760 m.</p>
+        </div>
+        <div class="card">
+          <span class="badge gold">Manometer</span><h3 class="mt-2">Measures gauge pressure of a gas</h3>
+          <p class="en">A U-tube with one side connected to the gas and the other open to the atmosphere. The height difference h gives P<sub>g</sub> = ρgh. Open-end manometer → gauge pressure; closed-end → absolute pressure of trapped gas.</p>
+          <p class="ar">أنبوبة U طرف متصل بالغاز والطرف الآخر مفتوح للجو. فرق الارتفاع h بيدي P<sub>g</sub> = ρgh. المفتوح يقيس gauge، والمغلق يقيس الضغط المطلق للغاز المحبوس.</p>
+        </div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 280" role="img" aria-label="U tube manometer">
+          <path d="M220 40 v170 a50 50 0 0 0 100 0 V40" fill="none" stroke="#8fb0d1" stroke-width="10" stroke-linecap="round"/>
+          <path d="M225 120 v90 a45 45 0 0 0 90 0 V90" fill="#2f9cf4" opacity=".55"/>
+          <path d="M225 120 h90" stroke="#45e0c0" stroke-width="4"/>
+          <path d="M225 90 h90" stroke="#ffcb6b" stroke-width="4"/>
+          <line x1="315" y1="90" x2="360" y2="90" stroke="#ffcb6b" stroke-dasharray="4 4"/>
+          <line x1="315" y1="120" x2="360" y2="120" stroke="#45e0c0" stroke-dasharray="4 4"/>
+          <text x="370" y="108" class="svg-label">h</text>
+          <text x="120" y="70" class="svg-small">gas P</text>
+          <text x="400" y="70" class="svg-small">open to atmosphere</text>
+          <text x="150" y="250" class="svg-small">P_g = ρgh</text>
+        </svg>
+        <figcaption>المانومتر: فرق ارتفاع السائل بين الفرعين يقيس فرق الضغط بين الغاز والجو.</figcaption>
+      </figure>
+
+      <div class="callout tip">
+        <div class="icon">P</div>
+        <div><h4>Blood pressure · ضغط الدم</h4><p class="en">Mercury manometers are used to measure arterial blood pressure. <b>Systolic</b> pressure is the maximum (heart contracts); <b>diastolic</b> is the minimum (heart relaxes).</p><p class="ar">مانومتر الزئبق بيقيس ضغط الدم الشرياني. <b>Systolic</b> هو الأعلى (القلب بينقبض)، و<b>Diastolic</b> هو الأقل (القلب بيرتاح).</p></div>
+      </div>
+    </section>
+
+    <section id="pascal" class="section">
+      <div class="section-head"><div><div class="kicker">4 · Pascal's principle</div><h2>مبدأ باسكال · Pascal's principle</h2></div></div>
+      <p class="en">A change in pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid and to the walls of the container. Pressure at any point is the same in all directions — pressure is a scalar in fluid statics. Also, any two points at the same elevation in a continuous static fluid have the same pressure.</p>
+      <p class="ar">أي تغير في الضغط على مائع محصور ينتقل بدون نقصان لكل أجزاء المائع وجدران الإناء. الضغط عند أي نقطة واحد في كل الاتجاهات — يعني الضغط كمية قياسية في استاتيكا الموائع. وأي نقطتين على نفس الارتفاع في مائع ساكن متصل ليهم نفس الضغط.</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Hydraulic press · المكبس الهيدروليكي</div><div class="fbody">P₁ = P₂ → F₁/A₁ = F₂/A₂</div><div class="fnote">F₂ = F₁ (A₂/A₁) — force multiplication</div></div>
+        <div class="formula"><div class="flabel">Volume conservation · حفظ الحجم</div><div class="fbody">A₁ Δx₁ = A₂ Δx₂</div><div class="fnote">Incompressible fluid: volume pushed down = volume pushed up</div></div>
+        <div class="formula"><div class="flabel">Work / mechanical advantage</div><div class="fbody">F₁Δx₁ = F₂Δx₂ → F₂/F₁ = A₂/A₁ = Δx₁/Δx₂</div><div class="fnote">No energy is created: small force × large distance = large force × small distance</div></div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 300" role="img" aria-label="Hydraulic press with two pistons">
+          <rect x="110" y="90" width="540" height="130" rx="10" fill="#0a2238" stroke="#436a8d"/>
+          <rect x="110" y="170" width="540" height="50" rx="0" fill="#2f9cf4" opacity=".45"/>
+          <rect x="170" y="55" width="60" height="120" rx="6" fill="#45e0c0" opacity=".8"/>
+          <rect x="520" y="35" width="120" height="140" rx="6" fill="#ffcb6b" opacity=".8"/>
+          <path d="M200 30 v18 M580 12 v18" stroke="#eaf3ff" stroke-width="4"/>
+          <text x="150" y="26" class="svg-small">F₁ small</text>
+          <text x="530" y="18" class="svg-small">F₂ large</text>
+          <text x="160" y="155" class="svg-small">A₁</text>
+          <text x="565" y="155" class="svg-small">A₂</text>
+          <text x="290" y="255" class="svg-label">P is transmitted undiminished → F₂ = F₁(A₂/A₁)</text>
+        </svg>
+        <figcaption>المكبس الهيدروليكي: قوة صغيرة على مساحة صغيرة تنتج قوة كبيرة على مساحة كبيرة، لكن المسافة تقل بنفس النسبة.</figcaption>
+      </figure>
+    </section>
+
+    <section id="archimedes" class="section">
+      <div class="section-head"><div><div class="kicker">5 · Buoyancy</div><h2>قاعدة أرخميدس · Archimedes' principle</h2></div></div>
+      <p class="en">Any object completely or partially submerged in a fluid is buoyed up by a force equal to the weight of the fluid displaced by the object. Buoyancy is the pressure difference between the lower and upper sides of the object.</p>
+      <p class="ar">أي جسم مغمور كليًا أو جزئيًا في مائع يتأثر بقوة دفع لأعلى تساوي وزن المائع المزاح. قوة الطفو هي فرق الضغط بين السطح السفلي والعلوي للجسم.</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Buoyant force · قوة الطفو</div><div class="fbody">B = ρ<sub>fluid</sub> V<sub>displaced</sub> g</div><div class="fnote">Equals weight of displaced fluid</div></div>
+        <div class="formula"><div class="flabel">Apparent weight · الوزن الظاهري</div><div class="fbody">W<sub>app</sub> = W<sub>air</sub> − B</div><div class="fnote">What a scale reads when the object is submerged</div></div>
+        <div class="formula"><div class="flabel">Floating condition · شرط الطفو</div><div class="fbody">B = W → ρ<sub>fluid</sub> V<sub>submerged</sub> g = ρ<sub>object</sub> V<sub>object</sub> g</div><div class="fnote">Fraction submerged = ρ<sub>object</sub>/ρ<sub>fluid</sub></div></div>
+        <div class="formula"><div class="flabel">Density test · اختبار الكثافة</div><div class="fbody">ρ<sub>object</sub> &lt; ρ<sub>fluid</sub> → floats; ρ<sub>object</sub> &gt; ρ<sub>fluid</sub> → sinks</div></div>
+      </div>
+
+      <div class="grid three mt-2">
+        <div class="card"><h3>Floating · يطفو</h3><p class="en">The object is less dense than the fluid. Only part of it is submerged, and B = W.</p><p class="ar">الجسم أقل كثافة من المائع. جزء منه بس يغمر، و B = W.</p></div>
+        <div class="card"><h3>Neutral · متعادل</h3><p class="en">Density equals the fluid's density. It can stay at any depth (like a fish adjusting its swim bladder).</p><p class="ar">كثافته تساوي كثافة المائع. يفضل في أي عمق (زي السمكة لما تظبط مثانتها).</p></div>
+        <div class="card"><h3>Sinking · يغرق</h3><p class="en">The object is denser than the fluid, so B is less than its weight.</p><p class="ar">الجسم أكثف من المائع، فقوة الطفو أقل من وزنه.</p></div>
+      </div>
+
+      <div class="callout mt-2">
+        <div class="icon">↑</div>
+        <div>
+          <h4>Everyday buoyancy · طفو في الحياة</h4>
+          <p class="en">Fish adjust the size of an internal swim bladder to keep neutral buoyancy. The brain is surrounded by cerebrospinal fluid (ρ ≈ 1007 kg/m³), slightly less dense than brain tissue (≈1040 kg/m³), so most of its weight is supported. A car battery's “magic dot” uses the density of the battery acid to show charge.</p>
+          <p class="ar">السمكة بتظبط حجم مثانتها العوم عشان تفضل متعادلة. المخ محاط بسائل نخاعي كثافته ≈1007 kg/m³ أقل قليلًا من كثافة المخ ≈1040، فمعظم وزنه مدعوم. نقطة بطارية العربية بتستخدم كثافة حمض البطارية لبيان الشحن.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="section-head"><div><div class="kicker">6 · Solved examples</div><h2>أمثلة محلولة من المحاضرات والشيت</h2></div></div>
+
+      <div class="example">
+        <div class="tag">Example 1 · density &amp; specific gravity</div>
+        <h4>One litre of a liquid weighs 7 N. Find its specific weight, density, and specific gravity.</h4>
+        <div class="work">
+          <span class="step">V = 1 L = 10⁻³ m³</span>
+          <span class="step">w = W/V = 7/10⁻³ = 7000 N/m³</span>
+          <span class="step">ρ = w/g = 7000/9.81 ≈ 714 kg/m³</span>
+          <span class="step">S = ρ/1000 = 0.714</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 2 · petrol</div>
+        <h4>One litre of petrol has specific gravity 0.7. Find its density, specific weight, and weight.</h4>
+        <div class="work">
+          <span class="step">ρ = S × 1000 = 0.7 × 1000 = 700 kg/m³</span>
+          <span class="step">w = ρg = 700 × 9.81 = 6867 N/m³</span>
+          <span class="step">W = wV = 6867 × 10⁻³ = 6.87 N</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 3 · pressure on the floor</div>
+        <h4>A 95 kg man + chair sits on four circular legs of radius 0.5 cm. Find the pressure each leg exerts.</h4>
+        <div class="work">
+          <span class="step">Each leg supports mg/4 = 95×9.8/4 = 232.75 N</span>
+          <span class="step">A = πr² = π(0.005)² = 7.85 × 10⁻⁵ m²</span>
+          <span class="step">P = 232.75 / (7.85 × 10⁻⁵) ≈ 2.96 × 10⁶ Pa</span>
+        </div>
+        <p class="ar mt-1">نفس النتيجة لو حسبت الوزن الكلي على المساحة الكلية للأربع أرجل.</p>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 4 · high heels</div>
+        <h4>A 50 kg woman balances on one heel of radius 0.5 cm. Find the pressure. Should the homeowner worry?</h4>
+        <div class="work">
+          <span class="step">F = mg = 50 × 9.8 = 490 N</span>
+          <span class="step">A = π(0.005)² = 7.85 × 10⁻⁵ m²</span>
+          <span class="step">P = 490 / (7.85 × 10⁻⁵) ≈ 6.24 × 10⁶ Pa</span>
+        </div>
+        <p class="en mt-1">That is about 61 atm — enough to dent a vinyl floor. Yes, the homeowner should be concerned.</p>
+        <p class="ar mt-1">حوالي 61 ضغط جوي — كفاية تعمل حفرة في أرضية الفينيل. أيوة، لازم يقلق.</p>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 5 · mass of the atmosphere</div>
+        <h4>Estimate the total mass of Earth's atmosphere. R<sub>Earth</sub> = 6.37 × 10⁶ m, P = 1.013 × 10⁵ Pa.</h4>
+        <div class="work">
+          <span class="step">A = 4πR² = 4π(6.37 × 10⁶)² = 5.10 × 10¹⁴ m²</span>
+          <span class="step">P = mg/A → m = PA/g</span>
+          <span class="step">m = (1.013 × 10⁵)(5.10 × 10¹⁴)/9.8 ≈ 5.27 × 10¹⁸ kg</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 6 · the gold crown</div>
+        <h4>A crown weighs 7.84 N in air and 6.86 N when submerged in water. Is it pure gold? (ρ<sub>gold</sub> = 19.3 × 10³ kg/m³)</h4>
+        <div class="work">
+          <span class="step">m = W/g = 7.84/9.8 = 0.800 kg</span>
+          <span class="step">B = W_air − W_water = 7.84 − 6.86 = 0.98 N</span>
+          <span class="step">B = ρ_water g V → V = 0.98/(1000 × 9.8) = 1.0 × 10⁻⁴ m³</span>
+          <span class="step">ρ_crown = m/V = 0.800/(1.0 × 10⁻⁴) = 8000 kg/m³</span>
+        </div>
+        <p class="en mt-1">8000 kg/m³ is far below 19 300 kg/m³, so the crown is hollow, made of an alloy, or both — not pure gold.</p>
+        <p class="ar mt-1">الكثافة 8000 أقل بكتير من 19300، يبقى التاج مجوّف أو سبيكة أو الاتنين — مش ذهب خالص.</p>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 7 · hydraulic press from the sheet</div>
+        <h4>The diameters of a small and large piston are 5 cm and 60 cm. A force of 50 N acts on the small piston. Find the force on the large piston.</h4>
+        <div class="work">
+          <span class="step">F₂ = F₁ (A₂/A₁) = F₁ (d₂/d₁)²</span>
+          <span class="step">F₂ = 50 × (60/5)² = 50 × 144 = 7200 N</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 8 · pressure at depth</div>
+        <h4>Find the pressure at 0.3 m depth in (i) water, (ii) oil S = 0.8, (iii) mercury S = 13.6.</h4>
+        <div class="work">
+          <span class="step">P = ρgh (gauge pressure)</span>
+          <span class="step">Water: 1000 × 9.8 × 0.3 = 2940 Pa</span>
+          <span class="step">Oil: 0.8 × 1000 × 9.8 × 0.3 = 2352 Pa</span>
+          <span class="step">Mercury: 13.6 × 1000 × 9.8 × 0.3 = 39 984 Pa</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section">
+      <div class="section-head"><div><div class="kicker">7 · Exam traps</div><h2>أخطاء شائعة</h2></div></div>
+      <div class="grid two">
+        <div class="card"><h3>Gauge ≠ absolute</h3><p class="en">The formula P = ρgh gives gauge pressure. Add P<sub>atm</sub> if the question asks for absolute pressure.</p><p class="ar">قانون P=ρgh بيدي gauge. لو السؤال عايز absolute، زوّد الضغط الجوي.</p></div>
+        <div class="card"><h3>القطر مقابل نصف القطر</h3><p class="en">Area = πr² = πd²/4. Using diameter instead of radius is a classic error.</p><p class="ar">المساحة = πr² = πd²/4. استخدام القطر بدل نصف القطر غلطة كلاسيكية.</p></div>
+        <div class="card"><h3>الضغط لا يعتمد على الشكل</h3><p class="en">At the same depth in the same fluid, pressure is the same regardless of container shape.</p><p class="ar">على نفس العمق في نفس السائل، الضغط واحد مهما كان شكل الإناء.</p></div>
+        <div class="card"><h3>الطفو يعتمد على الكثافة</h3><p class="en">A huge steel ship floats because its average density (steel + air) is less than water, not because steel is light.</p><p class="ar">سفينة ضخمة تطفو لأن كثافتها المتوسطة (حديد + هواء) أقل من الماء، مش لأن الحديد خفيف.</p></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-head"><div><div class="kicker">8 · Practice</div><h2>أسئلة الموائع · من الشيت والمحاضرات</h2><p class="muted">أكبر مجموعة هنا: اختيار من متعدد، صح/غلط، وتعريفات. اختار ثم اضغط تحقق.</p></div></div>
+      <div class="quiz">
+
+        <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Units of density are: · وحدات الكثافة:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f1"> a) kg/m³</label>
+            <label><input type="radio" name="f1"> b) g/cm³</label>
+            <label><input type="radio" name="f1"> c) pound/foot³</label>
+            <label><input type="radio" name="f1" data-correct="true"> d) all are correct</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> Density is mass/volume; any mass unit over any volume unit is valid.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">No relative motion between adjacent fluid layers occurs in: · مفيش حركة نسبية بين الطبقات في:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f2"> a) fluid dynamics</label>
+            <label><input type="radio" name="f2" data-correct="true"> b) fluid statics</label>
+            <label><input type="radio" name="f2"> c) both</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Static fluid = at rest, so no relative motion and no shear stress.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">Only normal stress exists in: · الإجهاد العمودي فقط يوجد في:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f3"> a) fluid dynamics</label>
+            <label><input type="radio" name="f3" data-correct="true"> b) fluid statics</label>
+            <label><input type="radio" name="f3"> c) neither</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> In statics there is no shear; only pressure (normal stress).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">Floating bodies, dams, gates, and storage tanks are applications of: · تطبيقات على:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f4"> a) fluid dynamics</label>
+            <label><input type="radio" name="f4" data-correct="true"> b) fluid statics</label>
+            <label><input type="radio" name="f4"> c) both</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> These involve fluids at rest.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">The unit of pressure is: · وحدة الضغط:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f5"> a) Pa</label>
+            <label><input type="radio" name="f5"> b) N/m²</label>
+            <label><input type="radio" name="f5"> c) kg/(m·s²)</label>
+            <label><input type="radio" name="f5" data-correct="true"> d) a, b, and c</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> Pa = N/m² = kg/(m·s²); all are equivalent.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">Gauge pressure is the pressure relative to: · الضغط المقاس نسبةً إلى:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f6"> a) absolute pressure</label>
+            <label><input type="radio" name="f6"> b) vacuum pressure</label>
+            <label><input type="radio" name="f6" data-correct="true"> c) atmospheric pressure</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Gauge pressure uses atmospheric pressure as its zero.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">7</div><div class="qtext">________ is the sum of gauge pressure and atmospheric pressure.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f7" data-correct="true"> a) Absolute pressure</label>
+            <label><input type="radio" name="f7"> b) Vacuum pressure</label>
+            <label><input type="radio" name="f7"> c) Neither</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> P<sub>abs</sub> = P<sub>g</sub> + P<sub>atm</sub>.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">8</div><div class="qtext">Atmospheric pressure at sea level averages: · الضغط الجوي عند سطح البحر:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f8"> a) 101 kPa</label>
+            <label><input type="radio" name="f8"> b) 1 atm</label>
+            <label><input type="radio" name="f8"> c) 1.01 × 10⁵ N/m²</label>
+            <label><input type="radio" name="f8" data-correct="true"> d) a, b, and c</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> All three describe the same standard atmosphere.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">9</div><div class="qtext">If P &lt; P<sub>atm</sub>, the pressure is called: · لو الضغط أقل من الجوي يسمى:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f9"> a) absolute pressure</label>
+            <label><input type="radio" name="f9" data-correct="true"> b) vacuum pressure (negative gauge)</label>
+            <label><input type="radio" name="f9"> c) gauge pressure</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Below atmospheric = negative gauge = vacuum pressure.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">10</div><div class="qtext">Which device measures the pressure of a trapped gas? · جهاز يقيس ضغط غاز محبوس:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f10"> a) barometer</label>
+            <label><input type="radio" name="f10" data-correct="true"> b) closed-end manometer</label>
+            <label><input type="radio" name="f10"> c) open-end manometer</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> A closed-end manometer reads absolute pressure of the trapped gas; an open-end one reads gauge pressure.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">11</div><div class="qtext">Which device measures the pressure of a gas against atmospheric pressure? · يقيس الضغط بالنسبة للجو:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f11"> a) barometer</label>
+            <label><input type="radio" name="f11" data-correct="true"> b) open-end manometer</label>
+            <label><input type="radio" name="f11"> c) closed-end manometer</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Open to atmosphere → gauge pressure.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">12</div><div class="qtext">Which device measures atmospheric pressure? · جهاز يقيس الضغط الجوي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f12" data-correct="true"> a) barometer</label>
+            <label><input type="radio" name="f12"> b) open-end manometer</label>
+            <label><input type="radio" name="f12"> c) closed-end manometer</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> The barometer is the standard atmospheric-pressure instrument.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">13</div><div class="qtext">The maximum blood pressure is: · أقصى ضغط دم:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f13"> a) atmospheric</label>
+            <label><input type="radio" name="f13" data-correct="true"> b) systolic</label>
+            <label><input type="radio" name="f13"> c) diastolic</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Systolic is the peak pressure when the heart contracts.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">14</div><div class="qtext">The minimum blood pressure is: · أقل ضغط دم:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f14"> a) atmospheric</label>
+            <label><input type="radio" name="f14"> b) systolic</label>
+            <label><input type="radio" name="f14" data-correct="true"> c) diastolic</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Diastolic is measured when the heart relaxes.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">15</div><div class="qtext">The fluid pressure is defined as: · الضغط =</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f15"> a) force into area</label>
+            <label><input type="radio" name="f15" data-correct="true"> b) force per unit area</label>
+            <label><input type="radio" name="f15"> c) force per unit length</label>
+            <label><input type="radio" name="f15"> d) none</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> P = F/A.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">16</div><div class="qtext">Which is true about the hydrostatic law? · قانون الضغط الهيدروستاتيكي:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f16"> a) pressure is constant with depth</label>
+            <label><input type="radio" name="f16" data-correct="true"> b) pressure varies linearly with depth</label>
+            <label><input type="radio" name="f16"> c) pressure varies exponentially with depth</label>
+            <label><input type="radio" name="f16"> d) none</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> P = P₀ + ρgh, so P is linear in h.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">17</div><div class="qtext">The gauge pressure may be: · الضغط المقاس قد يكون:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f17"> a) positive</label>
+            <label><input type="radio" name="f17"> b) negative</label>
+            <label><input type="radio" name="f17" data-correct="true"> c) positive or negative</label>
+            <label><input type="radio" name="f17"> d) none</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Positive above atmospheric, negative below it.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">18</div><div class="qtext">Pressure below atmospheric is called: · الضغط تحت الجوي يسمى:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f18"> a) vacuum pressure</label>
+            <label><input type="radio" name="f18"> b) suction pressure</label>
+            <label><input type="radio" name="f18"> c) negative gauge pressure</label>
+            <label><input type="radio" name="f18" data-correct="true"> d) all of the above</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: d.</b> All these names describe the same situation.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">19</div><div class="qtext">True or false: A liquid has a fixed volume and fixed shape. · السائل له حجم وشكل ثابتان.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f19"> a) True</label>
+            <label><input type="radio" name="f19" data-correct="true"> b) False</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: False.</b> A liquid has fixed volume but takes the shape of its container.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">20</div><div class="qtext">True or false: The same force over a smaller area produces a smaller pressure. · نفس القوة على مساحة أصغر = ضغط أصغر.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f20"> a) True</label>
+            <label><input type="radio" name="f20" data-correct="true"> b) False</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: False.</b> Smaller area → larger pressure (P = F/A).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">21</div><div class="qtext">True or false: The pressure at depth h depends on the shape of the container. · الضغط يعتمد على شكل الإناء.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f21"> a) True</label>
+            <label><input type="radio" name="f21" data-correct="true"> b) False</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: False.</b> It depends only on depth, fluid density, and surface pressure.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">22</div><div class="qtext">A hydraulic lift has a small piston of area 20 cm² and a large piston of area 0.4 m². If 240 N acts on the small piston, the load lifted is: · الحمل المرفوع:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f22"> a) 4800 N</label>
+            <label><input type="radio" name="f22"> b) 24 000 N</label>
+            <label><input type="radio" name="f22" data-correct="true"> c) 48 000 N</label>
+            <label><input type="radio" name="f22"> d) 96 000 N</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> A₁ = 20 cm² = 2 × 10⁻³ m². F₂ = 240 × 0.4/(2 × 10⁻³) = 48 000 N.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">23</div><div class="qtext">A block floats with 60% of its volume submerged in water. Its density is: · جسم يطفو و60% منه مغمور، كثافته:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f23"> a) 400 kg/m³</label>
+            <label><input type="radio" name="f23" data-correct="true"> b) 600 kg/m³</label>
+            <label><input type="radio" name="f23"> c) 1000 kg/m³</label>
+            <label><input type="radio" name="f23"> d) 1600 kg/m³</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> For floating, ρ_object = fraction submerged × ρ_fluid = 0.6 × 1000 = 600 kg/m³.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">24</div><div class="qtext">A 2 kg object appears to weigh 12 N when fully submerged in water. Find the buoyant force. (g = 10 m/s²)</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f24" data-correct="true"> a) 8 N</label>
+            <label><input type="radio" name="f24"> b) 12 N</label>
+            <label><input type="radio" name="f24"> c) 20 N</label>
+            <label><input type="radio" name="f24"> d) 32 N</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> W_air = mg = 20 N. B = W_air − W_app = 20 − 12 = 8 N.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">25</div><div class="qtext">Which fluid has the greatest viscosity at room temperature? · أعلى لزوجة:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="f25"> a) water</label>
+            <label><input type="radio" name="f25"> b) air</label>
+            <label><input type="radio" name="f25" data-correct="true"> c) honey</label>
+            <label><input type="radio" name="f25"> d) gasoline</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Honey resists flow much more strongly than the others.</div>
+        </div>
+
+      </div>
+
+      <div class="callout tip mt-3">
+        <div class="icon">Q</div>
+        <div>
+          <h4>Long-answer practice · أسئلة مقالية من الشيت</h4>
+          <p class="en">Define: fluid; real and ideal fluids; mass density and specific weight; viscosity; specific volume; specific gravity; the types of fluids; the difference between statics and kinematics. Then solve: the inverted U-tube manometer, and the U-tube with mercury (10 cm difference).</p>
+          <p class="ar">عرّف: المائع، المائع الحقيقي والمثالي، الكثافة والوزن النوعي، اللزوجة، الحجم النوعي، الكثافة النسبية، أنواع الموائع، والفرق بين الاستاتيكا والكينماتيكا. وبعدين حل مسألة المانومتر المقلوب ومانومتر الزئبق (فرق 10 سم).</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidecard">
+      <h4>On this page</h4>
+      <div class="mini-nav">
+        <a href="#idea"><span class="dot"></span>الفكرة ببساطة</a>
+        <a href="#properties"><span class="dot gold"></span>خواص الموائع</a>
+        <a href="#pressure"><span class="dot blue"></span>الضغط</a>
+        <a href="#measuring"><span class="dot pink"></span>القياس</a>
+        <a href="#pascal"><span class="dot"></span>مبدأ باسكال</a>
+        <a href="#archimedes"><span class="dot gold"></span>أرخميدس</a>
+        <a href="#examples"><span class="dot blue"></span>أمثلة محلولة</a>
+        <a href="#quiz"><span class="dot pink"></span>الأسئلة</a>
+      </div>
+    </div>
+    <div class="sidecard">
+      <h4>Constants</h4>
+      <p class="muted" style="font-size:13px;margin:0;line-height:2">
+        ρ<sub>water</sub> = 1000 kg/m³<br>
+        ρ<sub>Hg</sub> = 13 600 kg/m³<br>
+        g = 9.8 m/s²<br>
+        P<sub>atm</sub> = 1.013 × 10⁵ Pa<br>
+        1 atm = 760 mmHg<br>
+        1 L = 10⁻³ m³
+      </p>
+    </div>
+  </aside>
+</div>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

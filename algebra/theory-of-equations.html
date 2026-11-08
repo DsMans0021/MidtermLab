@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theory of Equations · نظرية المعادلات — Algebra</title>
+<meta name="description" content="نظرية المعادلات: القسمة التركيبية، نظرية الباقي والعامل، العلاقة بين الجذور والمعاملات، وتحويل المعادلات، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/algebra/theory-of-equations.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Theory of Equations · نظرية المعادلات — Algebra">
+<meta property="og:description" content="نظرية المعادلات: القسمة التركيبية، نظرية الباقي والعامل، العلاقة بين الجذور والمعاملات، وتحويل المعادلات، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/algebra/theory-of-equations.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Theory of Equations · نظرية المعادلات — Algebra">
+<meta name="twitter:description" content="نظرية المعادلات: القسمة التركيبية، نظرية الباقي والعامل، العلاقة بين الجذور والمعاملات، وتحويل المعادلات، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="algebra" data-page="theory-of-equations.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Algebra</a> / Theory of Equations</div>
+    <div class="eyebrow">Algebra · Topic 02 · Theory of Equations</div>
+    <h1>Theory of Equations <span style="color:var(--muted);font-weight:700">· نظرية المعادلات</span></h1>
+    <p class="lead en">Polynomials are built from roots and coefficients. This page covers the remainder and factor theorems, synthetic division, multiplicity, Vieta's relations, and transformations of equations — the fastest way to solve higher-degree problems.</p>
+    <p class="lead ar">كثيرات الحدود مبنية من الجذور والمعاملات. الصفحة دي بتغطي نظريتي الباقي والعامل، القسمة التركيبية، التكرار، علاقات فييتا، وتحويل المعادلات — أسرع طريق لحل مسائل الدرجات العليا.</p>
+    <div class="topic-tags">
+      <span class="badge">Core midterm topic</span>
+      <span class="badge gold">Vieta</span>
+      <span class="badge pink">Solved examples</span>
+      <span class="badge">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="basics">
+        <div class="kicker">1 · Polynomials</div>
+        <h2>Degree, division, and the remainder theorem</h2>
+        <p class="en">A polynomial of degree n is <b>f(x) = a₀xⁿ + a₁xⁿ⁻¹ + … + aₙ</b>, with a₀ ≠ 0. Dividing f(x) by (x − c) gives a quotient and a remainder. The remainder theorem says the remainder equals f(c).</p>
+        <p class="ar">كثيرة حدود من الدرجة n هي <b>f(x) = a₀xⁿ + a₁xⁿ⁻¹ + … + aₙ</b>، بشرط a₀ ≠ 0. قسمة f(x) على (x − c) بتعطي خارج قسمة وباقي. نظرية الباقي بتقول إن الباقي = f(c).</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Remainder theorem</div><div class="fbody">f(x) = (x − c)Q(x) + f(c)</div><div class="fnote">Remainder when dividing by (x − c)</div></div>
+          <div class="formula"><div class="flabel">Factor theorem</div><div class="fbody">f(c) = 0 ⇔ (x − c) is a factor</div><div class="fnote">Equivalent statements</div></div>
+          <div class="formula"><div class="flabel">Division algorithm</div><div class="fbody">f(x) = d(x)Q(x) + R(x)</div><div class="fnote">deg R &lt; deg d</div></div>
+          <div class="formula"><div class="flabel">Multiplicity</div><div class="fbody">f(x) = (x − c)<sup>m</sup>g(x), g(c) ≠ 0</div><div class="fnote">m = multiplicity of root c</div></div>
+        </div>
+      </section>
+
+      <section class="section" id="synthetic">
+        <div class="kicker">2 · Synthetic division</div>
+        <h2>The fastest way to divide by (x − c)</h2>
+        <p class="en">Write the coefficients, bring down the first, multiply by c, add, repeat. The last number is the remainder; the others are the quotient coefficients. This is the practical tool for factor theorem questions.</p>
+        <p class="ar">اكتب المعاملات، انزّل الأول، اضربه في c، اجمع، وكرر. آخر رقم هو الباقي؛ والباقي معاملات خارج القسمة. دي الأداة العملية لأسئلة نظرية العامل.</p>
+        <div class="example">
+          <div class="tag">Example 1 · synthetic division</div>
+          <h4>Divide f(x) = 2x³ − x² + 2x − 1 by (x − 1). Find the quotient and remainder.</h4>
+          <div class="work">
+            <span class="step">Coefficients: 2  −1  2  −1</span>
+            <span class="step">Bring down 2</span>
+            <span class="step">2×1 = 2; −1+2 = 1</span>
+            <span class="step">1×1 = 1; 2+1 = 3</span>
+            <span class="step">3×1 = 3; −1+3 = 2</span>
+            <span class="step">Quotient: 2x² + x + 3; remainder: 2</span>
+            <span class="step">Check: f(1) = 2 − 1 + 2 − 1 = 2 ✓</span>
+          </div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Sign trap · فخ الإشارة</h4>
+            <p class="en">For (x + c), use −c in synthetic division. For (2x − 1), divide by (x − 1/2) or use the factor theorem with c = 1/2. Do not forget missing powers: write 0 coefficients.</p>
+            <p class="ar">لو (x + c)، استخدم −c في القسمة التركيبية. ولو (2x − 1)، اقسم على (x − 1/2) أو استخدم نظرية العامل بـc = 1/2. متنساش القوى الناقصة: اكتب معامل 0.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="vieta">
+        <div class="kicker">3 · Roots and coefficients</div>
+        <h2>Vieta's relations</h2>
+        <p class="en">For a quadratic ax² + bx + c = 0 with roots α, β:</p>
+        <p class="ar">للمعادلة التربيعية ax² + bx + c = 0 بجذور α وβ:</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Quadratic · sum</div><div class="fbody">α + β = −b/a</div></div>
+          <div class="formula"><div class="flabel">Quadratic · product</div><div class="fbody">αβ = c/a</div></div>
+          <div class="formula"><div class="flabel">Equation from roots</div><div class="fbody">x² − (α+β)x + αβ = 0</div></div>
+          <div class="formula"><div class="flabel">Sum of squares</div><div class="fbody">α² + β² = (α+β)² − 2αβ</div></div>
+        </div>
+        <p class="en">For a cubic x³ + px² + qx + r = 0 with roots α, β, γ:</p>
+        <p class="ar">للمعادلة التكعيبية x³ + px² + qx + r = 0 بجذور α وβ وγ:</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Cubic · sum</div><div class="fbody">α + β + γ = −p</div></div>
+          <div class="formula"><div class="flabel">Cubic · pair sum</div><div class="fbody">αβ + βγ + γα = q</div></div>
+          <div class="formula"><div class="flabel">Cubic · product</div><div class="fbody">αβγ = −r</div></div>
+          <div class="formula"><div class="flabel">Cubic from roots</div><div class="fbody">x³ − S₁x² + S₂x − S₃ = 0</div><div class="fnote">S₁ = sum, S₂ = pair sum, S₃ = product</div></div>
+        </div>
+      </section>
+
+      <section class="section" id="transform">
+        <div class="kicker">4 · Transformations</div>
+        <h2>Building a new equation from old roots</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>New roots · الجذور الجديدة</th><th>Replace · استبدل</th></tr></thead>
+            <tbody>
+              <tr><td>−α, −β, …</td><td>x → −x, i.e. use f(−x) = 0</td></tr>
+              <tr><td>kα, kβ, …</td><td>x → x/k, i.e. use f(x/k) = 0</td></tr>
+              <tr><td>α + h, β + h, …</td><td>x → x − h, i.e. use f(x − h) = 0</td></tr>
+              <tr><td>α − h, β − h, …</td><td>x → x + h, i.e. use f(x + h) = 0</td></tr>
+              <tr><td>1/α, 1/β, …</td><td>x → 1/x, then clear fractions</td></tr>
+              <tr><td>α², β², …</td><td>Use y = x², eliminate x</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="example">
+          <div class="tag">Example 2 · equation from roots</div>
+          <h4>Find the quadratic equation whose roots are 2 + i and 2 − i.</h4>
+          <div class="work">
+            <span class="step">Sum = (2+i) + (2−i) = 4</span>
+            <span class="step">Product = (2+i)(2−i) = 4 − i² = 5</span>
+            <span class="step">x² − 4x + 5 = 0</span>
+          </div>
+        </div>
+        <div class="example">
+          <div class="tag">Example 3 · roots relation</div>
+          <h4>If α, β are roots of x² − 5x + 6 = 0, find α² + β².</h4>
+          <div class="work">
+            <span class="step">α + β = 5, αβ = 6</span>
+            <span class="step">α² + β² = (α+β)² − 2αβ = 25 − 12 = 13</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">5 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">If f(2) = 0, then (x − 2) is: · لو f(2)=0 فإن (x−2):</div></div>
+            <div class="opts">
+              <label><input type="radio" name="te1" data-correct="true"> a) a factor of f(x)</label>
+              <label><input type="radio" name="te1" data-correct="false"> b) the remainder</label>
+              <label><input type="radio" name="te1" data-correct="false"> c) the degree</label>
+              <label><input type="radio" name="te1" data-correct="false"> d) always a root</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Factor theorem: f(c)=0 ⇔ (x−c) is a factor.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The remainder when f(x) is divided by (x − c) is: · الباقي عند القسمة على (x−c):</div></div>
+            <div class="opts">
+              <label><input type="radio" name="te2" data-correct="false"> a) f(−c)</label>
+              <label><input type="radio" name="te2" data-correct="true"> b) f(c)</label>
+              <label><input type="radio" name="te2" data-correct="false"> c) 0 always</label>
+              <label><input type="radio" name="te2" data-correct="false"> d) the leading coefficient</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> Remainder theorem: remainder = f(c).</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">For ax² + bx + c = 0, the sum of roots is: · مجموع الجذور:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="te3" data-correct="true"> a) −b/a</label>
+              <label><input type="radio" name="te3" data-correct="false"> b) b/a</label>
+              <label><input type="radio" name="te3" data-correct="false"> c) c/a</label>
+              <label><input type="radio" name="te3" data-correct="false"> d) −c/a</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> α+β = −b/a; product αβ = c/a.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">If roots are 3 and −2, the quadratic equation is: · لو الجذور 3 و−2:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="te4" data-correct="true"> a) x² − x − 6 = 0</label>
+              <label><input type="radio" name="te4" data-correct="false"> b) x² + x − 6 = 0</label>
+              <label><input type="radio" name="te4" data-correct="false"> c) x² − 5x + 6 = 0</label>
+              <label><input type="radio" name="te4" data-correct="false"> d) x² + 5x + 6 = 0</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Sum = 1, product = −6 → x² − x − 6 = 0.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">For x³ + px² + qx + r = 0, the product of roots is: · حاصل ضرب الجذور:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="te5" data-correct="false"> a) r</label>
+              <label><input type="radio" name="te5" data-correct="true"> b) −r</label>
+              <label><input type="radio" name="te5" data-correct="false"> c) q</label>
+              <label><input type="radio" name="te5" data-correct="false"> d) −p</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> For a cubic, αβγ = −r.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">To get roots α + 2, β + 2 from f(x)=0, replace x by: · لجذور α+2:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="te6" data-correct="false"> a) x + 2</label>
+              <label><input type="radio" name="te6" data-correct="true"> b) x − 2</label>
+              <label><input type="radio" name="te6" data-correct="false"> c) 2x</label>
+              <label><input type="radio" name="te6" data-correct="false"> d) −x</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> New root x = old root + 2, so old root = x − 2; use f(x−2)=0.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="complex-numbers.html"><span>← Previous</span><b>Complex Numbers</b></a>
+        <a href="numerical-analysis.html" class="next"><span>Next →</span><b>Numerical Analysis</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#basics"><span class="dot blue"></span>Remainder theorem</a>
+          <a href="#synthetic"><span class="dot"></span>Synthetic division</a>
+          <a href="#vieta"><span class="dot gold"></span>Vieta</a>
+          <a href="#transform"><span class="dot pink"></span>Transformations</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <div class="formula" style="margin:0"><div class="fbody" style="font-size:16px">f(c) = R</div><div class="fnote">remainder theorem</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">α+β = −b/a</div><div class="fnote">quadratic sum</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">αβ = c/a</div><div class="fnote">quadratic product</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">αβγ = −r</div><div class="fnote">cubic product</div></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

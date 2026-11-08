@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forces &amp; Resultants · القوى والمحصلة</title>
+<meta name="description" content="أنظمة القوى والمحصلة: خصائص القوة، القوى المتلاقية، المحصلة بالمركبات ومتوازي الأضلاع، والتحليل، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/mechanics/forces.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Forces &amp; Resultants · القوى والمحصلة">
+<meta property="og:description" content="أنظمة القوى والمحصلة: خصائص القوة، القوى المتلاقية، المحصلة بالمركبات ومتوازي الأضلاع، والتحليل، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/mechanics/forces.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Forces &amp; Resultants · القوى والمحصلة">
+<meta name="twitter:description" content="أنظمة القوى والمحصلة: خصائص القوة، القوى المتلاقية، المحصلة بالمركبات ومتوازي الأضلاع، والتحليل، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="mechanics" data-page="forces.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Mechanics</a> / Forces &amp; Resultants</div>
+    <div class="eyebrow">Mechanics · Topic 02 · Forces</div>
+    <h1>Forces &amp; Resultants <span style="color:var(--muted);font-weight:700">· القوى والمحصلة</span></h1>
+    <p class="lead en">A force is a vector with four characteristics. This page covers force systems, the resultant by components and by the parallelogram law, resolution, and forces directed along a line.</p>
+    <p class="lead ar">القوة متجه له أربع خصائص. الصفحة دي بتغطي أنظمة القوى، المحصلة بالمركبات وبمتوازي الأضلاع، التحليل، والقوة على خط، مع أمثلة وأسئلة.</p>
+    <div class="topic-tags">
+      <span class="badge green">Core topic</span>
+      <span class="badge gold">Resultants</span>
+      <span class="badge">Resolution</span>
+      <span class="badge pink">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="force">
+        <div class="kicker">1 · What is a force?</div>
+        <h2>Four characteristics</h2>
+        <p class="en">A force is an external agency that changes or tends to change the state of rest or motion of a body. It is fully specified by magnitude, direction, line of action, and point of application.</p>
+        <p class="ar">القوة مؤثر خارجي بيغير أو بيحاول يغير حالة السكون أو الحركة للجسم. بتتحدد بالمقدار والاتجاه وخط العمل ونقطة التأثير.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Magnitude</div><div class="fbody">Length of the vector</div><div class="fnote">SI unit: newton (N)</div></div>
+          <div class="formula"><div class="flabel">Direction</div><div class="fbody">Arrowhead</div></div>
+          <div class="formula"><div class="flabel">Line of action</div><div class="fbody">Line along which it acts</div></div>
+          <div class="formula"><div class="flabel">Point of application</div><div class="fbody">Where it acts</div></div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Rigid body · الجسم الصلب</h4>
+            <p class="en">For a rigid body, a force can slide along its line of action without changing the external effect. This is the principle of transmissibility.</p>
+            <p class="ar">بالنسبة للجسم الصلب، القوة تقدر تنزلق على خط عملها من غير ما يتغير التأثير الخارجي. ده مبدأ الانتقال.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="systems">
+        <div class="kicker">2 · Force systems</div>
+        <h2>Classifying forces</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>System</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>Coplanar</td><td>All forces in one plane</td></tr>
+              <tr><td>Non-coplanar</td><td>Forces in different planes</td></tr>
+              <tr><td>Concurrent</td><td>Lines of action meet at one point</td></tr>
+              <tr><td>Non-concurrent</td><td>Lines of action do not meet at one point</td></tr>
+              <tr><td>Parallel</td><td>Lines of action are parallel (like or unlike)</td></tr>
+              <tr><td>Collinear</td><td>All forces on the same line</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="en">A coplanar concurrent system is the simplest: all forces can be moved to the common point and added as vectors. Non-concurrent systems also produce moments, so you need both force and moment equations.</p>
+        <p class="ar">النظام المستوي المتلاقي أبسط نوع: كل القوى تنتقل لنقطة التلاقي وتتجمع كمتجهات. الأنظمة غير المتلاقية بتنتج عزوم كمان، فتحتاج معادلات قوى وعزوم.</p>
+      </section>
+
+      <section class="section" id="resultant">
+        <div class="kicker">3 · Resultant</div>
+        <h2>Components method</h2>
+        <p class="en">Resolve every force into x and y components, add all x components and all y components, then combine. This works for any number of concurrent forces and avoids drawing errors.</p>
+        <p class="ar">حلّل كل قوة لمركبتين x وy، اجمع كل مركبات x وكل مركبات y، وبعدين اجمعهم. الطريقة دي تنفع لأي عدد من القوى المتلاقية وبتقلل أخطاء الرسم.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Components</div><div class="fbody">F<sub>x</sub> = F cos θ, F<sub>y</sub> = F sin θ</div></div>
+          <div class="formula"><div class="flabel">Resultant components</div><div class="fbody">R<sub>x</sub> = ΣF<sub>x</sub>, R<sub>y</sub> = ΣF<sub>y</sub></div></div>
+          <div class="formula"><div class="flabel">Magnitude</div><div class="fbody">R = √(R<sub>x</sub>²+R<sub>y</sub>²)</div></div>
+          <div class="formula"><div class="flabel">Direction</div><div class="fbody">θ = tan⁻¹(R<sub>y</sub>/R<sub>x</sub>)</div><div class="fnote">Check quadrant</div></div>
+        </div>
+        <div class="example">
+          <div class="tag">Example · two forces</div>
+          <h4>F₁ = 100 N at 0°, F₂ = 100 N at 60°. Find the resultant.</h4>
+          <div class="work">
+            <span class="step">F₁: (100, 0); F₂: (50, 86.60)</span>
+            <span class="step">R<sub>x</sub> = 150, R<sub>y</sub> = 86.60</span>
+            <span class="step">R = √(22500+7500) = √30000 ≈ 173.2 N</span>
+            <span class="step">θ = tan⁻¹(86.60/150) ≈ 30°</span>
+          </div>
+        </div>
+        <p class="en">For two forces only, the parallelogram law gives R² = F₁² + F₂² + 2F₁F₂ cos α, where α is the angle between them. The triangle law is the same geometry drawn tip to tail.</p>
+        <p class="ar">لقوتين بس، قانون متوازي الأضلاع بيعطي R² = F₁² + F₂² + 2F₁F₂ cos α، حيث α الزاوية بينهم. قانون المثلث نفس الهندسة لكن بالرسم رأس لذيل.</p>
+      </section>
+
+      <section class="section" id="line">
+        <div class="kicker">4 · Force along a line</div>
+        <h2>Unit vector method</h2>
+        <p class="en">If a force acts along AB, find the unit vector from A to B, then F = F λ. This is the standard way to express a 3D force in vector form.</p>
+        <p class="ar">لو القوة مؤثرة على AB، هات متجه الوحدة من A لـB، وبعدين F = F λ. دي الطريقة القياسية لكتابة قوة ثلاثية الأبعاد في صورة متجهة.</p>
+        <div class="formula">
+          <div class="flabel">Force along AB</div>
+          <div class="fbody">F = F · (r<sub>AB</sub> / |r<sub>AB</sub>|)</div>
+          <div class="fnote">r<sub>AB</sub> = position of B relative to A</div>
+        </div>
+        <div class="example">
+          <div class="tag">Example · 3D force</div>
+          <h4>A force of 50 N acts from A(1,2,0) to B(4,6,0). Express it as a vector.</h4>
+          <div class="work">
+            <span class="step">r<sub>AB</sub> = (3, 4, 0), |r| = 5</span>
+            <span class="step">λ = (0.6, 0.8, 0)</span>
+            <span class="step">F = 50(0.6i + 0.8j) = 30i + 40j N</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">5 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">A force is specified by: · القوة بتتحدد بـ:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mf1" data-correct="true"> a) magnitude, direction, line of action, point of application</label>
+              <label><input type="radio" name="mf1" data-correct="false"> b) magnitude only</label>
+              <label><input type="radio" name="mf1" data-correct="false"> c) direction only</label>
+              <label><input type="radio" name="mf1" data-correct="false"> d) mass and time</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> All four characteristics are needed.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">Concurrent forces have: · القوى المتلاقية:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mf2" data-correct="true"> a) lines of action meeting at one point</label>
+              <label><input type="radio" name="mf2" data-correct="false"> b) parallel lines</label>
+              <label><input type="radio" name="mf2" data-correct="false"> c) no direction</label>
+              <label><input type="radio" name="mf2" data-correct="false"> d) zero magnitude</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> They share a common point of intersection.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">The resultant of two perpendicular equal forces F is: · محصلة قوتين متعامدتين متساويتين:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mf3" data-correct="false"> a) F</label>
+              <label><input type="radio" name="mf3" data-correct="true"> b) √2 F</label>
+              <label><input type="radio" name="mf3" data-correct="false"> c) 2F</label>
+              <label><input type="radio" name="mf3" data-correct="false"> d) 0</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> √(F²+F²) = √2 F.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">A force along AB is expressed as: · القوة على AB:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mf4" data-correct="true"> a) F times the unit vector AB</label>
+              <label><input type="radio" name="mf4" data-correct="false"> b) F times AB without dividing by length</label>
+              <label><input type="radio" name="mf4" data-correct="false"> c) F + AB</label>
+              <label><input type="radio" name="mf4" data-correct="false"> d) F × AB</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> F = F λ<sub>AB</sub>, where λ is the unit vector.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">If ΣF<sub>x</sub> = 0 and ΣF<sub>y</sub> = 0, the concurrent system is: · النظام المتلاقي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mf5" data-correct="true"> a) in equilibrium</label>
+              <label><input type="radio" name="mf5" data-correct="false"> b) a couple</label>
+              <label><input type="radio" name="mf5" data-correct="false"> c) a wrench</label>
+              <label><input type="radio" name="mf5" data-correct="false"> d) always moving</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> For concurrent forces, zero resultant force is the equilibrium condition.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">The parallelogram law gives R² =: · قانون متوازي الأضلاع:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mf6" data-correct="true"> a) F₁²+F₂²+2F₁F₂cos α</label>
+              <label><input type="radio" name="mf6" data-correct="false"> b) F₁²+F₂²−2F₁F₂cos α</label>
+              <label><input type="radio" name="mf6" data-correct="false"> c) F₁+F₂</label>
+              <label><input type="radio" name="mf6" data-correct="false"> d) F₁F₂ sin α</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> α is the angle between the two forces placed tail to tail.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="vectors.html"><span>← Previous</span><b>Vectors</b></a>
+        <a href="moments.html" class="next"><span>Next →</span><b>Moments &amp; Couples</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#force"><span class="dot blue"></span>Force characteristics</a>
+          <a href="#systems"><span class="dot"></span>Force systems</a>
+          <a href="#resultant"><span class="dot gold"></span>Resultant</a>
+          <a href="#line"><span class="dot pink"></span>Force along a line</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <ul>
+          <li>F<sub>x</sub> = F cos θ</li>
+          <li>F<sub>y</sub> = F sin θ</li>
+          <li>R = √(R<sub>x</sub>²+R<sub>y</sub>²)</li>
+          <li>tan θ = R<sub>y</sub>/R<sub>x</sub></li>
+          <li>F = F λ<sub>AB</sub></li>
+          <li>R² = F₁²+F₂²+2F₁F₂cos α</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vectors · المتجهات — Mechanics</title>
+<meta name="description" content="المتجهات في الاستاتيكا: الجمع، المركبات، متجهات الوحدة، الضرب القياسي والاتجاهي، وجيوب تمام الاتجاه، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/mechanics/vectors.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Vectors · المتجهات — Mechanics">
+<meta property="og:description" content="المتجهات في الاستاتيكا: الجمع، المركبات، متجهات الوحدة، الضرب القياسي والاتجاهي، وجيوب تمام الاتجاه، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/mechanics/vectors.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vectors · المتجهات — Mechanics">
+<meta name="twitter:description" content="المتجهات في الاستاتيكا: الجمع، المركبات، متجهات الوحدة، الضرب القياسي والاتجاهي، وجيوب تمام الاتجاه، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="mechanics" data-page="vectors.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Mechanics</a> / Vectors</div>
+    <div class="eyebrow">Mechanics · Topic 01 · Vectors</div>
+    <h1>Vectors <span style="color:var(--muted);font-weight:700">· المتجهات</span></h1>
+    <p class="lead en">Vectors are the toolbox of statics. This page covers vector algebra, rectangular components, unit vectors, direction cosines, the dot product, the cross product, and the geometry applications you need for forces and moments.</p>
+    <p class="lead ar">المتجهات هي صندوق عدة الاستاتيكا. الصفحة دي بتغطي جبر المتجهات، المركبات المتعامدة، متجهات الوحدة، جيوب تمام الاتجاه، الضرب القياسي والاتجاهي، وتطبيقاتها على القوى والعزوم.</p>
+    <div class="topic-tags">
+      <span class="badge">Core topic</span>
+      <span class="badge gold">Components</span>
+      <span class="badge green">Dot &amp; cross</span>
+      <span class="badge pink">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="basics">
+        <div class="kicker">1 · Scalars and vectors</div>
+        <h2>What a vector is</h2>
+        <p class="en">A scalar has magnitude only: mass, time, temperature, speed. A vector has magnitude and direction: force, displacement, velocity, moment. In statics, almost every quantity you add or resolve is a vector.</p>
+        <p class="ar">الكمية القياسية ليها مقدار بس: الكتلة، الزمن، الحرارة، السرعة القياسية. المتجه له مقدار واتجاه: القوة، الإزاحة، السرعة المتجهة، العزم. في الاستاتيكا، تقريبًا كل كمية بتجمعها أو تحللها متجه.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Vector notation</div><div class="fbody">A = A<sub>x</sub> i + A<sub>y</sub> j + A<sub>z</sub> k</div></div>
+          <div class="formula"><div class="flabel">Magnitude</div><div class="fbody">A = √(A<sub>x</sub>² + A<sub>y</sub>² + A<sub>z</sub>²)</div></div>
+          <div class="formula"><div class="flabel">Unit vector</div><div class="fbody">λ = A / A</div><div class="fnote">|λ| = 1, same direction as A</div></div>
+          <div class="formula"><div class="flabel">Direction cosines</div><div class="fbody">cos α = A<sub>x</sub>/A, cos β = A<sub>y</sub>/A, cos γ = A<sub>z</sub>/A</div></div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Check · تحقق</h4>
+            <p class="en">Always check cos²α + cos²β + cos²γ = 1. If it does not equal 1, either a component or the magnitude is wrong.</p>
+            <p class="ar">دايمًا تحقق إن cos²α + cos²β + cos²γ = 1. لو مش بيساوي 1، يبقى فيه مركبة أو مقدار غلط.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="algebra">
+        <div class="kicker">2 · Vector algebra</div>
+        <h2>Addition, subtraction, scaling</h2>
+        <p class="en">Add vectors component by component. Subtract by adding the negative. Multiply by a scalar to change magnitude; a negative scalar reverses direction.</p>
+        <p class="ar">اجمع المتجهات مركبة بمركبة. اطرح بجمع السالب. اضرب في سكالر لتغيير المقدار؛ السكالر السالب يعكس الاتجاه.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Addition</div><div class="fbody">A+B = (A<sub>x</sub>+B<sub>x</sub>)i + (A<sub>y</sub>+B<sub>y</sub>)j + (A<sub>z</sub>+B<sub>z</sub>)k</div></div>
+          <div class="formula"><div class="flabel">Scalar multiple</div><div class="fbody">mA = mA<sub>x</sub> i + mA<sub>y</sub> j + mA<sub>z</sub> k</div></div>
+          <div class="formula"><div class="flabel">Vector between points</div><div class="fbody">AB = (x<sub>B</sub>−x<sub>A</sub>)i + (y<sub>B</sub>−y<sub>A</sub>)j + (z<sub>B</sub>−z<sub>A</sub>)k</div></div>
+          <div class="formula"><div class="flabel">Parallel condition</div><div class="fbody">A = mB</div><div class="fnote">Components proportional</div></div>
+        </div>
+        <p class="en">The parallelogram law: place the two vectors tail to tail; the diagonal of the parallelogram is the resultant. The triangle law: place the tail of the second at the tip of the first; the closing side is the resultant.</p>
+        <p class="ar">قانون متوازي الأضلاع: ضع المتجهين من نفس نقطة البداية؛ القطر هو المحصلة. قانون المثلث: ضع ذيل الثاني عند رأس الأول؛ الضلع القافل هو المحصلة.</p>
+      </section>
+
+      <section class="section" id="dot">
+        <div class="kicker">3 · Scalar product</div>
+        <h2>Dot product and projection</h2>
+        <div class="formula">
+          <div class="flabel">Dot product</div>
+          <div class="fbody">A · B = AB cos θ = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub></div>
+          <div class="fnote">Result is a scalar</div>
+        </div>
+        <ul class="muted" style="padding-left:20px;font-size:14px">
+          <li>A · B = 0 → perpendicular (if neither is zero).</li>
+          <li>A · A = A².</li>
+          <li>i·i = j·j = k·k = 1; i·j = j·k = k·i = 0.</li>
+          <li>Angle: cos θ = (A·B)/(AB).</li>
+          <li>Projection of A on B: (A·B)/B.</li>
+        </ul>
+        <div class="example">
+          <div class="tag">Example · angle between vectors</div>
+          <h4>Find the angle between A = 2i + 3j and B = 4i − j.</h4>
+          <div class="work">
+            <span class="step">A·B = (2)(4) + (3)(−1) = 5</span>
+            <span class="step">A = √13, B = √17</span>
+            <span class="step">cos θ = 5/√221 ≈ 0.3363</span>
+            <span class="step">θ ≈ 70.3°</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cross">
+        <div class="kicker">4 · Vector product</div>
+        <h2>Cross product and moments</h2>
+        <div class="formula">
+          <div class="flabel">Cross product</div>
+          <div class="fbody">A × B = (A<sub>y</sub>B<sub>z</sub>−A<sub>z</sub>B<sub>y</sub>)i − (A<sub>x</sub>B<sub>z</sub>−A<sub>z</sub>B<sub>x</sub>)j + (A<sub>x</sub>B<sub>y</sub>−A<sub>y</sub>B<sub>x</sub>)k</div>
+          <div class="fnote">Result is a vector, perpendicular to both</div>
+        </div>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Magnitude</div><div class="fbody">|A × B| = AB sin θ</div></div>
+          <div class="formula"><div class="flabel">Direction</div><div class="fbody">Right-hand rule</div></div>
+          <div class="formula"><div class="flabel">Parallel condition</div><div class="fbody">A × B = 0</div></div>
+          <div class="formula"><div class="flabel">Moment</div><div class="fbody">M<sub>O</sub> = r × F</div></div>
+        </div>
+        <p class="en">For a force F acting at a point with position vector r from O, the moment about O is r × F. The cross product is why the moment is perpendicular to the plane of r and F.</p>
+        <p class="ar">لقوة F مؤثرة عند نقطة متجه موضعها r من O، العزم حول O هو r × F. الضرب الاتجاهي هو السبب إن العزم عمودي على مستوى r وF.</p>
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Order matters · الترتيب مهم</h4>
+            <p class="en">A × B = −(B × A). Reversing the order reverses the moment direction. In 2D, use the sign convention: counter-clockwise positive, clockwise negative.</p>
+            <p class="ar">A × B = −(B × A). عكس الترتيب يعكس اتجاه العزم. في 2D استخدم الاصطلاح: عكس عقارب الساعة موجب، مع عقارب الساعة سالب.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">5 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Which is a vector? · أي كمية متجهة؟</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mv1" data-correct="false"> a) mass</label>
+              <label><input type="radio" name="mv1" data-correct="false"> b) temperature</label>
+              <label><input type="radio" name="mv1" data-correct="true"> c) force</label>
+              <label><input type="radio" name="mv1" data-correct="false"> d) time</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>c)</b> Force has magnitude and direction.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">|3i + 4j| equals: · المقدار:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mv2" data-correct="false"> a) 7</label>
+              <label><input type="radio" name="mv2" data-correct="true"> b) 5</label>
+              <label><input type="radio" name="mv2" data-correct="false"> c) 25</label>
+              <label><input type="radio" name="mv2" data-correct="false"> d) 1</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> √(9+16) = 5.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">A·B is: · الضرب القياسي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mv3" data-correct="true"> a) a scalar</label>
+              <label><input type="radio" name="mv3" data-correct="false"> b) a vector</label>
+              <label><input type="radio" name="mv3" data-correct="false"> c) always zero</label>
+              <label><input type="radio" name="mv3" data-correct="false"> d) a unit vector</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The dot product returns a scalar.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">If A·B = 0, then A and B are: · لو A·B = 0:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mv4" data-correct="true"> a) perpendicular</label>
+              <label><input type="radio" name="mv4" data-correct="false"> b) parallel</label>
+              <label><input type="radio" name="mv4" data-correct="false"> c) equal</label>
+              <label><input type="radio" name="mv4" data-correct="false"> d) zero</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> cos 90° = 0, so the dot product vanishes.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">|A × B| equals: · المقدار:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mv5" data-correct="false"> a) AB cos θ</label>
+              <label><input type="radio" name="mv5" data-correct="true"> b) AB sin θ</label>
+              <label><input type="radio" name="mv5" data-correct="false"> c) A+B</label>
+              <label><input type="radio" name="mv5" data-correct="false"> d) A/B</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> The cross product magnitude uses sin θ.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">The moment of F about O is: · عزم F حول O:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="mv6" data-correct="true"> a) r × F</label>
+              <label><input type="radio" name="mv6" data-correct="false"> b) r · F</label>
+              <label><input type="radio" name="mv6" data-correct="false"> c) F × r</label>
+              <label><input type="radio" name="mv6" data-correct="false"> d) r + F</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> M<sub>O</sub> = r × F, with r from O to the point of application.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="index.html"><span>← Previous</span><b>Mechanics overview</b></a>
+        <a href="forces.html" class="next"><span>Next →</span><b>Forces &amp; Resultants</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#basics"><span class="dot blue"></span>Scalars vs vectors</a>
+          <a href="#algebra"><span class="dot"></span>Vector algebra</a>
+          <a href="#dot"><span class="dot gold"></span>Dot product</a>
+          <a href="#cross"><span class="dot pink"></span>Cross product</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <ul>
+          <li>A = √(A<sub>x</sub>²+A<sub>y</sub>²+A<sub>z</sub>²)</li>
+          <li>λ = A/A</li>
+          <li>A·B = AB cos θ</li>
+          <li>|A×B| = AB sin θ</li>
+          <li>M<sub>O</sub> = r × F</li>
+          <li>cos²α+cos²β+cos²γ = 1</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

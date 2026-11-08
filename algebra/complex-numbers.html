@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complex Numbers · الأعداد المركبة — Algebra</title>
+<meta name="description" content="الأعداد المركبة: العمليات، المرافق، المقياس، السعة، الصورة القطبية، نظرية ديموافر، والجذور، مع أمثلة وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/algebra/complex-numbers.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Complex Numbers · الأعداد المركبة — Algebra">
+<meta property="og:description" content="الأعداد المركبة: العمليات، المرافق، المقياس، السعة، الصورة القطبية، نظرية ديموافر، والجذور، مع أمثلة وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/algebra/complex-numbers.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Complex Numbers · الأعداد المركبة — Algebra">
+<meta name="twitter:description" content="الأعداد المركبة: العمليات، المرافق، المقياس، السعة، الصورة القطبية، نظرية ديموافر، والجذور، مع أمثلة وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="algebra" data-page="complex-numbers.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Algebra</a> / Complex Numbers</div>
+    <div class="eyebrow">Algebra · Topic 01 · Complex Numbers</div>
+    <h1>Complex Numbers <span style="color:var(--muted);font-weight:700">· الأعداد المركبة</span></h1>
+    <p class="lead en">A complex number extends the real line with the imaginary unit i. This page covers algebra, conjugate, modulus, argument, polar form, De Moivre's theorem, and nth roots — the tools every later algebra topic depends on.</p>
+    <p class="lead ar">العدد المركب بيوسّع الخط الحقيقي بالوحدة التخيلية i. الصفحة دي بتغطي العمليات، المرافق، المقياس، السعة، الصورة القطبية، نظرية ديموافر، والجذور — الأدوات اللي كل مواضيع الجبر بعدها بتعتمد عليها.</p>
+    <div class="topic-tags">
+      <span class="badge">Core midterm topic</span>
+      <span class="badge gold">De Moivre</span>
+      <span class="badge pink">Solved examples</span>
+      <span class="badge">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="definition">
+        <div class="kicker">1 · Definition</div>
+        <h2>The imaginary unit and the complex plane</h2>
+        <p class="en">The imaginary unit is defined by <b>i² = −1</b>. A complex number is <b>z = a + bi</b>, where a is the real part and b is the imaginary part. On the complex plane, a is the horizontal coordinate and b is the vertical coordinate.</p>
+        <p class="ar">الوحدة التخيلية معرّفة بـ<b>i² = −1</b>. العدد المركب هو <b>z = a + bi</b>، حيث a الجزء الحقيقي وb الجزء التخيلي. على المستوى المركب، a الإحداثي الأفقي وb الرأسي.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Rectangular form</div><div class="fbody">z = a + b i</div><div class="fnote">Re(z) = a, Im(z) = b</div></div>
+          <div class="formula"><div class="flabel">Conjugate</div><div class="fbody">z̄ = a − b i</div><div class="fnote">Reflect across the real axis</div></div>
+          <div class="formula"><div class="flabel">Modulus</div><div class="fbody">|z| = √(a² + b²)</div><div class="fnote">Distance from the origin</div></div>
+          <div class="formula"><div class="flabel">Argument</div><div class="fbody">θ = tan⁻¹(b/a)</div><div class="fnote">Adjust the quadrant of θ</div></div>
+        </div>
+      </section>
+
+      <section class="section" id="operations">
+        <div class="kicker">2 · Algebra of complex numbers</div>
+        <h2>Addition, multiplication, and division</h2>
+        <p class="en">Add/subtract real and imaginary parts separately. Multiply like binomials, then replace i² by −1. To divide, multiply numerator and denominator by the conjugate of the denominator.</p>
+        <p class="ar">اجمع/اطرح الأجزاء الحقيقية والتخيلية لوحدهم. اضرب كأنهم حدين، وبعدين استبدل i² بـ−1. للقسمة، اضرب البسط والمقام في مرافق المقام.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Addition</div><div class="fbody">(a+bi) + (c+di) = (a+c) + (b+d)i</div></div>
+          <div class="formula"><div class="flabel">Multiplication</div><div class="fbody">(a+bi)(c+di) = (ac−bd) + (ad+bc)i</div></div>
+          <div class="formula"><div class="flabel">Division</div><div class="fbody">(a+bi)/(c+di) = (a+bi)(c−di)/(c²+d²)</div></div>
+          <div class="formula"><div class="flabel">Useful identity</div><div class="fbody">z z̄ = |z|² = a² + b²</div><div class="fnote">Always real and non-negative</div></div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Powers of i · قوى i</h4>
+            <p class="en">i¹ = i, i² = −1, i³ = −i, i⁴ = 1, then the pattern repeats every 4. To simplify iⁿ, divide n by 4 and use the remainder.</p>
+            <p class="ar">i¹ = i، i² = −1، i³ = −i، i⁴ = 1، وبعدها النمط بيتكرر كل 4. لتبسيط iⁿ، اقسم n على 4 واستخدم الباقي.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="polar">
+        <div class="kicker">3 · Polar form</div>
+        <h2>Modulus, argument, and De Moivre</h2>
+        <p class="en">Writing z = r(cos θ + i sin θ) makes multiplication, division, powers, and roots much easier. Here r = |z| and θ is the argument.</p>
+        <p class="ar">كتابة z = r(cos θ + i sin θ) بتسهّل الضرب والقسمة والرفع للقوى والجذور. هنا r = |z| وθ هي السعة.</p>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Polar form</div><div class="fbody">z = r(cos θ + i sin θ) = r e<sup>iθ</sup></div><div class="fnote">r = |z|, θ = arg z</div></div>
+          <div class="formula"><div class="flabel">Multiplication</div><div class="fbody">z₁z₂ = r₁r₂[cos(θ₁+θ₂) + i sin(θ₁+θ₂)]</div><div class="fnote">Multiply moduli, add arguments</div></div>
+          <div class="formula"><div class="flabel">Division</div><div class="fbody">z₁/z₂ = (r₁/r₂)[cos(θ₁−θ₂) + i sin(θ₁−θ₂)]</div><div class="fnote">Divide moduli, subtract arguments</div></div>
+          <div class="formula"><div class="flabel">De Moivre's theorem</div><div class="fbody">zⁿ = rⁿ[cos(nθ) + i sin(nθ)]</div><div class="fnote">n integer (also valid for rational with care)</div></div>
+        </div>
+        <div class="formula">
+          <div class="flabel">nth roots</div>
+          <div class="fbody">z<sup>1/n</sup> = r<sup>1/n</sup>[cos((θ+2kπ)/n) + i sin((θ+2kπ)/n)]</div>
+          <div class="fnote">k = 0, 1, 2, …, n−1 gives n distinct roots</div>
+        </div>
+      </section>
+
+      <section class="section" id="examples">
+        <div class="kicker">4 · Solved examples</div>
+        <h2>أمثلة محلولة</h2>
+
+        <div class="example">
+          <div class="tag">Example 1 · division</div>
+          <h4>Simplify (3 + 4i)/(1 − 2i).</h4>
+          <div class="work">
+            <span class="step">Multiply by conjugate (1 + 2i):</span>
+            <span class="step">= (3+4i)(1+2i) / (1²+2²)</span>
+            <span class="step">Numerator = 3 + 6i + 4i + 8i² = 3 + 10i − 8 = −5 + 10i</span>
+            <span class="step">= (−5 + 10i)/5 = −1 + 2i</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="tag">Example 2 · polar and De Moivre</div>
+          <h4>Find (1 + i)⁶.</h4>
+          <div class="work">
+            <span class="step">r = √(1²+1²) = √2, θ = 45° = π/4</span>
+            <span class="step">1+i = √2(cos 45° + i sin 45°)</span>
+            <span class="step">(1+i)⁶ = (√2)⁶[cos 270° + i sin 270°]</span>
+            <span class="step">(√2)⁶ = 8, cos 270° = 0, sin 270° = −1</span>
+            <span class="step">= 8(0 − i) = −8i</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="tag">Example 3 · square roots</div>
+          <h4>Find the square roots of i.</h4>
+          <div class="work">
+            <span class="step">i = 1(cos 90° + i sin 90°), r = 1, θ = 90°</span>
+            <span class="step">√i = cos((90+360k)/2) + i sin((90+360k)/2), k = 0,1</span>
+            <span class="step">k=0: cos45° + i sin45° = (1+i)/√2</span>
+            <span class="step">k=1: cos225° + i sin225° = −(1+i)/√2</span>
+          </div>
+        </div>
+
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Argument quadrant · ربع السعة</h4>
+            <p class="en">tan⁻¹(b/a) only gives the reference angle. Check the quadrant: if a &lt; 0, add or subtract 180°. If a = 0, the argument is ±90°. Always write θ in the correct quadrant.</p>
+            <p class="ar">tan⁻¹(b/a) بيعطي الزاوية المرجعية بس. اتأكد من الربع: لو a &lt; 0، اضيف أو اطرح 180°. ولو a = 0، السعة ±90°. اكتب θ في الربع الصح دايمًا.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">5 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">i² equals: · i² تساوي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="cx1" data-correct="false"> a) 1</label>
+              <label><input type="radio" name="cx1" data-correct="true"> b) −1</label>
+              <label><input type="radio" name="cx1" data-correct="false"> c) i</label>
+              <label><input type="radio" name="cx1" data-correct="false"> d) 0</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> The imaginary unit is defined by i² = −1.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The modulus of 3 − 4i is: · مقياس 3 − 4i:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="cx2" data-correct="false"> a) 7</label>
+              <label><input type="radio" name="cx2" data-correct="true"> b) 5</label>
+              <label><input type="radio" name="cx2" data-correct="false"> c) 1</label>
+              <label><input type="radio" name="cx2" data-correct="false"> d) 25</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> |z| = √(3² + (−4)²) = √25 = 5.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">The conjugate of 2 + 5i is: · مرافق 2 + 5i:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="cx3" data-correct="false"> a) −2 + 5i</label>
+              <label><input type="radio" name="cx3" data-correct="true"> b) 2 − 5i</label>
+              <label><input type="radio" name="cx3" data-correct="false"> c) −2 − 5i</label>
+              <label><input type="radio" name="cx3" data-correct="false"> d) 5 + 2i</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> Change the sign of the imaginary part only.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">In polar form, multiplying two complex numbers: · في الصورة القطبية، الضرب:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="cx4" data-correct="true"> a) multiplies moduli and adds arguments</label>
+              <label><input type="radio" name="cx4" data-correct="false"> b) adds moduli and multiplies arguments</label>
+              <label><input type="radio" name="cx4" data-correct="false"> c) divides moduli and adds arguments</label>
+              <label><input type="radio" name="cx4" data-correct="false"> d) subtracts moduli</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> z₁z₂ = r₁r₂[cos(θ₁+θ₂) + i sin(θ₁+θ₂)].</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">The number of distinct nth roots of a nonzero complex number is: · عدد الجذور النونية المختلفة:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="cx5" data-correct="false"> a) 1</label>
+              <label><input type="radio" name="cx5" data-correct="false"> b) 2</label>
+              <label><input type="radio" name="cx5" data-correct="true"> c) n</label>
+              <label><input type="radio" name="cx5" data-correct="false"> d) infinite</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>c)</b> k = 0, 1, …, n−1 gives n distinct roots equally spaced on a circle.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">(1 + i)² equals: · (1 + i)² تساوي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="cx6" data-correct="false"> a) 2</label>
+              <label><input type="radio" name="cx6" data-correct="true"> b) 2i</label>
+              <label><input type="radio" name="cx6" data-correct="false"> c) 1 + 2i</label>
+              <label><input type="radio" name="cx6" data-correct="false"> d) −2i</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> (1+i)² = 1 + 2i + i² = 2i.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="index.html"><span>← Previous</span><b>Algebra overview</b></a>
+        <a href="theory-of-equations.html" class="next"><span>Next →</span><b>Theory of Equations</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#definition"><span class="dot blue"></span>Definition</a>
+          <a href="#operations"><span class="dot"></span>Operations</a>
+          <a href="#polar"><span class="dot gold"></span>Polar &amp; De Moivre</a>
+          <a href="#examples"><span class="dot pink"></span>Examples</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <div class="formula" style="margin:0"><div class="fbody" style="font-size:16px">z = a + bi</div><div class="fnote">rectangular</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">|z| = √(a²+b²)</div><div class="fnote">modulus</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">z = r e<sup>iθ</sup></div><div class="fnote">polar</div></div>
+        <div class="formula" style="margin:10px 0 0"><div class="fbody" style="font-size:16px">zⁿ = rⁿ e<sup>inθ</sup></div><div class="fnote">De Moivre</div></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deformation &amp; Elasticity — Physics Midterm Lab</title>
+<meta name="description" content="شرح التشوه والمرونة: الإجهاد والانفعال، قانون هوك، معامل يونج والحجم والقص، نسبة بواسون، الإجهاد الحراري، والطاقة المخزنة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/deformation.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Deformation &amp; Elasticity — Physics Midterm Lab">
+<meta property="og:description" content="شرح التشوه والمرونة: الإجهاد والانفعال، قانون هوك، معامل يونج والحجم والقص، نسبة بواسون، الإجهاد الحراري، والطاقة المخزنة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/deformation.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deformation &amp; Elasticity — Physics Midterm Lab">
+<meta name="twitter:description" content="شرح التشوه والمرونة: الإجهاد والانفعال، قانون هوك، معامل يونج والحجم والقص، نسبة بواسون، الإجهاد الحراري، والطاقة المخزنة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="deformation">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects · كل المواد</a> / <a href="index.html">Physics · الفيزياء</a> / Deformation &amp; Elasticity</div>
+    <div class="eyebrow">Topic 02 · Mechanics of materials</div>
+    <h1>Deformation &amp; Elasticity <span style="color:var(--muted);font-weight:700">· التشوه والمرونة</span></h1>
+    <p class="lead en">Why does a rubber band stretch easily while a steel rod barely moves? Why does a bridge need expansion joints? This page explains how materials respond to forces, from the atomic level to the stress–strain curve.</p>
+    <p class="lead ar">ليه الاستيكة بتتمدد بسهولة وقضيب الصلب بالعافية؟ وليه الكباري محتاجة فواصل تمدد؟ الصفحة دي بتشرح استجابة المواد للقوى من مستوى الذرات لحد منحنى الإجهاد–الانفعال.</p>
+    <div class="topic-tags">
+      <span class="badge green">Hooke's law</span>
+      <span class="badge">Young · Bulk · Shear</span>
+      <span class="badge gold">Stress–strain curve</span>
+      <span class="badge pink">Thermal stress</span>
+    </div>
+  </div>
+</header>
+
+<div class="container layout" id="main">
+  <article>
+    <section id="idea" class="section">
+      <div class="callout tip">
+        <div class="icon">1</div>
+        <div>
+          <h4>الفكرة ببساطة · The big idea</h4>
+          <p class="en">When you apply a force to an object, it changes shape. That change is called <b>deformation</b>. If the object returns to its original shape after removing the force, the deformation is <b>elastic (temporary)</b>. If it stays deformed, it is <b>plastic (permanent)</b>. Elasticity is the property that makes the material want to return home.</p>
+          <p class="ar">لما تحط قوة على جسم، شكله بيتغير. التغيير ده اسمه <b>تشوه (Deformation)</b>. لو رجع لشكله الأصلي بعد ما شلت القوة → تشوه <b>مرن (مؤقت)</b>. لو فضل متشوه → تشوه <b>لدن (دائم)</b>. المرونة هي خاصية المادة اللي بتخليها ترجع لبيتها.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <div class="card"><span class="badge green">Elastic · مرن</span><h3 class="mt-2">Temporary deformation</h3><p class="en">Reversible. The material returns to its original size and shape when the load is removed. Example: a spring, a rubber band at small stretch.</p><p class="ar">قابل للرجوع. المادة ترجع لحجمها وشكلها بعد إزالة الحمل. مثال: السوستة، الاستيكة عند شد بسيط.</p></div>
+        <div class="card"><span class="badge pink">Plastic · لدن</span><h3 class="mt-2">Permanent deformation</h3><p class="en">Irreversible. It remains after the force is removed. Example: clay, dough, a bent paper clip.</p><p class="ar">غير قابل للرجوع. بيفضل بعد إزالة القوة. مثال: الصلصال، العجين، مشبك ورق متني.</p></div>
+      </div>
+    </section>
+
+    <section id="hooke" class="section">
+      <div class="section-head"><div><div class="kicker">1 · Hooke's law</div><h2>قانون هوك · Hooke's law</h2></div></div>
+      <p class="en">For small deformations, the restoring force exerted by an elastic material is directly proportional to the displacement from equilibrium. The minus sign means the force is opposite to the displacement: it always tries to pull the object back.</p>
+      <p class="ar">في التشوهات الصغيرة، قوة الاسترجاع في المادة المرنة تتناسب طرديًا مع الإزاحة عن وضع الاتزان. الإشارة السالبة معناها إن القوة عكس الإزاحة: بتحاول ترجع الجسم لمكانه.</p>
+      <div class="formula">
+        <div class="flabel">Hooke's law · قانون هوك</div>
+        <div class="fbody">F = −k x</div>
+        <div class="fvars">
+          <div><b>F</b> restoring force · قوة الاسترجاع (N)</div>
+          <div><b>k</b> stiffness / spring constant · ثابت الصلابة (N/m)</div>
+          <div><b>x</b> displacement · الإزاحة (m)</div>
+        </div>
+        <div class="fnote">The law applies only within the elastic limit. Beyond it, the material deforms permanently.</div>
+      </div>
+      <div class="callout warn">
+        <div class="icon">!</div>
+        <div><h4>Important · مهم</h4><p class="en">Hooke's law is linear and applies to perfectly elastic materials only up to the proportional limit. It does not apply after the elastic limit.</p><p class="ar">قانون هوك خطي وبيطبق على المواد المرنة فقط لحد حد التناسب. بعد الحد المرن القانون مايعدش صالح.</p></div>
+      </div>
+    </section>
+
+    <section id="stress" class="section">
+      <div class="section-head"><div><div class="kicker">2 · Stress &amp; strain</div><h2>الإجهاد والانفعال · Stress and strain</h2></div></div>
+      <p class="en">Force alone is not enough to describe deformation: the same force on a thin wire and a thick rod gives different results. That is why we use <b>stress</b> (force per unit area) and <b>strain</b> (fractional change in dimension).</p>
+      <p class="ar">القوة لوحدها مش كفاية: نفس القوة على سلك رفيع وقضيب سميك بتدي نتائج مختلفة. عشان كده بنستخدم <b>الإجهاد</b> (قوة على مساحة) و<b>الانفعال</b> (نسبة التغير في الطول أو الحجم).</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Tensile stress · إجهاد شد</div><div class="fbody">σ = F / A</div><div class="fnote">Unit: N/m² = Pa</div></div>
+        <div class="formula"><div class="flabel">Tensile strain · انفعال طولي</div><div class="fbody">ε = ΔL / L₀</div><div class="fnote">Dimensionless — no unit</div></div>
+        <div class="formula"><div class="flabel">General Hooke's law</div><div class="fbody">Stress = Elastic modulus × Strain</div></div>
+        <div class="formula"><div class="flabel">Young's modulus · معامل يونج</div><div class="fbody">Y = σ / ε = (F/A) / (ΔL/L₀)</div><div class="fnote">Unit: Pa (or N/m²)</div></div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 300" role="img" aria-label="Stress strain curve showing elastic region, yield point, ultimate strength and fracture">
+          <defs>
+            <linearGradient id="ssg" x1="0" x2="1"><stop offset="0" stop-color="#45e0c0"/><stop offset=".55" stop-color="#ffcb6b"/><stop offset="1" stop-color="#ff7ab6"/></linearGradient>
+          </defs>
+          <line x1="80" y1="250" x2="710" y2="250" stroke="#8fb0d1" stroke-width="2"/>
+          <line x1="80" y1="250" x2="80" y2="30" stroke="#8fb0d1" stroke-width="2"/>
+          <text x="640" y="278" class="svg-label">strain ε</text>
+          <text x="40" y="45" class="svg-label">stress σ</text>
+          <path d="M80 250 L230 120" stroke="#45e0c0" stroke-width="5" fill="none"/>
+          <path d="M230 120 C280 110 300 115 340 118 C390 122 430 90 470 70 C510 52 535 70 555 118 C580 175 610 220 660 245" stroke="url(#ssg)" stroke-width="5" fill="none"/>
+          <circle cx="230" cy="120" r="7" fill="#45e0c0"/><text x="238" y="105" class="svg-small">A proportional limit</text>
+          <circle cx="340" cy="118" r="7" fill="#ffcb6b"/><text x="348" y="103" class="svg-small">B yield point</text>
+          <circle cx="470" cy="70" r="7" fill="#ffcb6b"/><text x="478" y="58" class="svg-small">C ultimate strength</text>
+          <circle cx="660" cy="245" r="7" fill="#ff7ab6"/><text x="610" y="232" class="svg-small">D fracture</text>
+          <text x="110" y="150" class="svg-small">elastic</text>
+          <text x="390" y="200" class="svg-small">plastic</text>
+          <line x1="230" y1="120" x2="230" y2="250" stroke="#45e0c0" stroke-dasharray="5 6" opacity=".5"/>
+        </svg>
+        <figcaption>المنحنى النموذجي للإجهاد–الانفعال: O→A خطي (هوك)، A→B منطقة الخضوع، ثم التصلد حتى قوة الشد النهائية، ثم الرقبة والكسر.</figcaption>
+      </figure>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Region · المنطقة</th><th>What happens · اللي بيحصل</th></tr></thead>
+          <tbody>
+            <tr><td><b>O → A</b> Elastic / linear</td><td>Stress ∝ strain. Hooke's law holds. Slope = Young's modulus. Material returns fully.</td></tr>
+            <tr><td><b>A</b> Proportional limit</td><td>Last point of perfect proportionality. Beyond it the line bends.</td></tr>
+            <tr><td><b>A → B</b> Yield region</td><td>Permanent deformation starts. Strain increases quickly with little extra stress.</td></tr>
+            <tr><td><b>B → C</b> Strain hardening</td><td>Atomic structure rearranges and strengthens. More stress is needed to stretch.</td></tr>
+            <tr><td><b>C</b> Ultimate strength</td><td>Maximum stress the material can withstand before necking.</td></tr>
+            <tr><td><b>C → D</b> Necking</td><td>Cross-section shrinks locally; engineering stress drops; fracture follows.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid two mt-2">
+        <div class="card"><h3>Ductile · مطيلي</h3><p class="en">Shows a large plastic range before fracture. Example: copper, steel. Can be drawn into wires.</p><p class="ar">بيتحمل تشوه لدن كبير قبل الكسر. مثال: النحاس والصلب. ينفع يتسحب لأسلاك.</p></div>
+        <div class="card"><h3>Brittle · هش</h3><p class="en">Very little or no plastic deformation before failure. Example: glass, ceramics. The curve is steep and short.</p><p class="ar">تشوه لدن صغير جدًا أو معدوم قبل الكسر. مثال: الزجاج والسيراميك. المنحنى حاد وقصير.</p></div>
+      </div>
+
+      <div class="table-wrap mt-2">
+        <table>
+          <thead><tr><th>Property</th><th>Steel</th><th>Rubber</th><th>Glass</th></tr></thead>
+          <tbody>
+            <tr><td>Elastic modulus</td><td>High (~200 GPa)</td><td>Very low (~0.01 GPa)</td><td>Very high (~70 GPa)</td></tr>
+            <tr><td>Behavior</td><td>Elastic within limit</td><td>Highly elastic, large strain</td><td>Slightly elastic, breaks easily</td></tr>
+            <tr><td>Curve</td><td>Long, curved — large plastic region</td><td>Long, smooth — large strain with small stress</td><td>Short, sharp — breaks after elastic limit</td></tr>
+            <tr><td>Use</td><td>Buildings, bridges, tools</td><td>Tires, bands, seals</td><td>Windows, bottles, lenses</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="moduli" class="section">
+      <div class="section-head"><div><div class="kicker">3 · The three moduli</div><h2>معاملات المرونة · Elastic moduli</h2><p class="muted">ثلاثة معاملات لأن في ثلاث طرق أساسية لتشويه الجسم: شد، ضغط من كل الجهات، أو قص.</p></div></div>
+      <div class="grid three">
+        <div class="card">
+          <span class="badge green">Stretch</span><h3 class="mt-2">Young's modulus Y</h3>
+          <p class="en">Resistance to length change under tension or compression. Steep slope on stress–strain = high stiffness.</p>
+          <p class="ar">مقاومة تغير الطول تحت الشد أو الضغط. ميل أكبر = مادة أصلب.</p>
+          <div class="formula"><div class="fbody">Y = (F/A) / (ΔL/L₀)</div></div>
+        </div>
+        <div class="card">
+          <span class="badge gold">Volume</span><h3 class="mt-2">Bulk modulus B</h3>
+          <p class="en">Resistance to uniform compression (squeezing from all sides), like a submarine deep underwater.</p>
+          <p class="ar">مقاومة الضغط المنتظم من كل الاتجاهات، زي الغواصة تحت الماء.</p>
+          <div class="formula"><div class="fbody">B = −ΔP / (ΔV/V₀)</div></div>
+        </div>
+        <div class="card">
+          <span class="badge pink">Shape</span><h3 class="mt-2">Shear modulus S (G)</h3>
+          <p class="en">Resistance to shape change when a tangential force acts parallel to a surface.</p>
+          <p class="ar">مقاومة تغير الشكل لما قوة مماسية تؤثر موازية للسطح.</p>
+          <div class="formula"><div class="fbody">S = (F/A) / (x/h)</div></div>
+        </div>
+      </div>
+
+      <div class="callout mt-2">
+        <div class="icon">σ</div>
+        <div>
+          <h4>Poisson's ratio · نسبة بواسون</h4>
+          <p class="en">When a rod is stretched, it becomes thinner. Poisson's ratio compares the lateral (sideways) contraction to the longitudinal extension. It is dimensionless and usually about 0.2–0.4 for metals.</p>
+          <p class="ar">لما تشد قضيب، بيبقى أرفع. نسبة بواسون بتقارن الانكماش الجانبي بالتمدد الطولي. كمية بلا أبعاد، وعادة 0.2–0.4 للمعادن.</p>
+          <div class="formula"><div class="fbody">σ = − (Δr/r) / (ΔL/L₀)</div><div class="fnote">The minus sign makes σ positive for normal materials (one dimension increases while the other decreases).</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thermal-stress" class="section">
+      <div class="section-head"><div><div class="kicker">4 · Thermal stress</div><h2>الإجهاد الحراري · Thermal stress in constrained bars</h2></div></div>
+      <p class="en">If a bar is heated but prevented from expanding, or cooled but prevented from contracting, internal stress builds up. This force exists only when free expansion/contraction is blocked.</p>
+      <p class="ar">لو قضيب اتسخّن ومنعته يتمدد، أو برد ومنعته ينكمش، بيتكوّن إجهاد داخلي. القوة دي بتظهر بس لما التمدد أو الانكماش الحر يبقى ممنوع.</p>
+      <div class="formula">
+        <div class="flabel">Thermal force · القوة الحرارية</div>
+        <div class="fbody">F = Y A α ΔT</div>
+        <div class="fvars">
+          <div><b>Y</b> Young's modulus · معامل يونج</div>
+          <div><b>A</b> cross-sectional area · مساحة المقطع</div>
+          <div><b>α</b> linear expansion coefficient · معامل التمدد الطولي</div>
+          <div><b>ΔT</b> temperature change · تغير درجة الحرارة</div>
+        </div>
+        <div class="fnote">Derivation: ΔL = αLΔT, and Y = (F/A)/(ΔL/L) → F = YAΔL/L = YAαΔT.</div>
+      </div>
+    </section>
+
+    <section id="energy" class="section">
+      <div class="section-head"><div><div class="kicker">5 · Stored energy</div><h2>الطاقة المخزنة في السلك · Energy stored in a stretched wire</h2></div></div>
+      <p class="en">Within the elastic limit, the force is proportional to extension, so the work done is the area of the force–extension triangle. That work is stored as elastic potential energy.</p>
+      <p class="ar">في الحد المرن، القوة تتناسب مع الاستطالة، فالشغل = مساحة مثلث القوة–الاستطالة. الشغل ده بيتخزن كطاقة مرونة كامنة.</p>
+      <div class="formula-grid">
+        <div class="formula"><div class="flabel">Work done · الشغل</div><div class="fbody">W = ½ F ΔL</div><div class="fnote">Joule (J) — or erg in CGS</div></div>
+        <div class="formula"><div class="flabel">Energy density · كثافة الطاقة</div><div class="fbody">W / (A L₀) = ½ (F/A)(ΔL/L₀) = ½ stress × strain</div><div class="fnote">Energy per unit volume · طاقة لكل وحدة حجم</div></div>
+      </div>
+      <div class="callout tip">
+        <div class="icon">↺</div>
+        <div><p class="en">Using Y = stress/strain, you can also write energy density = ½ Y (strain)². This is useful when the problem gives Y and ΔL/L instead of force.</p><p class="ar">وبما إن Y = stress/strain، تقدر تكتب كثافة الطاقة = ½ Y (strain)². مفيدة لو المسألة مدياك Y والانفعال بدل القوة.</p></div>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="section-head"><div><div class="kicker">6 · Solved examples</div><h2>أمثلة محلولة خطوة بخطوة</h2></div></div>
+
+      <div class="example">
+        <div class="tag">Example 1 · from the lecture</div>
+        <h4>A 250 kg load hangs from a metal wire of length 6 m and cross-section 0.2 cm². The length increases by 0.4 cm. Find Young's modulus.</h4>
+        <div class="work">
+          <span class="step">A = 0.2 cm² = 0.2 × 10⁻⁴ m² = 2 × 10⁻⁵ m²</span>
+          <span class="step">F = mg = 250 × 9.8 = 2450 N</span>
+          <span class="step">stress = F/A = 2450 / (2 × 10⁻⁵) = 1.225 × 10⁸ N/m²</span>
+          <span class="step">ΔL = 0.4 cm = 4 × 10⁻³ m</span>
+          <span class="step">strain = ΔL/L = (4 × 10⁻³)/6 = 6.67 × 10⁻⁴</span>
+          <span class="step">Y = stress/strain = (1.225 × 10⁸)/(6.67 × 10⁻⁴) ≈ 1.84 × 10¹¹ N/m²</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 2 · bulk modulus</div>
+        <h4>A solid lead sphere of volume 0.5 m³ is taken to a depth where water pressure is 2 × 10⁷ N/m². B = 7.7 × 10⁹ N/m². Find ΔV.</h4>
+        <div class="work">
+          <span class="step">B = −ΔP / (ΔV/V₀)</span>
+          <span class="step">ΔV = −V₀ ΔP / B</span>
+          <span class="step">ΔV = −(0.5)(2 × 10⁷)/(7.7 × 10⁹)</span>
+          <span class="step">ΔV ≈ −1.30 × 10⁻³ m³</span>
+        </div>
+        <p class="en mt-1">Negative means the volume decreased. The sphere is compressed by about 1.3 litres.</p>
+        <p class="ar mt-1">الإشارة سالبة معناها الحجم قل. الكرة انضغطت بحوالي 1.3 لتر.</p>
+      </div>
+
+      <div class="example">
+        <div class="tag">Example 3 · energy in a wire</div>
+        <h4>A wire of length 3 m and diameter 1 mm is stretched by 2 mm. Y = 2 × 10¹² dyne/cm². Find the work done and the energy per unit volume.</h4>
+        <div class="work">
+          <span class="step">Y = 2 × 10¹² dyne/cm² = 2 × 10¹¹ N/m²</span>
+          <span class="step">strain = ΔL/L = (2 × 10⁻³)/3 = 6.67 × 10⁻⁴</span>
+          <span class="step">energy density = ½ Y (strain)²</span>
+          <span class="step">= ½ (2 × 10¹¹)(6.67 × 10⁻⁴)² ≈ 4.44 × 10⁴ J/m³</span>
+          <span class="step">A = πr² = π(0.5 × 10⁻³)² = 7.85 × 10⁻⁷ m²</span>
+          <span class="step">Volume = A L = 2.36 × 10⁻⁶ m³</span>
+          <span class="step">W = energy density × volume ≈ 0.105 J</span>
+        </div>
+        <p class="ar mt-1">لاحظ: 4.44×10⁴ J/m³ = 4.44×10⁵ erg/cm³ (لأن 1 J/m³ = 10 erg/cm³).</p>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section">
+      <div class="section-head"><div><div class="kicker">7 · Exam traps</div><h2>أخطاء شائعة</h2></div></div>
+      <div class="grid two">
+        <div class="card"><h3>انسَ تحويل الوحدات</h3><p class="en">cm² to m²: multiply by 10⁻⁴. mm² to m²: multiply by 10⁻⁶. This is the #1 source of wrong answers.</p><p class="ar">سم² إلى م²: اضرب في 10⁻⁴. مم² إلى م²: اضرب في 10⁻⁶. ده أكتر سبب لإجابة غلط.</p></div>
+        <div class="card"><h3>الانفعال ليس له وحدة</h3><p class="en">Strain = ΔL/L, so units cancel. If your answer has a unit, you probably used the wrong formula.</p><p class="ar">الانفعال = ΔL/L، الوحدات بتتشال. لو إجابتك ليها وحدة يبقى استخدمت قانون غلط.</p></div>
+        <div class="card"><h3>Young's modulus = الميل</h3><p class="en">On a stress–strain graph, Y is the slope of the straight elastic part only.</p><p class="ar">على منحنى إجهاد–انفعال، Y هو ميل الجزء المستقيم المرن فقط.</p></div>
+        <div class="card"><h3>الإجهاد الحراري يحتاج منع التمدد</h3><p class="en">No thermal stress if the bar is free to expand. The force appears only when expansion/contraction is constrained.</p><p class="ar">مفيش إجهاد حراري لو القضيب حر يتمدد. القوة تظهر فقط لما التمدد أو الانكماش يكون ممنوع.</p></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-head"><div><div class="kicker">8 · Practice</div><h2>أسئلة على التشوه والمرونة</h2><p class="muted">MCQs + مسائل + أسئلة مقالية. اضغط "تحقق" بعد الاختيار.</p></div></div>
+      <div class="quiz">
+
+        <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">Hooke's law is valid: · قانون هوك صالح:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d1"> a) for all stresses</label>
+            <label><input type="radio" name="d1" data-correct="true"> b) up to the proportional limit</label>
+            <label><input type="radio" name="d1"> c) only after fracture</label>
+            <label><input type="radio" name="d1"> d) only for plastics</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> The straight-line region ends at the proportional limit; beyond it the law fails.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">The unit of strain is: · وحدة الانفعال:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d2"> a) N/m²</label>
+            <label><input type="radio" name="d2"> b) N·m</label>
+            <label><input type="radio" name="d2" data-correct="true"> c) dimensionless (no unit)</label>
+            <label><input type="radio" name="d2"> d) Pa</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Strain is a ratio of two lengths: ΔL/L.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">A material with a very low Young's modulus is: · مادة بمعامل يونج منخفض جدًا تكون:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d3"> a) very stiff</label>
+            <label><input type="radio" name="d3" data-correct="true"> b) easily stretched</label>
+            <label><input type="radio" name="d3"> c) perfectly brittle</label>
+            <label><input type="radio" name="d3"> d) incompressible</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> Small Y means a given stress produces a large strain — like rubber compared with steel.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">Bulk modulus measures resistance to: · معامل الحجم يقيس مقاومة:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d4"> a) stretching</label>
+            <label><input type="radio" name="d4" data-correct="true"> b) uniform compression</label>
+            <label><input type="radio" name="d4"> c) twisting</label>
+            <label><input type="radio" name="d4"> d) bending</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> B = −ΔP/(ΔV/V₀) describes volume change under pressure.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">A wire of length 2 m stretches by 1 mm. Its strain is: · انفعال سلك طوله 2 m واستطال 1 mm:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d5"> a) 2 × 10⁻³</label>
+            <label><input type="radio" name="d5" data-correct="true"> b) 5 × 10⁻⁴</label>
+            <label><input type="radio" name="d5"> c) 5 × 10⁻³</label>
+            <label><input type="radio" name="d5"> d) 2 × 10⁻⁴</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> ε = ΔL/L = (1 × 10⁻³)/2 = 5 × 10⁻⁴.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">A steel rod is clamped at both ends and heated. It develops: · قضيب صلب مثبت من الطرفين وسخّن، فهو يتعرض لـ:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d6" data-correct="true"> a) compressive thermal stress</label>
+            <label><input type="radio" name="d6"> b) tensile thermal stress</label>
+            <label><input type="radio" name="d6"> c) no stress</label>
+            <label><input type="radio" name="d6"> d) zero strain but zero stress</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> The rod wants to expand but cannot, so the constraints compress it. If cooled while clamped, it would be in tension.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">7</div><div class="qtext">The energy stored in a stretched wire within the elastic limit is: · الطاقة المخزنة في سلك مشدود:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d7"> a) FΔL</label>
+            <label><input type="radio" name="d7" data-correct="true"> b) ½FΔL</label>
+            <label><input type="radio" name="d7"> c) 2FΔL</label>
+            <label><input type="radio" name="d7"> d) F/ΔL</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> The force–extension graph is a triangle, so area = ½ × base × height = ½FΔL.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">8</div><div class="qtext">Poisson's ratio is: · نسبة بواسون:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d8"> a) measured in Pa</label>
+            <label><input type="radio" name="d8" data-correct="true"> b) dimensionless</label>
+            <label><input type="radio" name="d8"> c) always greater than 1</label>
+            <label><input type="radio" name="d8"> d) the same as Young's modulus</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> It is a ratio of two strains, so it has no unit.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">9</div><div class="qtext">A load of 100 N hangs from a wire of area 2 × 10⁻⁶ m². The stress is: · إجهاد سلك مساحة مقطعه 2×10⁻⁶ m²:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d9"> a) 2 × 10⁶ Pa</label>
+            <label><input type="radio" name="d9" data-correct="true"> b) 5 × 10⁷ Pa</label>
+            <label><input type="radio" name="d9"> c) 5 × 10⁸ Pa</label>
+            <label><input type="radio" name="d9"> d) 2 × 10⁸ Pa</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> σ = F/A = 100/(2 × 10⁻⁶) = 5 × 10⁷ Pa.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">10</div><div class="qtext">Which material is most likely brittle? · أي مادة على الأرجح هشة؟</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d10"> a) copper</label>
+            <label><input type="radio" name="d10"> b) steel</label>
+            <label><input type="radio" name="d10" data-correct="true"> c) glass</label>
+            <label><input type="radio" name="d10"> d) rubber</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Glass has almost no plastic region before fracture.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">11</div><div class="qtext">A steel wire (Y = 2 × 10¹¹ Pa) of length 3 m and area 1 × 10⁻⁶ m² is stretched by 1.5 mm. Find the force.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d11"> a) 50 N</label>
+            <label><input type="radio" name="d11" data-correct="true"> b) 100 N</label>
+            <label><input type="radio" name="d11"> c) 200 N</label>
+            <label><input type="radio" name="d11"> d) 1000 N</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> F = YAΔL/L = (2×10¹¹)(1×10⁻⁶)(1.5×10⁻³)/3 = 100 N.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">12</div><div class="qtext">The slope of the linear part of a stress–strain graph represents: · ميل الجزء الخطي من منحنى الإجهاد–الانفعال يمثل:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d12" data-correct="true"> a) Young's modulus</label>
+            <label><input type="radio" name="d12"> b) strain</label>
+            <label><input type="radio" name="d12"> c) stress</label>
+            <label><input type="radio" name="d12"> d) Poisson's ratio</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> Slope = stress/strain = Y.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">13</div><div class="qtext">Find the thermal force in a steel bar of area 2 × 10⁻⁴ m², Y = 2 × 10¹¹ Pa, α = 1.2 × 10⁻⁵ °C⁻¹, heated by 50 °C while clamped.</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d13"> a) 1.2 × 10³ N</label>
+            <label><input type="radio" name="d13" data-correct="true"> b) 2.4 × 10⁴ N</label>
+            <label><input type="radio" name="d13"> c) 2.4 × 10⁵ N</label>
+            <label><input type="radio" name="d13"> d) 1.2 × 10⁵ N</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: b.</b> F = YAαΔT = (2×10¹¹)(2×10⁻⁴)(1.2×10⁻⁵)(50) = 2.4×10⁴ N.</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">14</div><div class="qtext">When a wire is stretched, its cross-section decreases. This is described by: · عند شد سلك يقل مقطعه، وده بيوصفه:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d14"> a) bulk modulus</label>
+            <label><input type="radio" name="d14"> b) shear modulus</label>
+            <label><input type="radio" name="d14" data-correct="true"> c) Poisson's ratio</label>
+            <label><input type="radio" name="d14"> d) Hooke's constant</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: c.</b> Poisson's ratio = −(lateral strain)/(longitudinal strain).</div>
+        </div>
+
+        <div class="q"><div class="qhead"><div class="num">15</div><div class="qtext">A material obeys Hooke's law. If the stress is doubled while remaining in the elastic region, the strain: · لو تضاعف الإجهاد داخل الحد المرن، الانفعال:</div></div>
+          <div class="opts">
+            <label><input type="radio" name="d15" data-correct="true"> a) doubles</label>
+            <label><input type="radio" name="d15"> b) halves</label>
+            <label><input type="radio" name="d15"> c) quadruples</label>
+            <label><input type="radio" name="d15"> d) stays the same</label>
+          </div>
+          <button class="reveal">تحقق · Check answer</button>
+          <div class="answer"><b>Answer: a.</b> Stress ∝ strain in the linear region, so doubling stress doubles strain.</div>
+        </div>
+
+      </div>
+
+      <div class="callout tip mt-3">
+        <div class="icon">Q</div>
+        <div>
+          <h4>Long-answer practice · أسئلة مقالية</h4>
+          <p class="en">1) Define stress and strain and state their units. 2) Explain the difference between elastic and plastic deformation. 3) Describe the regions of a stress–strain curve. 4) Why is steel stiffer than rubber? 5) Why does a constrained heated bar develop stress?</p>
+          <p class="ar">1) عرّف الإجهاد والانفعال ووحداتهم. 2) اشرح الفرق بين التشوه المرن واللدن. 3) اوصف مناطق منحنى الإجهاد–الانفعال. 4) ليه الصلب أصلب من المطاط؟ 5) ليه القضيب المسخّن والمثبت بيتولد فيه إجهاد؟</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidecard">
+      <h4>On this page</h4>
+      <div class="mini-nav">
+        <a href="#idea"><span class="dot"></span>الفكرة ببساطة</a>
+        <a href="#hooke"><span class="dot gold"></span>قانون هوك</a>
+        <a href="#stress"><span class="dot blue"></span>الإجهاد والانفعال</a>
+        <a href="#moduli"><span class="dot pink"></span>المعاملات الثلاثة</a>
+        <a href="#thermal-stress"><span class="dot"></span>الإجهاد الحراري</a>
+        <a href="#energy"><span class="dot gold"></span>الطاقة المخزنة</a>
+        <a href="#examples"><span class="dot blue"></span>أمثلة محلولة</a>
+        <a href="#quiz"><span class="dot pink"></span>الأسئلة</a>
+      </div>
+    </div>
+    <div class="sidecard">
+      <h4>Formula snapshot</h4>
+      <p class="muted" style="font-size:13px;margin:0;line-height:2">
+        σ = F/A<br>
+        ε = ΔL/L₀<br>
+        Y = σ/ε<br>
+        B = −ΔP/(ΔV/V₀)<br>
+        S = (F/A)/(x/h)<br>
+        σ<sub>P</sub> = −(Δr/r)/(ΔL/L₀)<br>
+        F<sub>thermal</sub> = YAαΔT<br>
+        W = ½FΔL
+      </p>
+    </div>
+  </aside>
+</div>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

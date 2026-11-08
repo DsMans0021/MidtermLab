@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Midterm Lab">
+  <rect width="512" height="512" rx="112" fill="#0f766e"/>
+  <path d="M116 366V146h54l86 116 86-116h54v220h-58V238l-82 108-82-108v128z" fill="#fffdf8"/>
+  <circle cx="386" cy="126" r="26" fill="#f4c95d"/>
+</svg>

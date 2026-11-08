@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Law of Thermodynamics · القانون الأول — Physics</title>
+<meta name="description" content="القانون الأول للديناميكا الحرارية: النظام والشغل والحرارة والطاقة الداخلية، العمليات الأربعة، وأمثلة محلولة وأسئلة تفاعلية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/physics/thermodynamics.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="First Law of Thermodynamics · القانون الأول — Physics">
+<meta property="og:description" content="القانون الأول للديناميكا الحرارية: النظام والشغل والحرارة والطاقة الداخلية، العمليات الأربعة، وأمثلة محلولة وأسئلة تفاعلية.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/physics/thermodynamics.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="First Law of Thermodynamics · القانون الأول — Physics">
+<meta name="twitter:description" content="القانون الأول للديناميكا الحرارية: النظام والشغل والحرارة والطاقة الداخلية، العمليات الأربعة، وأمثلة محلولة وأسئلة تفاعلية.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="physics" data-page="thermodynamics.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Physics</a> / First Law</div>
+    <div class="eyebrow">Physics · Topic 05 · Heat &amp; Thermodynamics</div>
+    <h1>First Law of Thermodynamics <span style="color:var(--muted);font-weight:700">· القانون الأول</span></h1>
+    <p class="lead en">Heat and work are two ways to transfer energy. The first law says the change in internal energy equals the heat added minus the work done by the system. This page makes the sign convention, the four processes, and the exam traps completely clear.</p>
+    <p class="lead ar">الحرارة والشغل طريقتان لنقل الطاقة. القانون الأول بيقول إن تغير الطاقة الداخلية = الحرارة المضافة − الشغل اللي يعمله النظام. الصفحة دي بتوضّح اتفاقية الإشارة، العمليات الأربعة، وأخطاء الامتحان.</p>
+    <div class="topic-tags">
+      <span class="badge green">Core midterm topic</span>
+      <span class="badge gold">Formula heavy</span>
+      <span class="badge pink">Solved examples</span>
+      <span class="badge">8 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="system">
+        <div class="kicker">1 · The language</div>
+        <h2>System, state, and internal energy</h2>
+        <p class="en">A <b>system</b> is the part of the universe we study; everything else is the <b>surroundings</b>. A system can exchange energy with the surroundings as <b>heat Q</b> or <b>work W</b>. Its <b>state</b> is described by measurable variables such as pressure P, volume V, and temperature T. <b>Internal energy U</b> is the total kinetic and potential energy of the molecules — it depends only on the state, not on the path.</p>
+        <p class="ar"><b>النظام</b> هو الجزء اللي بندرسه، وكل حاجة تانية هي <b>المحيط</b>. النظام بيتبادل طاقة مع المحيط في صورة <b>حرارة Q</b> أو <b>شغل W</b>. <b>الحالة</b> بتتوصف بمتغيرات زي P وV وT. <b>الطاقة الداخلية U</b> هي مجموع طاقة الحركة والوضع للجزيئات — بتعتمد على الحالة بس، مش على المسار.</p>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>State function · دالة حالة</h4>
+            <p class="en">U is a state function: ΔU depends only on the initial and final states. Q and W are <b>not</b> state functions — they depend on the path. This is why we write ΔU, not U.</p>
+            <p class="ar">U دالة حالة: ΔU بتعتمد على الحالة الابتدائية والنهائية بس. أما Q وW مش دوال حالة — بيعتمدوا على المسار. عشان كده بنكتب ΔU مش U.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="first-law">
+        <div class="kicker">2 · The law</div>
+        <h2>The first law — and the sign convention</h2>
+        <div class="formula">
+          <div class="flabel">First law of thermodynamics · القانون الأول</div>
+          <div class="fbody">ΔU = Q − W</div>
+          <div class="fnote">Q = heat added <b>to</b> the system; W = work done <b>by</b> the system. Both in joules.</div>
+        </div>
+        <p class="en">Equivalently, <b>Q = ΔU + W</b>: the heat added to a system goes partly into raising its internal energy and partly into work done by the system. If heat leaves the system, Q is negative. If work is done <b>on</b> the system (compression), W is negative.</p>
+        <p class="ar">بالتكافؤ: <b>Q = ΔU + W</b> — الحرارة المضافة للنظام بيروح جزء منها لزيادة الطاقة الداخلية وجزء لشغل يعمله النظام. لو الحرارة خارجة، Q سالبة. ولو الشغل معمول <b>على</b> النظام (انضغاط)، W سالبة.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Quantity · الكمية</th><th>Positive when · موجبة لما</th><th>Negative when · سالبة لما</th></tr></thead>
+            <tbody>
+              <tr><td><b>Q</b> heat · حرارة</td><td>Heat enters the system</td><td>Heat leaves the system</td></tr>
+              <tr><td><b>W</b> work · شغل</td><td>System expands (does work)</td><td>System is compressed (work done on it)</td></tr>
+              <tr><td><b>ΔU</b> internal energy</td><td>U increases (usually T rises)</td><td>U decreases (usually T falls)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="formula-grid mt-2">
+          <div class="formula">
+            <div class="flabel">Work at constant pressure</div>
+            <div class="fbody">W = P ΔV = P(V₂ − V₁)</div>
+            <div class="fnote">Only when P is constant. For a general process, W is the area under the P–V curve.</div>
+          </div>
+          <div class="formula">
+            <div class="flabel">Work at constant volume</div>
+            <div class="fbody">W = 0</div>
+            <div class="fnote">No expansion → no P–V work. Then ΔU = Q.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="processes">
+        <div class="kicker">3 · The four processes</div>
+        <h2>Isothermal, isobaric, isochoric, adiabatic</h2>
+        <p class="en">Most exam questions are one of four special processes. Learn what stays constant, what happens to Q, W, and ΔU, and the formula to use.</p>
+        <p class="ar">أغلب أسئلة الامتحان واحدة من أربع عمليات خاصة. اعرف إيه اللي بيثبت، وإيه اللي بيحصل لـ Q وW وΔU، والقانون اللي تستخدمه.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Process · العملية</th><th>Constant · ثابت</th><th>Key relation · العلاقة</th><th>Q, W, ΔU</th></tr></thead>
+            <tbody>
+              <tr><td><b>Isothermal</b> · ثابتة الحرارة</td><td>T</td><td>PV = constant; W = nRT ln(V₂/V₁)</td><td>ΔU = 0, so Q = W</td></tr>
+              <tr><td><b>Isobaric</b> · ثابتة الضغط</td><td>P</td><td>W = PΔV; Q = nC<sub>p</sub>ΔT</td><td>ΔU = nC<sub>v</sub>ΔT</td></tr>
+              <tr><td><b>Isochoric</b> · ثابتة الحجم</td><td>V</td><td>W = 0; Q = nC<sub>v</sub>ΔT</td><td>ΔU = Q</td></tr>
+              <tr><td><b>Adiabatic</b> · أدياباتية</td><td>Q = 0</td><td>PV<sup>γ</sup> = constant; TV<sup>γ−1</sup> = constant</td><td>ΔU = −W</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="formula-grid mt-2">
+          <div class="formula">
+            <div class="flabel">Molar specific heats</div>
+            <div class="fbody">C<sub>p</sub> − C<sub>v</sub> = R &nbsp;·&nbsp; γ = C<sub>p</sub>/C<sub>v</sub></div>
+            <div class="fnote">Monatomic: C<sub>v</sub> = 3R/2, C<sub>p</sub> = 5R/2, γ = 5/3. Diatomic: C<sub>v</sub> = 5R/2, γ = 7/5.</div>
+          </div>
+          <div class="formula">
+            <div class="flabel">Internal energy (ideal gas)</div>
+            <div class="fbody">ΔU = n C<sub>v</sub> ΔT</div>
+            <div class="fnote">For any process of an ideal gas — not only constant volume.</div>
+          </div>
+        </div>
+
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>أهم فخ في الامتحان · The biggest trap</h4>
+            <p class="en">ΔU = nC<sub>v</sub>ΔT is valid for <b>any</b> process of an ideal gas, but Q = nC<sub>v</sub>ΔT is valid <b>only at constant volume</b>. At constant pressure use C<sub>p</sub>.</p>
+            <p class="ar">ΔU = nC<sub>v</sub>ΔT صالحة لأي عملية لغاز مثالي، لكن Q = nC<sub>v</sub>ΔT صالحة <b>فقط عند ثبات الحجم</b>. عند ثبات الضغط استخدم C<sub>p</sub>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pv">
+        <div class="kicker">4 · Visual</div>
+        <h2>The P–V diagram</h2>
+        <p class="en">Work done by a gas equals the area under the process curve on a P–V diagram. Clockwise cycles do net positive work; counter-clockwise cycles do net negative work. The change in internal energy around a complete cycle is zero.</p>
+        <p class="ar">الشغل اللي يعمله الغاز = المساحة تحت منحنى العملية على رسم P–V. الدورة في اتجاه عقارب الساعة شغلها الصافي موجب، وعكس عقارب الساعة سالب. تغير الطاقة الداخلية في دورة كاملة = صفر.</p>
+        <div class="card" style="padding:12px">
+          <svg viewBox="0 0 520 280" width="100%" height="auto" role="img" aria-label="PV diagram with isobaric, isochoric, isothermal and adiabatic paths">
+            <defs>
+              <linearGradient id="pvfill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#45e0c0" stop-opacity=".28"/>
+                <stop offset="1" stop-color="#2f9cf4" stop-opacity=".04"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="520" height="280" fill="rgba(255,255,255,.015)" rx="14"/>
+            <line x1="70" y1="230" x2="480" y2="230" stroke="#7f9bb8" stroke-width="1.5"/>
+            <line x1="70" y1="230" x2="70" y2="40" stroke="#7f9bb8" stroke-width="1.5"/>
+            <text x="460" y="252" fill="#9fb4ca" font-size="12">V</text>
+            <text x="42" y="50" fill="#9fb4ca" font-size="12">P</text>
+            <path d="M120 180 H380 V90 H120 Z" fill="url(#pvfill)" stroke="none"/>
+            <path d="M120 180 H380" stroke="#45e0c0" stroke-width="3"/>
+            <path d="M380 180 V90" stroke="#ffcb6b" stroke-width="3"/>
+            <path d="M380 90 H120" stroke="#45e0c0" stroke-width="3"/>
+            <path d="M120 90 V180" stroke="#ffcb6b" stroke-width="3"/>
+            <path d="M120 180 C210 165 300 130 380 90" stroke="#ff7ab6" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+            <path d="M120 180 C190 120 260 80 340 60" stroke="#8ab4ff" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+            <text x="250" y="205" fill="#45e0c0" font-size="12">isobaric · P const</text>
+            <text x="390" y="145" fill="#ffcb6b" font-size="12">isochoric</text>
+            <text x="210" y="120" fill="#ff7ab6" font-size="12">isothermal</text>
+            <text x="220" y="72" fill="#8ab4ff" font-size="12">adiabatic</text>
+            <circle cx="120" cy="180" r="5" fill="#45e0c0"/>
+            <circle cx="380" cy="90" r="5" fill="#45e0c0"/>
+            <text x="90" y="198" fill="#9fb4ca" font-size="11">1</text>
+            <text x="386" y="84" fill="#9fb4ca" font-size="11">2</text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section" id="examples">
+        <div class="kicker">5 · Solved examples</div>
+        <h2>أمثلة محلولة خطوة بخطوة</h2>
+
+        <div class="example">
+          <div class="tag">Example 1 · isobaric heating</div>
+          <h4>2 mol of a monatomic ideal gas is heated at constant pressure from 300 K to 400 K. Find W, ΔU, and Q. (R = 8.31 J/mol·K)</h4>
+          <div class="work">
+            <span class="step">n = 2, ΔT = 100 K, monatomic: Cv = 3R/2, Cp = 5R/2</span>
+            <span class="step">W = PΔV = nRΔT = 2 × 8.31 × 100 = 1662 J</span>
+            <span class="step">ΔU = nCvΔT = 2 × (1.5 × 8.31) × 100 = 2493 J</span>
+            <span class="step">Q = nCpΔT = 2 × (2.5 × 8.31) × 100 = 4155 J</span>
+            <span class="step">Check: Q = ΔU + W = 2493 + 1662 = 4155 J ✓</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="tag">Example 2 · adiabatic compression</div>
+          <h4>A gas is compressed adiabatically, and 500 J of work is done on it. Find ΔU and the final temperature change direction.</h4>
+          <div class="work">
+            <span class="step">Adiabatic → Q = 0</span>
+            <span class="step">First law: ΔU = Q − W = 0 − (−500) = +500 J</span>
+            <span class="step">W is negative because work is done ON the gas (compression).</span>
+            <span class="step">ΔU > 0 → internal energy increases → temperature rises.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="tag">Example 3 · isothermal expansion</div>
+          <h4>3 mol of an ideal gas expands isothermally at 350 K from 2 L to 6 L. Find W and Q. (R = 8.31)</h4>
+          <div class="work">
+            <span class="step">Isothermal → ΔU = 0 → Q = W</span>
+            <span class="step">W = nRT ln(V2/V1) = 3 × 8.31 × 350 × ln(3)</span>
+            <span class="step">ln(3) ≈ 1.0986</span>
+            <span class="step">W ≈ 3 × 8.31 × 350 × 1.0986 ≈ 9585 J</span>
+            <span class="step">Q = 9585 J (heat enters the gas)</span>
+          </div>
+        </div>
+
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Checklist before you answer · تشيك ليست</h4>
+            <p class="en">1) Is the process isothermal, isobaric, isochoric, or adiabatic? 2) Did you convert T to kelvin? 3) Is work done BY or ON the gas? 4) Did you use C<sub>v</sub> for ΔU and the correct C for Q? 5) Are your units joules?</p>
+            <p class="ar">1) العملية إيه؟ 2) حوّلت الحرارة لكلفن؟ 3) الشغل معمول بواسطة الغاز ولا عليه؟ 4) استخدمت C<sub>v</sub> للطاقة الداخلية وC الصح للحرارة؟ 5) الوحدات بالجول؟</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">6 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <p class="muted">اختار إجابة، وبعدين اضغط "تحقق" عشان تشوف الشرح.</p>
+        <div class="quiz">
+          <div class="q">
+            <div class="qhead"><div class="num">1</div><div class="qtext">The first law of thermodynamics is a statement of: · القانون الأول تعبير عن:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t1" data-correct="false"><span>a) Conservation of momentum</span></label>
+              <label><input type="radio" name="t1" data-correct="true"><span>b) Conservation of energy</span></label>
+              <label><input type="radio" name="t1" data-correct="false"><span>c) Conservation of mass</span></label>
+              <label><input type="radio" name="t1" data-correct="false"><span>d) Entropy always increases</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> The first law is energy conservation for heat and work: ΔU = Q − W.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">2</div><div class="qtext">In an isochoric process, the work done by the gas is: · في عملية ثابتة الحجم، الشغل:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t2" data-correct="false"><span>a) PΔV</span></label>
+              <label><input type="radio" name="t2" data-correct="true"><span>b) Zero</span></label>
+              <label><input type="radio" name="t2" data-correct="false"><span>c) nRT ln(V₂/V₁)</span></label>
+              <label><input type="radio" name="t2" data-correct="false"><span>d) Negative</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> ΔV = 0, so W = PΔV = 0. Therefore ΔU = Q.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">3</div><div class="qtext">For an isothermal process of an ideal gas: · في عملية ثابتة الحرارة لغاز مثالي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t3" data-correct="false"><span>a) Q = 0</span></label>
+              <label><input type="radio" name="t3" data-correct="false"><span>b) W = 0</span></label>
+              <label><input type="radio" name="t3" data-correct="true"><span>c) ΔU = 0</span></label>
+              <label><input type="radio" name="t3" data-correct="false"><span>d) ΔU = Q + W</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>c)</b> T is constant, so ΔU = nC<sub>v</sub>ΔT = 0. Hence Q = W.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">4</div><div class="qtext">A gas absorbs 300 J of heat and does 120 J of work. Its change in internal energy is: · غاز امتص 300 J وعمل 120 J، تغير طاقته الداخلية:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t4" data-correct="true"><span>a) +180 J</span></label>
+              <label><input type="radio" name="t4" data-correct="false"><span>b) +420 J</span></label>
+              <label><input type="radio" name="t4" data-correct="false"><span>c) −180 J</span></label>
+              <label><input type="radio" name="t4" data-correct="false"><span>d) −420 J</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> ΔU = Q − W = 300 − 120 = +180 J.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">5</div><div class="qtext">In an adiabatic process: · في عملية أدياباتية:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t5" data-correct="false"><span>a) Q = W</span></label>
+              <label><input type="radio" name="t5" data-correct="true"><span>b) Q = 0</span></label>
+              <label><input type="radio" name="t5" data-correct="false"><span>c) ΔU = 0</span></label>
+              <label><input type="radio" name="t5" data-correct="false"><span>d) W = 0</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> No heat exchange with the surroundings, so ΔU = −W.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">6</div><div class="qtext">For a monatomic ideal gas, C<sub>v</sub> equals: · لغاز مثالي أحادي الذرة، C<sub>v</sub> تساوي:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t6" data-correct="false"><span>a) R</span></label>
+              <label><input type="radio" name="t6" data-correct="false"><span>b) 5R/2</span></label>
+              <label><input type="radio" name="t6" data-correct="true"><span>c) 3R/2</span></label>
+              <label><input type="radio" name="t6" data-correct="false"><span>d) 7R/2</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>c)</b> Monatomic: C<sub>v</sub> = 3R/2, C<sub>p</sub> = 5R/2, γ = 5/3.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">7</div><div class="qtext">Work done by a gas is represented on a P–V diagram by: · الشغل على رسم P–V يمثله:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t7" data-correct="true"><span>a) The area under the process curve</span></label>
+              <label><input type="radio" name="t7" data-correct="false"><span>b) The slope of the curve</span></label>
+              <label><input type="radio" name="t7" data-correct="false"><span>c) The y-intercept</span></label>
+              <label><input type="radio" name="t7" data-correct="false"><span>d) The area above the curve</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> W = ∫P dV = area under the curve between the initial and final volumes.</div>
+          </div>
+
+          <div class="q">
+            <div class="qhead"><div class="num">8</div><div class="qtext">A gas is compressed at constant pressure, so its volume decreases. The work done by the gas is: · غاز انضغط عند ثبات الضغط، الشغل اللي يعمله الغاز:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="t8" data-correct="false"><span>a) Positive</span></label>
+              <label><input type="radio" name="t8" data-correct="true"><span>b) Negative</span></label>
+              <label><input type="radio" name="t8" data-correct="false"><span>c) Zero</span></label>
+              <label><input type="radio" name="t8" data-correct="false"><span>d) Equal to Q</span></label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>b)</b> W = PΔV, and ΔV is negative for compression, so work done by the gas is negative.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="temperature.html"><span>← Previous</span><b>Temperature &amp; Zeroth Law</b></a>
+        <a href="formulas.html" class="next"><span>Next →</span><b>Formula Vault · بنك القوانين</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#system"><span class="dot blue"></span>System &amp; state</a>
+          <a href="#first-law"><span class="dot"></span>First law</a>
+          <a href="#processes"><span class="dot gold"></span>Four processes</a>
+          <a href="#pv"><span class="dot pink"></span>P–V diagram</a>
+          <a href="#examples"><span class="dot"></span>Examples</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick formulas</h4>
+        <div class="formula" style="margin:0">
+          <div class="fbody" style="font-size:16px">ΔU = Q − W</div>
+          <div class="fnote">Q = ΔU + W</div>
+        </div>
+        <div class="formula" style="margin:10px 0 0">
+          <div class="fbody" style="font-size:16px">W = PΔV</div>
+          <div class="fnote">constant pressure only</div>
+        </div>
+        <div class="formula" style="margin:10px 0 0">
+          <div class="fbody" style="font-size:16px">ΔU = nC<sub>v</sub>ΔT</div>
+          <div class="fnote">ideal gas, any process</div>
+        </div>
+        <div class="formula" style="margin:10px 0 0">
+          <div class="fbody" style="font-size:16px">C<sub>p</sub> − C<sub>v</sub> = R</div>
+          <div class="fnote">γ = C<sub>p</sub>/C<sub>v</sub></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

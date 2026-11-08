@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<script>(function(){try{var t=localStorage.getItem("ml-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauss's Method · طريقة جاوس — Algebra</title>
+<meta name="description" content="طريقة جاوس: حذف جاوس، عمليات الصفوف، الصورة السلمية، التعويض العكسي، جاوس-جوردان، مع مثال محلول وأسئلة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://dsmans0021.com/MidtermLab/algebra/gauss-method.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Midterm Lab">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Gauss&#x27;s Method · طريقة جاوس — Algebra">
+<meta property="og:description" content="طريقة جاوس: حذف جاوس، عمليات الصفوف، الصورة السلمية، التعويض العكسي، جاوس-جوردان، مع مثال محلول وأسئلة.">
+<meta property="og:url" content="https://dsmans0021.com/MidtermLab/algebra/gauss-method.html">
+<meta property="og:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gauss&#x27;s Method · طريقة جاوس — Algebra">
+<meta name="twitter:description" content="طريقة جاوس: حذف جاوس، عمليات الصفوف، الصورة السلمية، التعويض العكسي، جاوس-جوردان، مع مثال محلول وأسئلة.">
+<meta name="twitter:image" content="https://dsmans0021.com/MidtermLab/assets/icon-512.png">
+</head>
+<body class="lang-both" data-subject="algebra" data-page="gauss-method.html">
+<a class="skip" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="../index.html">All subjects</a> / <a href="index.html">Algebra</a> / Gauss's Method</div>
+    <div class="eyebrow">Algebra · Topic 04 · Gauss's Method</div>
+    <h1>Gauss's Method <span style="color:var(--muted);font-weight:700">· طريقة جاوس</span></h1>
+    <p class="lead en">Gaussian elimination solves a system of linear equations by turning its augmented matrix into row-echelon form, then back-substituting. This page covers row operations, the algorithm, Gauss–Jordan, and Cramer's rule as a check.</p>
+    <p class="lead ar">حذف جاوس بيحل نظام معادلات خطية بتحويل المصفوفة الممتدة للصورة السلمية، وبعدين التعويض العكسي. الصفحة دي بتغطي عمليات الصفوف، الخوارزمية، جاوس–جوردان، وكرامر كتحقق.</p>
+    <div class="topic-tags">
+      <span class="badge">Core midterm topic</span>
+      <span class="badge gold">Row operations</span>
+      <span class="badge pink">Solved example</span>
+      <span class="badge">6 quiz questions</span>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <div class="layout">
+    <article>
+      <section class="section" id="system">
+        <div class="kicker">1 · Linear systems</div>
+        <h2>From equations to an augmented matrix</h2>
+        <p class="en">A linear system has the form a₁x + b₁y + c₁z = d₁, etc. Write only the coefficients in an <b>augmented matrix</b>. The vertical line separates the coefficient matrix from the constants.</p>
+        <p class="ar">النظام الخطي على شكل a₁x + b₁y + c₁z = d₁، إلخ. اكتب المعاملات بس في <b>مصفوفة ممتدة</b>. الخط الفاصل بيفصل مصفوفة المعاملات عن الثوابت.</p>
+        <div class="formula">
+          <div class="flabel">Augmented matrix</div>
+          <div class="fbody">[ A | b ]</div>
+          <div class="fnote">Each row = one equation; each column = one variable's coefficients.</div>
+        </div>
+        <p class="en">A system can have one solution, infinitely many solutions, or no solution. Gaussian elimination reveals which case you are in.</p>
+        <p class="ar">النظام ممكن يكون له حل واحد، أو عدد لا نهائي من الحلول، أو مفيش حل. حذف جاوس بيوضّح الحالة.</p>
+      </section>
+
+      <section class="section" id="rowops">
+        <div class="kicker">2 · Allowed moves</div>
+        <h2>Elementary row operations</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Operation · العملية</th><th>Effect · التأثير</th></tr></thead>
+            <tbody>
+              <tr><td>Swap two rows · تبديل صفين</td><td>Rᵢ ↔ Rⱼ</td></tr>
+              <tr><td>Multiply a row by a nonzero constant · ضرب صف في ثابت</td><td>Rᵢ → kRᵢ</td></tr>
+              <tr><td>Add a multiple of one row to another · جمع مضاعف صف لصف</td><td>Rᵢ → Rᵢ + kRⱼ</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="en">These operations do not change the solution set. The goal is to create zeros below the pivot in each column.</p>
+        <p class="ar">العمليات دي مش بتغير مجموعة الحل. الهدف إنك تعمل أصفار تحت العنصر المحوري في كل عمود.</p>
+        <div class="callout warn">
+          <div class="icon">!</div>
+          <div>
+            <h4>Do not · ممنوع</h4>
+            <p class="en">Do not multiply a row by zero. Do not add a multiple of a row to itself in a way that destroys the equation. Do not change the constants column independently.</p>
+            <p class="ar">ممنوع تضرب صف في صفر. وممنوع تجمع مضاعف صف عليه نفسه بشكل يدمّر المعادلة. وممنوع تغير عمود الثوابت لوحده.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="elimination">
+        <div class="kicker">3 · The algorithm</div>
+        <h2>Gaussian elimination + back substitution</h2>
+        <ol class="muted" style="padding-left:20px;font-size:14px">
+          <li><b>Write</b> the augmented matrix.</li>
+          <li><b>Pivot</b> on the first nonzero entry in column 1; swap if needed.</li>
+          <li><b>Eliminate</b> all entries below the pivot using row operations.</li>
+          <li><b>Move</b> to the next column and repeat until row-echelon form.</li>
+          <li><b>Back-substitute</b> from the last equation upward.</li>
+          <li><b>Check</b> by substituting into the original equations.</li>
+        </ol>
+        <div class="formula-grid">
+          <div class="formula"><div class="flabel">Row-echelon form</div><div class="fbody">Leading 1s step down to the right</div><div class="fnote">Zeros below each leading entry</div></div>
+          <div class="formula"><div class="flabel">Back substitution</div><div class="fbody">Solve the last variable first, then move upward</div><div class="fnote">Substitute known values into the row above</div></div>
+          <div class="formula"><div class="flabel">Gauss–Jordan</div><div class="fbody">Continue to reduced row-echelon form</div><div class="fnote">Zeros above and below each pivot → read solution directly</div></div>
+          <div class="formula"><div class="flabel">Cramer's rule</div><div class="fbody">x<sub>i</sub> = det(A<sub>i</sub>)/det(A)</div><div class="fnote">Only if det(A) ≠ 0; good as a check</div></div>
+        </div>
+      </section>
+
+      <section class="section" id="example">
+        <div class="kicker">4 · Solved example</div>
+        <h2>Solve a 3×3 system step by step</h2>
+        <div class="example">
+          <div class="tag">Example · Gaussian elimination</div>
+          <h4>Solve: x + y + z = 6; 2x + y − z = 1; x − y + 2z = 5.</h4>
+          <div class="work">
+            <span class="step">Augmented matrix:</span>
+            <span class="step">[ 1  1  1 | 6 ]</span>
+            <span class="step">[ 2  1 −1 | 1 ]</span>
+            <span class="step">[ 1 −1  2 | 5 ]</span>
+            <span class="step">R2 → R2 − 2R1: [0 −1 −3 | −11]</span>
+            <span class="step">R3 → R3 − R1: [0 −2  1 | −1]</span>
+            <span class="step">R3 → R3 − 2R2: [0  0  7 | 21] → z = 3</span>
+            <span class="step">Back substitute R2: −y − 3(3) = −11 → y = 2</span>
+            <span class="step">R1: x + 2 + 3 = 6 → x = 1</span>
+            <span class="step">Solution: (x, y, z) = (1, 2, 3)</span>
+          </div>
+        </div>
+        <div class="callout tip">
+          <div class="icon">→</div>
+          <div>
+            <h4>Check · تحقق</h4>
+            <p class="en">Substitute (1, 2, 3) into all three original equations. If one fails, the error is in the row operations, not the back substitution.</p>
+            <p class="ar">عوّض (1, 2, 3) في المعادلات الثلاثة الأصلية. لو واحدة غلط، الغلط في عمليات الصفوف مش في التعويض العكسي.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cases">
+        <div class="kicker">5 · Special cases</div>
+        <h2>No solution or infinitely many</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Row you see</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>[0 0 0 | nonzero]</td><td>No solution (inconsistent)</td></tr>
+              <tr><td>[0 0 0 | 0]</td><td>Redundant equation; free variable may exist</td></tr>
+              <tr><td>Fewer pivots than variables</td><td>Infinitely many solutions (free variables)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="en">If a variable column has no pivot, it becomes a free parameter. Write the other variables in terms of it.</p>
+        <p class="ar">لو عمود متغير مالوش عنصر محوري، بيبقى بارامتر حر. اكتب المتغيرات التانية بدلالته.</p>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="kicker">6 · Test yourself</div>
+        <h2>أسئلة تفاعلية · Interactive quiz</h2>
+        <div class="quiz">
+          <div class="q"><div class="qhead"><div class="num">1</div><div class="qtext">The augmented matrix includes: · المصفوفة الممتدة تشمل:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="ga1" data-correct="true"> a) coefficients and constants</label>
+              <label><input type="radio" name="ga1" data-correct="false"> b) only coefficients</label>
+              <label><input type="radio" name="ga1" data-correct="false"> c) only constants</label>
+              <label><input type="radio" name="ga1" data-correct="false"> d) only variables</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> The augmented matrix is [A | b], coefficients plus the constants column.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">2</div><div class="qtext">Which is NOT an elementary row operation? · أي عملية مش مسموحة؟</div></div>
+            <div class="opts">
+              <label><input type="radio" name="ga2" data-correct="false"> a) Swap two rows</label>
+              <label><input type="radio" name="ga2" data-correct="false"> b) Multiply a row by 2</label>
+              <label><input type="radio" name="ga2" data-correct="false"> c) Add 3 times row 1 to row 2</label>
+              <label><input type="radio" name="ga2" data-correct="true"> d) Multiply a row by 0</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>d)</b> Multiplying a row by zero destroys information and is not allowed.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">3</div><div class="qtext">Gaussian elimination produces: · حذف جاوس ينتج:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="ga3" data-correct="true"> a) row-echelon form</label>
+              <label><input type="radio" name="ga3" data-correct="false"> b) identity matrix always</label>
+              <label><input type="radio" name="ga3" data-correct="false"> c) inverse matrix</label>
+              <label><input type="radio" name="ga3" data-correct="false"> d) determinant only</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> Then back substitution gives the solution.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">4</div><div class="qtext">A row [0 0 0 | 5] means: · الصف [0 0 0 | 5] معناه:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="ga4" data-correct="true"> a) no solution</label>
+              <label><input type="radio" name="ga4" data-correct="false"> b) infinite solutions</label>
+              <label><input type="radio" name="ga4" data-correct="false"> c) x = 5</label>
+              <label><input type="radio" name="ga4" data-correct="false"> d) unique solution</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> 0 = 5 is impossible, so the system is inconsistent.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">5</div><div class="qtext">Gauss–Jordan differs from Gaussian elimination by: · جاوس–جوردان بيختلف بـ:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="ga5" data-correct="true"> a) eliminating above and below pivots</label>
+              <label><input type="radio" name="ga5" data-correct="false"> b) using no row operations</label>
+              <label><input type="radio" name="ga5" data-correct="false"> c) using only Cramer</label>
+              <label><input type="radio" name="ga5" data-correct="false"> d) ignoring constants</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> It continues to reduced row-echelon form, so the solution is read directly.</div>
+          </div>
+
+          <div class="q"><div class="qhead"><div class="num">6</div><div class="qtext">If a variable column has no pivot, the system may have: · لو عمود مالوش pivot:</div></div>
+            <div class="opts">
+              <label><input type="radio" name="ga6" data-correct="true"> a) infinitely many solutions</label>
+              <label><input type="radio" name="ga6" data-correct="false"> b) always no solution</label>
+              <label><input type="radio" name="ga6" data-correct="false"> c) always a unique solution</label>
+              <label><input type="radio" name="ga6" data-correct="false"> d) no variables</label>
+            </div>
+            <button class="reveal" type="button">تحقق · Check answer</button>
+            <div class="answer"><b>a)</b> A missing pivot means a free variable, which usually gives infinitely many solutions.</div>
+          </div>
+        </div>
+        <div class="mt-2"><button class="btn" type="button" data-answers="show">أظهر كل الإجابات · Show all answers</button> <button class="btn ghost" type="button" data-answers="hide">إخفاء · Hide</button></div>
+      </section>
+
+      <div class="pager">
+        <a href="numerical-analysis.html"><span>← Previous</span><b>Numerical Analysis</b></a>
+        <a href="formulas.html" class="next"><span>Next →</span><b>Formula Vault</b></a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidecard">
+        <h4>On this page · في الصفحة</h4>
+        <div class="mini-nav">
+          <a href="#system"><span class="dot blue"></span>Linear systems</a>
+          <a href="#rowops"><span class="dot"></span>Row operations</a>
+          <a href="#elimination"><span class="dot gold"></span>Algorithm</a>
+          <a href="#example"><span class="dot pink"></span>Example</a>
+          <a href="#cases"><span class="dot"></span>Special cases</a>
+          <a href="#quiz"><span class="dot gold"></span>Quiz</a>
+        </div>
+      </div>
+      <div class="sidecard">
+        <h4>Quick rules</h4>
+        <ul>
+          <li>Swap rows freely.</li>
+          <li>Multiply a row by a nonzero constant.</li>
+          <li>Add a multiple of one row to another.</li>
+          <li>Pivot → eliminate below → repeat.</li>
+          <li>Back-substitute from the bottom.</li>
+          <li>Check in the original equations.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div data-site-footer></div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
